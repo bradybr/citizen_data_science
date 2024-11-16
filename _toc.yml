@@ -1,0 +1,12 @@
+# Table of contents
+format: jb-book
+root: intro
+options:
+  numbered: true
+chapters:
+- file: Chapter1/introduction
+  sections:
+  - file: Chapter1/book_organization
+  - file: Chapter1/objectives
+- file: Chapter2/what_is_data_science
+- file: zreferences
