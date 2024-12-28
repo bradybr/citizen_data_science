@@ -1,0 +1,969 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>5.1.2. Data Types &#8212; A Beginner&#39;s Guide To Citizen Data Science</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Chapter5/data_types';</script>
+    <link rel="canonical" href="https://bradybr.github.io/citizen_data_science/intro/Chapter5/data_types.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="5.1.3. Data Acquisition" href="data_acquisition.html" />
+    <link rel="prev" title="5.1.1. Data Structure" href="data_structure.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/npp_logo.png" class="logo__image only-light" alt="A Beginner's Guide To Citizen Data Science - Home"/>
+    <script>document.write(`<img src="../_static/npp_logo.png" class="logo__image only-dark" alt="A Beginner's Guide To Citizen Data Science - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Beginner’s Guide To Citizen Data Science:
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter1/introduction.html">1. Introduction</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/book_organization.html">1.1. Book Organization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/objectives.html">1.2. Objectives</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter2/what_is_data_science.html">2. What Is Data Science?</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter2/problems_we_solve.html">2.1. Problems We Solve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter2/fields_of_study.html">2.2. Fields of Study</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter2/skills_and_tools.html">2.3. Skills &amp; Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter2/roles.html">2.4. Roles</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter3/citizen_data_scientist.html">3. The Citizen Data Scientist</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter3/how_they_add_value.html">3.1. How They Add Value</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter3/prerequisites.html">3.2. Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter3/getting_started.html">3.3. Getting Started</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter4/business_analytics.html">4. Business Analytics Overview</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter4/analytics_continuum.html">4.1. Analytics Continuum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter4/project_ideation.html">4.2. Project Ideation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter4/project_charters.html">4.3. Project Charters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter4/CRISP-DM.html">4.4. CRISP-DM</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="project_workflow.html">5. The Project Workflow</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="data.html">5.1. Data</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="data_structure.html">5.1.1. Data Structure</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">5.1.2. Data Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data_acquisition.html">5.1.3. Data Acquisition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data_integrity.html">5.1.4. Data Integrity</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../zreferences.html">6. References</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Chapter5/data_types.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Data Types</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="data-types">
+<h1><span class="section-number">5.1.2. </span>Data Types<a class="headerlink" href="#data-types" title="Permalink to this heading">#</a></h1>
+<p>In addition to all of the structures and shapes our data may take, there are several different types of data we will encounter.  We’ll discuss the properties of each in more detail when we get to the <span class="xref std std-doc">../Chapter6/machine_learning</span> section, so here we’ll only introduce the types and cover a high level understanding of the following.</p>
+<ul class="simple">
+<li><p>Cross sectional</p></li>
+<li><p>Time series</p></li>
+<li><p>Panel</p></li>
+<li><p>Text</p></li>
+</ul>
+<p>Most of the data will fall into the category of “structured” data, think rows and columns (like Excel), with Text data being the most common exception usually coming in “unstructred” blocks of text.  There are other more exotic data, but this will cover the common ones you’ll deal with the most often.</p>
+<p><strong><h3>Cross Sectional</h3></strong></p>
+<p>The one is very common and you’ll run into it often.  Think of <strong>cross sectional</strong> as a snapshot of some collection of data points at a given point in time.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Cross Sectional data refers to variables and measures recorded at the same point in time.</p>
+</div>
+<p>Recall our Iris data set from earlier?  It’s a classic example of cross-sectional data because it’s a collection of measurements (lengths and widths) for multiple flowers, all recorded at the same time.</p>
+<div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sepal_length</th>
+      <th>sepal_width</th>
+      <th>petal_length</th>
+      <th>petal_width</th>
+      <th>species</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>57</th>
+      <td>4.9</td>
+      <td>2.4</td>
+      <td>3.3</td>
+      <td>1.0</td>
+      <td>versicolor</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>5.1</td>
+      <td>3.3</td>
+      <td>1.7</td>
+      <td>0.5</td>
+      <td>setosa</td>
+    </tr>
+    <tr>
+      <th>94</th>
+      <td>5.6</td>
+      <td>2.7</td>
+      <td>4.2</td>
+      <td>1.3</td>
+      <td>versicolor</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>5.1</td>
+      <td>3.5</td>
+      <td>1.4</td>
+      <td>0.3</td>
+      <td>setosa</td>
+    </tr>
+    <tr>
+      <th>138</th>
+      <td>6.0</td>
+      <td>3.0</td>
+      <td>4.8</td>
+      <td>1.8</td>
+      <td>virginica</td>
+    </tr>
+    <tr>
+      <th>66</th>
+      <td>5.6</td>
+      <td>3.0</td>
+      <td>4.5</td>
+      <td>1.5</td>
+      <td>versicolor</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>5.2</td>
+      <td>3.4</td>
+      <td>1.4</td>
+      <td>0.2</td>
+      <td>setosa</td>
+    </tr>
+    <tr>
+      <th>116</th>
+      <td>6.5</td>
+      <td>3.0</td>
+      <td>5.5</td>
+      <td>1.8</td>
+      <td>virginica</td>
+    </tr>
+    <tr>
+      <th>67</th>
+      <td>5.8</td>
+      <td>2.7</td>
+      <td>4.1</td>
+      <td>1.0</td>
+      <td>versicolor</td>
+    </tr>
+    <tr>
+      <th>95</th>
+      <td>5.7</td>
+      <td>3.0</td>
+      <td>4.2</td>
+      <td>1.2</td>
+      <td>versicolor</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>It often helps to understand your data through graphs and visualizations, as you’ll learn soon when we get to the Exploratory Data Analysis section, so let’s plot a couple of the variables in this set and look at the relationship between <code class="docutils literal notranslate"><span class="pre">petal_width</span></code> and <code class="docutils literal notranslate"><span class="pre">petal_length</span></code>.</p>
+<div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
+<div class="cell_output docutils container">
+<img alt="../_images/490b0bfc00592b10d65a7f5b0305111d4b0a980f7774b2e2721891da21b452dd.png" src="../_images/490b0bfc00592b10d65a7f5b0305111d4b0a980f7774b2e2721891da21b452dd.png" />
+</div>
+</div>
+<p><strong><h3>Time Series</h3></strong></p>
+<p>When we’re dealing with what’s known as <em>univariate</em> (only a single dependent variable), the data tends to be very simple.  We usually just have a column or two with categorical fields like “Customer” or “Region”, then some kind of time variable such as “Day”, “Month”, or “Year”, and then some numeric value of interest like “Sales”, “Profit”, or maybe “Price”.  This would be an example of <strong>time series</strong> data.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Time Series data refers to a subject and variables recorded at different points in time (usually at regular intervals).</p>
+</div>
+<p>The key point of distinction for time series data is repeated measurements of data at multiple points in time.  Below you can see an example with a 1 year sample of prices for the Dow Jones Industrial Average from 1968 by Month.</p>
+<div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Date</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>637</th>
+      <td>1968-01-01</td>
+      <td>884.77</td>
+    </tr>
+    <tr>
+      <th>638</th>
+      <td>1968-02-01</td>
+      <td>847.20</td>
+    </tr>
+    <tr>
+      <th>639</th>
+      <td>1968-03-01</td>
+      <td>834.76</td>
+    </tr>
+    <tr>
+      <th>640</th>
+      <td>1968-04-01</td>
+      <td>893.37</td>
+    </tr>
+    <tr>
+      <th>641</th>
+      <td>1968-05-01</td>
+      <td>905.22</td>
+    </tr>
+    <tr>
+      <th>642</th>
+      <td>1968-06-01</td>
+      <td>906.82</td>
+    </tr>
+    <tr>
+      <th>643</th>
+      <td>1968-07-01</td>
+      <td>905.32</td>
+    </tr>
+    <tr>
+      <th>644</th>
+      <td>1968-08-01</td>
+      <td>883.72</td>
+    </tr>
+    <tr>
+      <th>645</th>
+      <td>1968-09-01</td>
+      <td>922.80</td>
+    </tr>
+    <tr>
+      <th>646</th>
+      <td>1968-10-01</td>
+      <td>955.47</td>
+    </tr>
+    <tr>
+      <th>647</th>
+      <td>1968-11-01</td>
+      <td>964.12</td>
+    </tr>
+    <tr>
+      <th>648</th>
+      <td>1968-12-01</td>
+      <td>965.39</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Time series data is a fun one to display graphically.  Time across the x-axis, and the numeric value in the y-axis.  You’ll build these kinds of graphs frequently when you get into real time series projects.</p>
+<br><div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
+<div class="cell_output docutils container">
+<img alt="../_images/9a2f232a1d57d484c188a8e7efda8bc5ba1c0fd3f09237cfb99fe4196e1564aa.png" src="../_images/9a2f232a1d57d484c188a8e7efda8bc5ba1c0fd3f09237cfb99fe4196e1564aa.png" />
+</div>
+</div>
+<p><strong><h3>Panel</h3></strong></p>
+<p>Next up, <strong>Panel</strong> data.  We’ve already seen an example of panel data as well if you recall from a previous section.  Remember the Gas Consumption dataset?  Recall how the unit of analysis was “Gas Consumption, by Country, by Year”?  Well, that’s panel data.  Multiple cross-sections of subjects recorded at multiple points in time.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Panel, or longitudinal data refers to variables and measures across multiple cross sections at different points in time.</p>
+</div>
+<p>Sounds confusing, but it’s the logical next step going from a single slice, or cross sectional, then to multiple points in time with time series, all building up to put them together as we get with panel data.</p>
+<p>Let’s see it in action.</p>
+<div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>country</th>
+      <th>year</th>
+      <th>lgaspcar</th>
+      <th>lincomep</th>
+      <th>lrpmg</th>
+      <th>lcarpcap</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>AUSTRIA</td>
+      <td>1960</td>
+      <td>4.173244</td>
+      <td>-6.474277</td>
+      <td>-0.334548</td>
+      <td>-9.766840</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>AUSTRIA</td>
+      <td>1961</td>
+      <td>4.100989</td>
+      <td>-6.426006</td>
+      <td>-0.351328</td>
+      <td>-9.608622</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>AUSTRIA</td>
+      <td>1962</td>
+      <td>4.073177</td>
+      <td>-6.407308</td>
+      <td>-0.379518</td>
+      <td>-9.457257</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>AUSTRIA</td>
+      <td>1963</td>
+      <td>4.059509</td>
+      <td>-6.370679</td>
+      <td>-0.414251</td>
+      <td>-9.343155</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>AUSTRIA</td>
+      <td>1964</td>
+      <td>4.037689</td>
+      <td>-6.322247</td>
+      <td>-0.445335</td>
+      <td>-9.237739</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>338</th>
+      <td>U.S.A.</td>
+      <td>1974</td>
+      <td>4.798626</td>
+      <td>-5.328694</td>
+      <td>-1.231467</td>
+      <td>-7.617558</td>
+    </tr>
+    <tr>
+      <th>339</th>
+      <td>U.S.A.</td>
+      <td>1975</td>
+      <td>4.804932</td>
+      <td>-5.346190</td>
+      <td>-1.200377</td>
+      <td>-7.607010</td>
+    </tr>
+    <tr>
+      <th>340</th>
+      <td>U.S.A.</td>
+      <td>1976</td>
+      <td>4.814891</td>
+      <td>-5.297946</td>
+      <td>-1.154682</td>
+      <td>-7.574748</td>
+    </tr>
+    <tr>
+      <th>341</th>
+      <td>U.S.A.</td>
+      <td>1977</td>
+      <td>4.811032</td>
+      <td>-5.256606</td>
+      <td>-1.175910</td>
+      <td>-7.553458</td>
+    </tr>
+    <tr>
+      <th>342</th>
+      <td>U.S.A.</td>
+      <td>1978</td>
+      <td>4.818454</td>
+      <td>-5.221232</td>
+      <td>-1.212062</td>
+      <td>-7.536176</td>
+    </tr>
+  </tbody>
+</table>
+<p>342 rows × 6 columns</p>
+</div></div></div>
+</div>
+<p>Just as before, plotting our data really helps us to visualize what we have and spot the differences between categorical groups.</p>
+<div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
+<div class="cell_output docutils container">
+<img alt="../_images/f1ecafbce76c6befcc2ed0b40a58e64f5b23cd51c4af832dcea3db087a8bf4e1.png" src="../_images/f1ecafbce76c6befcc2ed0b40a58e64f5b23cd51c4af832dcea3db087a8bf4e1.png" />
+</div>
+</div>
+<p><strong><h3>Text</h3></strong></p>
+<p>Text data can come in a variety of formats.  It can be in a corpus, which is a collection of text or audio, a simple column in a file with one or a few words, or you might see it as below, which is free form text in the form of sentences.  Let’s read in a public dataset from the UCI Repository <span id="id1">[<a class="reference internal" href="../zreferences.html#id12" title="UC Irvine. 2024. URL: https://archive.ics.uci.edu/.">Irv24</a>]</span> listing email text for spam classification.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Text data refers to any sort of written data stored in a text/character format.</p>
+</div>
+<p>Let’s print out the first 15 records in the data.</p>
+<div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     Go until jurong point, crazy.. Available only in bugis n great world la e buffet... Ci...
+1                                                                 Ok lar... Joking wif u oni...
+2     Free entry in 2 a wkly comp to win FA Cup final tkts 21st May 2005. Text FA to 87121 t...
+3                                             U dun say so early hor... U c already then say...
+4                                 Nah I don&#39;t think he goes to usf, he lives around here though
+5     FreeMsg Hey there darling it&#39;s been 3 week&#39;s now and no word back! I&#39;d like some fun y...
+6                 Even my brother is not like to speak with me. They treat me like aids patent.
+7     As per your request &#39;Melle Melle (Oru Minnaminunginte Nurungu Vettam)&#39; has been set as...
+8     WINNER!! As a valued network customer you have been selected to receivea Â£900 prize r...
+9     Had your mobile 11 months or more? U R entitled to Update to the latest colour mobiles...
+10    I&#39;m gonna be home soon and i don&#39;t want to talk about this stuff anymore tonight, k? I...
+11    SIX chances to win CASH! From 100 to 20,000 pounds txt&gt; CSH11 and send to 87575. Cost ...
+12    URGENT! You have won a 1 week FREE membership in our Â£100,000 Prize Jackpot! Txt the ...
+13    I&#39;ve been searching for the right words to thank you for this breather. I promise i wo...
+14                                                          I HAVE A DATE ON SUNDAY WITH WILL!!
+Name: text, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can see it’s text in long form written sentences.  There are many things we could do to start preprocessing this data, but let’s make it simple and jump right into looking at frequency counts.  Often one on the analyses you’ll want to look at with text data is the number of times, occurrences, or frequency, in which a word appears in a corpus of data.  Let’s run the counts and print out the 10 most used words in this spam data.</p>
+<div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>word</th>
+      <th>frequency</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>12</th>
+      <td>to</td>
+      <td>53</td>
+    </tr>
+    <tr>
+      <th>71</th>
+      <td>you</td>
+      <td>42</td>
+    </tr>
+    <tr>
+      <th>43</th>
+      <td>I</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>a</td>
+      <td>26</td>
+    </tr>
+    <tr>
+      <th>63</th>
+      <td>and</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <th>163</th>
+      <td>the</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <th>73</th>
+      <td>for</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <th>184</th>
+      <td>i</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <th>102</th>
+      <td>your</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>in</td>
+      <td>15</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Hmm… maybe not so interesting or useful yet as you can see a lot of the top words are what we call “stop” words, or uninformative.  They give us little information in regards to subjects or context.  We would normally clean the data up a bit first before analyzing, but hopefully you can at least see what we’re after.</p>
+<p>Let’s plot the top 50 words and see if we start to see a bit more interesting words show up.</p>
+<div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
+<div class="cell_output docutils container">
+<img alt="../_images/c3ce60117914067f40668241245ab939084ccf6377c6cd4efba5c1286dcf3ffd.png" src="../_images/c3ce60117914067f40668241245ab939084ccf6377c6cd4efba5c1286dcf3ffd.png" />
+</div>
+</div>
+<p>We’ve plotted the most commonly used words in all of the emails, but notice how many of the words are still uninformative?  When you get into working with text for real, you’ll learn that there’s a <em>ton</em> of preprocessing that needs to happen before you can properly analzye your data.  Simply expanding from 10 to 50 wasn’t enough.  We’ll need to remove stop words, deal with special characters and punctutations, truncate words down to their root, and likely need to look at combinations of words in sequences as well!</p>
+<p>This at least gives you a basic feel for looking at text, doing some simple manipulations, and plotting basic count frequencies.  More to come.</p>
+<h3>What Did We Learn?</h3><p>I know this was a long section, but hopefully you’re starting to get a taste for what some real data looks like, how to interpret a few format types you’ll see, how to perform a few simple manipulations in Python code, and even what kinds of use cases these datasets may line up with.</p>
+<p>There’s always so much more detail we could go into, but we will see more of these as we work through the hands on sections that dig into project steps and methogologies.</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Chapter5"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="data_structure.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">5.1.1. </span>Data Structure</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="data_acquisition.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">5.1.3. </span>Data Acquisition</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Brian Brady
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

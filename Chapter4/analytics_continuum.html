@@ -1,0 +1,545 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>4.1. Analytics Continuum &#8212; A Beginner&#39;s Guide To Citizen Data Science</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Chapter4/analytics_continuum';</script>
+    <link rel="canonical" href="https://bradybr.github.io/citizen_data_science/intro/Chapter4/analytics_continuum.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="4.2. Project Ideation" href="project_ideation.html" />
+    <link rel="prev" title="4. Business Analytics Overview" href="business_analytics.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/npp_logo.png" class="logo__image only-light" alt="A Beginner's Guide To Citizen Data Science - Home"/>
+    <script>document.write(`<img src="../_static/npp_logo.png" class="logo__image only-dark" alt="A Beginner's Guide To Citizen Data Science - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Beginner’s Guide To Citizen Data Science:
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter1/introduction.html">1. Introduction</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/book_organization.html">1.1. Book Organization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/objectives.html">1.2. Objectives</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter2/what_is_data_science.html">2. What Is Data Science?</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter2/problems_we_solve.html">2.1. Problems We Solve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter2/fields_of_study.html">2.2. Fields of Study</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter2/skills_and_tools.html">2.3. Skills &amp; Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter2/roles.html">2.4. Roles</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter3/citizen_data_scientist.html">3. The Citizen Data Scientist</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter3/how_they_add_value.html">3.1. How They Add Value</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter3/prerequisites.html">3.2. Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter3/getting_started.html">3.3. Getting Started</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="business_analytics.html">4. Business Analytics Overview</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">4.1. Analytics Continuum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="project_ideation.html">4.2. Project Ideation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="project_charters.html">4.3. Project Charters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CRISP-DM.html">4.4. CRISP-DM</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter5/project_workflow.html">5. The Project Workflow</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter5/data.html">5.1. Data</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../zreferences.html">6. References</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Chapter4/analytics_continuum.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Analytics Continuum</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="analytics-continuum">
+<h1><span class="section-number">4.1. </span>Analytics Continuum<a class="headerlink" href="#analytics-continuum" title="Permalink to this heading">#</a></h1>
+<p>Let’s start with a view of the analytics continuum.  There’s no value judgement below, as significant value can be found anywhere along the continuum; however, there is a natural progression of implied complexity as you move from left to right.  Data scientists mostly <em>want</em> to live on the right side of the graphic, but it’s certainly not unusual to progress through the descriptive, visual, and statistical steps during the course of an actual project.
+<br></p>
+<figure class="align-default" id="analytics-craddle-fig">
+<a class="reference internal image-reference" href="../_images/analytics_craddle.png"><img alt="../_images/analytics_craddle.png" src="../_images/analytics_craddle.png" style="width: 700px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4.1 </span><span class="caption-text">Analytics Continuum</span><a class="headerlink" href="#analytics-craddle-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>These lists are non mutually exclusive, and we’ll often say “generally” because there are few hard and fast rules here.  It’s not unusual for a data scientist to be working on a project using only traditional statistical methods.  Again, it’s not important that we’re super strict with definitions and classifications, but more so that we gain a better understanding of what’s commonly considered to be included under the umbrella of Data Science.</p>
+<p><strong><h3>Descriptive Statistics</h3></strong></p>
+<p>If we look at <a class="reference internal" href="#analytics-craddle-fig"><span class="std std-numref">Fig. 4.1</span></a>, we can understand that the majority of the traditional analytics produced today falls into the first bucket of trying to explain <em>what happened</em> (Descriptive Analytics).  Why?  Because it’s the most accessible and requires the least amount of specialized knowledge.  Nearly every entry level business associate should be able to take some historical data and summarize it in some interesting way.</p>
+<ul class="simple">
+<li><p>What’s the percentage of sales for this quarter by region?</p></li>
+<li><p>Which late shipment reason code was applied most often last month?</p></li>
+<li><p>Which customers are paying their invoices late, ranked as a percentage of total sales?</p></li>
+</ul>
+<br>
+<p>How about highlighting your findings with a simple barplot?</p>
+<p>Is there any evidence of chivalry based on the survial rates from the famous Titanic disaster?  Turns out… maybe.  In the plot below we can see that over 80% of men perished that fateful night, whereas only 26% of the women on board died.  Very interesting.   <em>Women and children first</em> possibly?</p>
+<figure class="align-default" id="titanic-survival-by-sex-fig">
+<a class="reference internal image-reference" href="../_images/titanic_survival_by_sex.png"><img alt="../_images/titanic_survival_by_sex.png" src="../_images/titanic_survival_by_sex.png" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4.2 </span><span class="caption-text">Titanic Survival Rates by Sex</span><a class="headerlink" href="#titanic-survival-by-sex-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>This is all the domain of Descriptive Analytics.  Overall, pretty intuitive questions you might think of when interrogating a data set, which is why it’s the most frequently employed; however, don’t be fooled into thinking analytics has to overly complex or elaborate to be valuable.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Analytics does not have to be complicated.  Sometimes all that’s needed to make a massive impact is simply a clear understanding of what’s happening.</p>
+</div>
+<p><strong><h3>Diagnostic Analytics</h3></strong></p>
+<p>Moving on to trying to understanding <em>why</em> something happend.  Diagnostic Analytics in <a class="reference internal" href="#analytics-craddle-fig"><span class="std std-numref">Fig. 4.1</span></a> shows us this bucket has been the traditional home for the more advanced and mathematically inclined in any organization.  These have historically been engineers, economists, statisticians, research and development (R&amp;D), demand planners, and even MBA’s, to name a few.</p>
+<p>What’s important to point out here, is that this set is working with higher order mathematics more so than the average analyst.  We’ll discuss this further when we get to methodologies, but for now it’s enough to know what really sets this group apart is their statistical prowess.  We do see some crossover into the more data science-sy territory with this group because we often use some of the same math and solvers.  Where we usually diverage is in the end-to-end business continuity, the types of problems we solve, the technology and programming languages we use, and the applications we build.  I know it’s hard to see the distinctions now, but stay tuned.  It will become more clear as we introduce new topics.</p>
+<p>An example for this group wouldn’t be complete without mentioning the workhorse of statistics:  Regression.</p>
+<ul class="simple">
+<li><p>Want to understand the relationship between height and weight?</p></li>
+<li><p>Want to estimate what raising your retail prices will do to sales?</p></li>
+<li><p>Want to understand if a promotion you ran last month influenced your sales?</p></li>
+</ul>
+<br>
+<p>Then welcome to statistics and regression my friend.  There are lots of other methodologies being used with diagnostic analysis, but the main distinction is we’re essentially stopping short of predictions and instead usually making some sort of statistical inference (i.e. looking at a sample of data and drawing some kind of conclusion from your analysis).</p>
+<p>We’ll cover these topics again in later chapters, so don’t feel like you’re missing anything if you don’t quite understand the <em>how</em> behind the ways these questions are answered or the details behind these methods.</p>
+<p><strong><h3>Predictive Analytics</h3></strong></p>
+<p>Now we get to the fun stuff (IMHO).  Predictive analytics always felt like the “what’s new and different” when I was first introduced to the field.  General business assocates are often quite capable of analyzing data with descriptive summaries, and statistics was burned into my brain as a chore from my college years, but now I was being asked to think about how cool it would be if I was able to predict which specific employees were likely quit next month, or which product had the highest probability of running out of inventory next week.  Taken even further with topics that held more personal interest was really exciting as well.  Could I predict the winner of an upcoming MLB baseball game?  Could I predict which stock had the highest probability of going up in price tomorrow?  Super fun stuff!</p>
+<p>This set of analytics is generally where we begin to see separation from what a traditional “math” persona or statistician might be comfortable doing.  We also start throwing around words like “algorithm” and “model” far more frequently at this stage.  You can definitely build diagnostic models, but when we get to the predictive stage we’re likely talking about building end-to-end, deployable, and resuable models.  Essentially this means we’re no longer talking about just answering a one-time question or a one-off study.  Here we may want to frequently run new data through our model and have it continuously spit out new predictions at regular intervals.</p>
+<p>You’ll be introduced to all kinds of new topics when we begin discussing the methodologies and mathematics from this set in future chapters, but for now try to wrap your head around this idea: We start with data as inputs, then we build models to learn patterns and relationships between the subjects of interest, next we project those learned patterns onto new data inputs, which finally produces a prediction of some kind.</p>
+<ul class="simple">
+<li><p>Predicting which consumers have the highest likely of responding to a promotional offer</p></li>
+<li><p>Predicting which piece of manufacturing equipment is likely to break down within the next month</p></li>
+<li><p>Forecasting sales for next quarter</p></li>
+<li><p>Grouping products and consumers together to reveal hidden similarities or preferences</p></li>
+<li><p>Detecting foreign objects and ingredient contaminants in food manufacturing</p></li>
+</ul>
+<br>
+<p>For another example, imagine how an anti-theft detection program might “see” crowds of people in a small shopping corridor and predict unusual behvior.  Computers do not see things the same ways our human eyes and brains do so we need to somehow encode our data into a format our program can understand.  For now, just understand that public places like this often have software running analyzing video feeds for our facial expressions, body movements, and other indicators of specific behaviors.  From a technical point of view it’s very cool, however kind of scary to think about from a personal privacy perspective, right?</p>
+<figure class="align-default" id="crowd-id-fig">
+<a class="reference internal image-reference" href="../_images/crowd_id2.png"><img alt="../_images/crowd_id2.png" src="../_images/crowd_id2.png" style="width: 700px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4.3 </span><span class="caption-text">Anti-theft detection program</span><a class="headerlink" href="#crowd-id-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p><strong><h3>Prescriptive Analytics</h3></strong></p>
+<p>Now we’ve arrived at the final, and typically the most complex type of analytics: Prescriptive.</p>
+<p>Prescriptive Analytics is another set similar to Diagnostic Analytics, in that it has historically received plenty of attention, albeit from highly specialized practitioners.  These resources tend to be masters or Ph.D. level associates highly skilled in applied statistics, linear algebra, and calculus.  Practically speaking, the field of Operations Research, alternatively known as Management Science, has been the applied faction in business traditionally focused on linear modeling and optimization.</p>
+<p>Generally, the idea of this set is focused on steering an organization towards better, hopefully optimal, decision making, by using specialized mathematics and analytical techniques.  We want to <em>prescribe</em>, or direct our business stakeholders with information telling them what they should do.  The techniques we use can be anything from simple algebra and linear programs, stochastic optimization, to extremely complex non linear functional solvers.  Regardless of the type or industry, these optimization problems will nearly always have the same components, i.e. input variables, decision variables, an objective function, and optionally, constraints if applicable.</p>
+<p>Lots of new terms here we’ll explain in greater detail later, but think of optimization simply as taking in some information (input variables), telling it what answer you would like to get back (decision variables), describing what you would like the solution to minimize or maximize (objective function), and possibly giving it some rules the solution must respect (constraints).</p>
+<p>This type of optimization lends itself well to manufacturing and industries where there are complex operations with many possibilities for the choices or decisions one could make.</p>
+<ul class="simple">
+<li><p>Resource shift scheduling</p></li>
+<li><p>Transporation route planning</p></li>
+<li><p>Production sequencing and scheduling</p></li>
+</ul>
+<br>
+<p>Taken even further to a more complex degree, a field of study known as Reinforcement Learning (RL) is often in the public eye due to high profile companies such as Tesla.  Any guess as to how those fancy autonomous driving vehicles are learning how to avoid pedestrians and other obstacles?  You guessed it, reinforcement learning (among many other types of math and models).  RL is a type of complex specialized program that learns how to make sequential decisions that lead to the best cumulative benefit over a longer time horizon.  An easy way to think of RL is as decision making under uncertainty, or in uncertain conditions.</p>
+<p>In manufacturing, these learned state-action policies are often used to automatically control extremely complex pieces of machinery without requiring human intervention.</p>
+<figure class="align-default" id="manif-process-fig">
+<a class="reference internal image-reference" href="../_images/manif_process.png"><img alt="../_images/manif_process.png" src="../_images/manif_process.png" style="width: 700px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4.4 </span><span class="caption-text">A complex manufacturing operation with parallel and sequential tasks</span><a class="headerlink" href="#manif-process-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Whew… that was a lot.  Sorry, had to get it out of the way.</p>
+<p>At this stage you’ve been introduced to some fundamental data science methodologies and project types at a very high level.  There’s so much more to expound on and we’ll begin to discuss in more detail in the upcoming sections.</p>
+<p>Let’s pivot now to discuss what makes Data Science so exciting by looking at the kinds of problems we solve.</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Chapter4"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="business_analytics.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>Business Analytics Overview</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="project_ideation.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">4.2. </span>Project Ideation</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Brian Brady
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,519 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>3.1. How They Add Value &#8212; A Beginner&#39;s Guide To Citizen Data Science</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Chapter3/how_they_add_value';</script>
+    <link rel="canonical" href="https://bradybr.github.io/citizen_data_science/intro/Chapter3/how_they_add_value.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="3.2. Prerequisites" href="prerequisites.html" />
+    <link rel="prev" title="3. The Citizen Data Scientist" href="citizen_data_scientist.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/npp_logo.png" class="logo__image only-light" alt="A Beginner's Guide To Citizen Data Science - Home"/>
+    <script>document.write(`<img src="../_static/npp_logo.png" class="logo__image only-dark" alt="A Beginner's Guide To Citizen Data Science - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Beginner’s Guide To Citizen Data Science:
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter1/introduction.html">1. Introduction</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/book_organization.html">1.1. Book Organization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/objectives.html">1.2. Objectives</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter2/what_is_data_science.html">2. What Is Data Science?</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter2/problems_we_solve.html">2.1. Problems We Solve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter2/fields_of_study.html">2.2. Fields of Study</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter2/skills_and_tools.html">2.3. Skills &amp; Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter2/roles.html">2.4. Roles</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="citizen_data_scientist.html">3. The Citizen Data Scientist</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.1. How They Add Value</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prerequisites.html">3.2. Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html">3.3. Getting Started</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter4/business_analytics.html">4. Business Analytics Overview</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter4/analytics_continuum.html">4.1. Analytics Continuum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter4/project_ideation.html">4.2. Project Ideation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter4/project_charters.html">4.3. Project Charters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter4/CRISP-DM.html">4.4. CRISP-DM</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter5/project_workflow.html">5. The Project Workflow</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter5/data.html">5.1. Data</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../zreferences.html">6. References</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Chapter3/how_they_add_value.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>How They Add Value</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="how-they-add-value">
+<h1><span class="section-number">3.1. </span>How They Add Value<a class="headerlink" href="#how-they-add-value" title="Permalink to this heading">#</a></h1>
+<p>In any business, associates are hired to perform specific work, typically embedded within a business function.  In these domains it’s not uncommon to find roles such as analysts, account executives, team leaders, and directors, to name a few.  These associates could be practically anywhere, from Consumer Insights, Marketing, and Sales, to Manufacturing, Transportation, and Supply Chain.  All of these business functions have domain specific elements of their operations that require specialized knowledge, training, and experience.</p>
+<p>Each associate, no matter the domain or title, is responsible for tasks in line with whatever their business function delivers for the company.  My work as a data scientist, you guessed it, is to do data science work.  The thing is though, data scientists typically work in a support capacity.  We seldom own the domain or business function we work in.  We support whichever business function owns the use case, be it Supply Chain, Sales, Marketing, Manufacturing, etc.  My strengths are expertise are in math and machine learning, but these skills are essentially useless unless paired with some area of focus, as within a specific area of business.</p>
+<p>Citizen data scientists are first and foremost something else.  They’re hired as analysts or associates to work within a business function.  Maybe it’s a transportation scheduler, human resource manager, marketing associate, category analyst, procurement specialist, business analyst, etc.  These associates will all have core responsibilities and duties within their business functions they were hired to perform, such as coordinating and scheduling inbound shipments, managing employee retention, allocating marketing spend, and so on.</p>
+<p>In <a class="reference internal" href="#data-scientist-expertise-fig"><span class="std std-numref">Fig. 3.2</span></a> we can see the secret that makes this idea of the citizen data science so potentially valuable.  On the left side of the graphic, notice that a professional and full time data scientist will spend all their time accumulating skill and expertise in the practical elements of data science methodologies.  There’s a significant amount of effort and time to work up the pyramid through all of the elements of their core capabilities before getting to the top, where we’d begin to gain any understanding of a specific domain.  And once you consider that we often work in analytical centers of competency, meaning we support across a variety of business functions, it’s fairly unreasonable to expect these resources to become experts or self sufficient in multiple domains in any sort of expedient time frame.</p>
+<figure class="align-default" id="data-scientist-expertise-fig">
+<a class="reference internal image-reference" href="../_images/cds_expertise_pyramid.png"><img alt="../_images/cds_expertise_pyramid.png" src="../_images/cds_expertise_pyramid.png" style="width: 900px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 3.2 </span><span class="caption-text">Professional vs. Citizen Data Scientist knowledge &amp; expertise pyramid</span><a class="headerlink" href="#data-scientist-expertise-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Now consider the citizen data scientist pyramid of expertise on the right side of <a class="reference internal" href="#data-scientist-expertise-fig"><span class="std std-numref">Fig. 3.2</span></a>.  It’s simply an inverted image of the professional data scientist.  Because their first priorities are the business, these associates spend all of their time accumulating expertise within their domain.  They possess an understanding of the challenges of their environments, have intimate knowledge of the decisions and actions required in their space, possess a detailed grasp of the idiosynchries, rules, and constraints that need to be considered, and finally they sit at the origin of any potential uses cases or projects that may be valuable to the business.</p>
+<p>Hopefully the benefit is starting to become clear.  It’s simply a longer path for someone to get all the way through to the top of the pyramid on the left than it is for a business analyst, or citizen data scientist, to just get to the second rung of their capability pyramid.  They already know everything they need to know about the potential project use case and the value potential for solving the problem.  All they need now is to get to the next level of Computer Science to begin using the low/no code analytics platforms, such as we’ve discussed with KNIME.</p>
+<p>Please don’t misunderstand the message though.  While someone could turn themselves loose straight away using KNIME and start making all kinds of predictions and analytical inferences.  I would strongly advise against it however.  The point it’s a quicker and easier path to empower and enhance the <em>business analyst</em> with minimal data science and machine learning knowledge, than it is to try to upskill the full-time professional data scientist in any kind of domain expertise capacity.</p>
+<p><strong><h3>Financial Analyst Use Case</h3></strong></p>
+<p>To solidify our understanding with an example, consider the following job description in <a class="reference internal" href="#financial-analyst-job-description-fig"><span class="std std-numref">Fig. 3.3</span></a> for a Senior Financial Analyst.</p>
+<p>We’ll learn how to do this in more detail later when we get to project scoping and ideations, but for now, begin with trying to understand that the lowest hanging fruit in terms of our analytical opportunities will always exist within the current scope of an employee’s role.  Said another way, each employee is responsible for certain decisions and activites, and effectively, these are the things they care about.  You can’t go wrong with starting with current responsibilities if you’re looking for advanced analytics opportunities.</p>
+<p>In <a class="reference internal" href="#financial-analyst-job-description-fig"><span class="std std-numref">Fig. 3.3</span></a> we see a bulleted list of the primary responsibilities and tasks for this associate.</p>
+<figure class="align-default" id="financial-analyst-job-description-fig">
+<a class="reference internal image-reference" href="../_images/financial_analyst_job_description.png"><img alt="../_images/financial_analyst_job_description.png" src="../_images/financial_analyst_job_description.png" style="width: 700px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 3.3 </span><span class="caption-text">Job description outlining the tasks and responsibilities for a typical Financial Analyst position</span><a class="headerlink" href="#financial-analyst-job-description-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>After you get a few more pieces of the puzzle under your belt, here’s what you’d be able to do with just this information.  Given any list of responsibilities like the one this analyst will care about, you could ask a series of <em>what if I could…</em> questions that might be of interest to them.  And the cool part… you know that the questions you’re asking are all tied to one of those 3 things we covered in <a class="reference internal" href="../Chapter2/problems_we_solve.html#problems-we-solve"><span class="std std-ref">Problems We Solve</span></a>, where we either 1) Predict something, 2) Uncover hidden patterns or relationships, or 3) Prescribe something, but you’ve phrased the question in context and words they understand, which avoided all of the complicated AI and math speak that might confuse them!</p>
+<p>Let’s see how it works.</p>
+<ul class="simple">
+<li><p><strong>Prepare Financial Plans:</strong>  <em>What if I could automate forecasting sales and improve your accuracy from 80% to 95%?</em></p></li>
+<li><p><strong>Partner with Business Leaders:</strong>  <em>What if I could preemptively alert you to abnormal consumer shopping behaviors, prolonged negative sales trends on the horizon, or competitor activities creating risk for your business, all before they happen?</em></p></li>
+<li><p><strong>Develop Ad-Hoc Analysis:</strong>  <em>What if I could prescribe the best course of action for a given scenario you’re considering, which will maximize your return (e.g. merger/acquisition/divestiture, staffing changes, new product introductions)?</em></p></li>
+<li><p><strong>Work Cross Functionally:</strong>  <em>What if I could give you a scenario planning and simulation tool that allows you to test the financial impacts of various ideas and strategies, and will optimize your budget and spend across multiple departments?</em></p></li>
+</ul>
+<br>
+<p>So just from the couple of bullet points in a job description, in a field, industry, and company I am personally unfamiliar with, I’m able to come up with 4 or 5 use case ideas I guarantee you this company would be falling over themselves to have.</p>
+<p>Now let’s look at this through the lens of a professional full-time data scientist solving the challenge vs. a citizen data scientist, and see how the effort might play out for each.  We’ll select the easiest use case idea to motivate our example - Sales Forecasting.</p>
+<h4>Professional Data Scientist</h4>
+<p>On the face of it, this request seems simple enough, right? Give me some sales data and I’ll figure out the fancy math, build some forecasting models, and finally tell you how good they are.  Sadly, it’s not going to be that easy.  Consider the following questions I can tell you from experience you should be asking, and will need to know before getting started.</p>
+<ul class="simple">
+<li><p>What am I forecasting (<em>target</em>)?  Is it Retail Point of Sales, Customer Sales/Shipments, Net Sales, Gross Sales, Revenue?</p></li>
+<li><p>What’s the <em>level of analysis</em> you need the forecast at, e.g. Sales, by Division, by Region, by Product, by Day/Month/Quarter?</p></li>
+<li><p>What’s the forecast <em>horizon</em> window, or how far out do I need to forecast, e.g. the end of the Week, Month, Quarter, Half-Year, Year-End?</p></li>
+<li><p>When does the forecast need to be produced, e.g. on the first day of the current month, 3 days before month end, daily?</p></li>
+<li><p>Are there any skus, brands, product lines or divisional categories that should be excluded from the data history?</p></li>
+<li><p>How many years of data are available?</p></li>
+<li><p>Why are there missing time periods in the data history?</p></li>
+<li><p>What does success look like?  Are there any accuracy or error benchmarks that I need to outperform?</p></li>
+<li><p>and many more…</p></li>
+</ul>
+<p>After weeks and weeks of waiting, and finally receiving answers to all of my questions above, guess what I’m going to do next?  I’m going to open my favorite coding IDE and get to work coding from scratch.  And because I’m so smart and knowledgeable, I’m going to code up exploratory data analysis summaries, plots, and data quality reports to understand what’s in my data.  Next, I’m going to investigate the statistical properties of the data target I’m trying to forecast.  Does it have serial correlation?  Is it stationary?  Does it have heteroskedasticity, or non constant variance?  What about any seasonal or cyclical components?  Does it look like additive or multiplicative effects?  And on, and on…</p>
+<p>Next up, I’m going to think through some transformations to the data that may help clean up the distribution a bit.  Maybe forecasting the log values would be better?  Or maybe I should try a Box Cox transformation to induce normality?  And then after that, I’ll try a million different types of mathematical modeling approaches to see what works best to give me the smallest error on a rolling back test.  Maybe it’s a drift model?  Or maybe a state-space model?  Or possibly holt-winters?  And more…</p>
+<p>Hopefully at the end of the 4 weeks, and all of these tests and iterations I’ve carried out, I’ve built you the absolute <em>best</em> forecasting model on the planet!  And wouldn’t you know it?  I was able to get the mean absolute percentage error down to only 5% for my final model!  Not too shabby.</p>
+<h4>Citizen Data Scientist</h4>
+<p>Now, for the Financial Analyst (aka citizen data scientist) we’ve upskilled and trained on how to build a forecasting model.  Guess what?  They already know all of the answers to those questions above!  So instead of scheduling meetings, asking questions, waiting for someone to send data, and then needing time to investigate that data, and all of the back and forth communications that take weeks to accomplish, the citizen data scientist can actually jump right in today!</p>
+<p>So far so good, but how about all of those complicated math tests and statistical questions they need to know about, understand, and investigate?  Well, here’s where we rely on our low/no code platform.  What if you only had to learn a few basic concepts, like which math and modeling methodologies pair up with each of the 3 types of things we do (predictions, uncovering patterns, prescription/optimization)?, and how to know if your results are stable or untrustworthy?  No need to be an expert in the math or methods, instead learn just enough to be able to work through a minimum number of steps, ask questions, and know when something looks wrong.  That’s it!</p>
+<p>For example, if you understood we solve the business case of predicting numbers using time series forecasting math, knew how to navigate the KNIME template which outlined all of the steps and questions you need to work through, could understand the documentation for what “good” looks like, and could follow the steps for things to try if your results <em>don’t</em> look so “good”.  Hopefully that doesn’t sound too scary.</p>
+<p>Let’s say I’m right and all of that is possible!</p>
+<p><strong><h3>What Did We Learn?</h3></strong></p>
+<p>The fact is, I don’t work in Sales.  The request for a solution to this problem did not originate with me.  I can guess what I think the answers are to my questions, but the truth is, it doesn’t matter what I think.  what matters is I deliver what my business sponsor wants, and only they will be able to answers these questions because they can.  They’re the ones who understand the Sales function, and they’re the ones who will use what I build.</p>
+<p>Hopefully the light bulb and bells of excitement are starting to go off and ring in your head, and you’re seeing the potential of what we’re talking about!</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Chapter3"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="citizen_data_scientist.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>The Citizen Data Scientist</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="prerequisites.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">3.2. </span>Prerequisites</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Brian Brady
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

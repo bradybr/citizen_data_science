@@ -1,0 +1,636 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>2.3. Skills &amp; Tools &#8212; A Beginner&#39;s Guide To Citizen Data Science</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Chapter2/skills_and_tools';</script>
+    <link rel="canonical" href="https://bradybr.github.io/citizen_data_science/intro/Chapter2/skills_and_tools.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2.4. Roles" href="roles.html" />
+    <link rel="prev" title="2.2. Fields of Study" href="fields_of_study.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/npp_logo.png" class="logo__image only-light" alt="A Beginner's Guide To Citizen Data Science - Home"/>
+    <script>document.write(`<img src="../_static/npp_logo.png" class="logo__image only-dark" alt="A Beginner's Guide To Citizen Data Science - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Beginner’s Guide To Citizen Data Science:
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter1/introduction.html">1. Introduction</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/book_organization.html">1.1. Book Organization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/objectives.html">1.2. Objectives</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="what_is_data_science.html">2. What Is Data Science?</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="problems_we_solve.html">2.1. Problems We Solve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fields_of_study.html">2.2. Fields of Study</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">2.3. Skills &amp; Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="roles.html">2.4. Roles</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter3/citizen_data_scientist.html">3. The Citizen Data Scientist</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter3/how_they_add_value.html">3.1. How They Add Value</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter3/prerequisites.html">3.2. Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter3/getting_started.html">3.3. Getting Started</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter4/business_analytics.html">4. Business Analytics Overview</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter4/analytics_continuum.html">4.1. Analytics Continuum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter4/project_ideation.html">4.2. Project Ideation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter4/project_charters.html">4.3. Project Charters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter4/CRISP-DM.html">4.4. CRISP-DM</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter5/project_workflow.html">5. The Project Workflow</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter5/data.html">5.1. Data</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../zreferences.html">6. References</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Chapter2/skills_and_tools.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Skills & Tools</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="skills-tools">
+<h1><span class="section-number">2.3. </span>Skills &amp; Tools<a class="headerlink" href="#skills-tools" title="Permalink to this heading">#</a></h1>
+<p>Coming on the heels of learning which fields of study are involved in the application of data science, is the just as important topic of what Skills and Tools one would be expected to use.  Don’t worry though, it’s about to start getting fun.  At this stage we start introducing practical tools you’ll be able to start playing around with instead of just more theory and conceptual topics.</p>
+<p>The landscape of tools and technology looks so radically different today than it did just 10 years ago, that I’m constantly reminded how quickly we move in this space.
+Years ago, practioners would have most likely come up through a mathematics, engineering, or science department at university and learned theory, methodology, and how to use some commercial software tool during that time (whichever was paid for by your university).  Post graduation, you would have found a company looking for a practioner capable of using the software program you learned in school, and then you would have been all set for a career.</p>
+<p>Open source technologies have seriously changed the game since these old days.  Open source essentially means the source code of the program, which allows it to do what it does, is available for you tp see, modify, and/or distribute under its license, all for free.  This is in stark contrast to commercial applications which cost money to use, usually not an insignificant amount I might add, and you’re generally not allowed to view or modify how it works.  There are communities of users who maintain these open source code repositories with a rigorous testing and comittal process, but the general idea is to leverage the synergy of active users contributing to the functionality of the language or tool.  The benefits and the ways these communities have changed the world around us cannot be overstated.</p>
+<p>Today, you have an amazingly deep pool of powerful tools to choose from at your disposal, generally supported by an active community of users willing to help you learn.  Definitely take advantage, and hopefully give back where you can.</p>
+<p>Now finally, let’s get to the landscape of tools and technologies that allow us to do what we do.  The majority of what you’ll need to start making an impact falls under the following buckets:</p>
+<ol class="arabic simple">
+<li><p>Analytics Platform</p>
+<ul class="simple">
+<li><p>Programming Languages</p></li>
+<li><p>Integrated Development Environment (IDE)</p></li>
+<li><p>Low/No Code Applications</p></li>
+</ul>
+</li>
+<li><p>Code Management</p></li>
+<li><p>User Interface/User Experience (UI/UX)</p>
+<ul class="simple">
+<li><p>Front-End Application</p></li>
+</ul>
+</li>
+</ol>
+<p><strong><h3>Analytics Platform</h3></strong></p>
+<p>Data science and machine learning doesn’t just come out of nowhere.  This is the <em>where</em> and <em>how</em>.</p>
+<p>Whether you code it yourself or an application does the heavy lifting for you, our work involves math, code, and some kind of development platform.  This is where all of the magic happens.  Our focus here is of course the Citizen Data Scientist and not the professional Data Scientist; however, I would be remiss if I didn’t lead with the following suggestion.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Learning to code and becoming proficient in any number of programming languages will pay huge dividends in your ability to be productive and effective in this space, regardless of the application or tools you choose to use in practice.</p>
+</div>
+<h4>Programming Languages</h4>
+<p>Let’s start with what the majority and professionals are actually using.  If we’re talking about pure developer programming languages overall, you can see from the Stack Overflow 2024 Survey <span id="id1">[<a class="reference internal" href="../zreferences.html#id5" title="Stack overflow developer survey 2024. 2024. URL: https://survey.stackoverflow.co/2024/technology/.">SO_24</a>]</span> in <a class="reference internal" href="#so-langs-fig"><span class="std std-numref">Fig. 2.7</span></a> that the top spots are geared towards web development with Javascript and HTML/CSS.  The 3rd spot however is where we come in with over 50% of the respondents citing python (PY), in response to the question <strong>“Which programming, scripting, and markup languages have you done extensive development work in over the past year?”</strong></p>
+<figure class="align-default" id="so-langs-fig">
+<a class="reference internal image-reference" href="../_images/so_langs.png"><img alt="../_images/so_langs.png" src="../_images/so_langs.png" style="width: 1000px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2.7 </span><span class="caption-text">Source: <a class="reference external" href="https://survey.stackoverflow.co/2024/technology/">https://survey.stackoverflow.co/2024/technology/</a></span><a class="headerlink" href="#so-langs-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Python is an extremely flexible general purpose coding language, which has been extended with a super robust library of add-on functionality to make it the undisputed king of the hill for professional machine learning practitioners, as well as novices and hobbyists alike.  If you plan to become more of a full fledged programmer or data scientist, then you can’t go wrong learning python.  Visit <a href="https://www.python.org/">Python.org</a> to learn more.</p>
+<p>I would also suggest you get started using python through an <a href="https://docs.anaconda.com/">Anaconda</a> distribution though if you’re going this route.  You can read up in the docs, or you’ll come to understand the benefits of its package manager and add-ons if you get into actual coding.</p>
+<p>Additionally, there are a handful of other languages you may be interested in familiarizing yourself with if you plan to go the coding route.  These recommendations will cover basic general purpose scripting, math and statistics, data science and machine learning, database connectivity, as well as more advanced operations dealing with cloud computing, and distributed and parallel processing.  There are tons of free and paid resources available via books, tutorials, and web courses to learn any of these and others.</p>
+<ol class="arabic simple">
+<li><p><a href="https://www.python.org/">Python</a> (<a href="https://docs.anaconda.com/">Anaconda</a>)</p>
+<ul class="simple">
+<li><p>NumPy</p></li>
+<li><p>Pandas</p></li>
+<li><p>matplotlib/seaborn</p></li>
+<li><p>scikit-Learn</p></li>
+</ul>
+</li>
+<li><p>SQL</p></li>
+<li><p>PySpark</p></li>
+<li><p>Scala</p></li>
+</ol>
+<p>The majority of the analytics, graphics, and coding images in this book have been created with python, however we’ll focus on an analytics platform called KNIME for our Labs and Exercises coming up, just as soon as we cover IDE’s in this next section.</p>
+<h4>Integrated Development Environment (IDE)</h4>
+<p>After you have your favorite language picked out, you’ll need a place to do your work.  Enter the text editor or integrated development environment (IDE).  You could actually do all of your work in a plain text file and use the comand prompt if you’re one of those kinds of programmers… I am not unfortunately, and am only comfortable there when I need to be.  So for me and many others like me, we need applications with all the bells and whistles that make coding more efficient.  With these applications we’ll get awesome utilities and benefits like control over run-time execution, debugging, syntax highlighting, linting, object explorers, etc., that make our lives so much easier.</p>
+<p>You’ll have a couple of choices here depending on your preferences and needs, and they generally shake out into two camps: 1) Web notebooks and 2) Desktop applications.</p>
+<p><strong>Web Notebooks</strong></p>
+<p>Web notebooks are excellent choices when you’re learning, teaching, sharing, in development, or prototyping.  There are plenty of choices and different flavors, but when we talk the most common, you’ll probably run across the following.</p>
+<ul class="simple">
+<li><p><a href="https://jupyter.org/">JupyterLab</a>  (<a href="https://docs.anaconda.com/">Anaconda</a> distribution)</p></li>
+<li><p><a href="https://colab.google/">Google Colab</a></p></li>
+<li><p><a href="https://www.databricks.com//">Data Bricks</a></p></li>
+</ul>
+<figure class="align-default" id="jupyter-ex-fig">
+<a class="reference internal image-reference" href="../_images/jupyter_ex.png"><img alt="../_images/jupyter_ex.png" src="../_images/jupyter_ex.png" style="width: 900px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2.8 </span><span class="caption-text">JupyterLab notebook excercise example</span><a class="headerlink" href="#jupyter-ex-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>It’s worth mentioning that when you get out into the corporate arena and start seeing end-to-end production infrastructures, you’ll likely run into the difference between coding by yourself in isolation and coding designed to scale within a team.  Certain front and back-end environments and platforms will make more or less sense depending on the composition of your team, your financial resources, and what you’re trying to accomplish.</p>
+<p><strong>Desktop IDE’s</strong></p>
+<p>If you start getting really serious about building bullet proof applications in a “pythonic” way, you may realize the online notebooks sometimes may make it a little difficult to do so.  Production applications are built and deployed in notebook environments like Jupyter and Data Bricks, but you may find it’s often easier to develop and manage your code at certain steps using an IDE.  These tools come with more functionality and a different template compared to the notebook/cell varieties.  In those cases where it may help to move out of a notebook environment, you may want to start looking into local installations.  Below are just a couple of the most popular, and all three come with the Anaconda installation as well.</p>
+<ul class="simple">
+<li><p><a href="https://www.spyder-ide.org/">Spyder</a></p></li>
+<li><p><a href="https://code.visualstudio.com/">VS Code</a></p></li>
+<li><p><a href="https://www.jetbrains.com/pycharm/">PyCharm</a></p></li>
+</ul>
+<p>I personally love Spyder as my IDE of choice because it comes with a variable explorer natively, which makes is much easier to investigate and monitor your progress.  VS Code and PyCharm are more popular by far, although I personally find them less intuitive and user friendly for some reason.  You aren’t locked into choosing just one, and can switch back and forth as you’d like since they’re not cloud or web environments, so feel free to play around with any or all.</p>
+<figure class="align-default" id="spyder-ex-fig">
+<a class="reference internal image-reference" href="../_images/spyder_ex.png"><img alt="../_images/spyder_ex.png" src="../_images/spyder_ex.png" style="width: 900px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2.9 </span><span class="caption-text">Spyder IDE with local .py file example</span><a class="headerlink" href="#spyder-ex-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Again, since our objective in this course is the citizen data scientist for quick wins with business analytics, you can actually skip the coding languages and IDE’s all together if your intent is to get right down to it and starting returning value quickly.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The detailed explanation of the professional toolkit involving programming languages and tools was for the benefit of comprehensiveness, but make no mistake, you can still provide quick wins with advanced analytics without being a master coder or learning tons of new applications or technology.</p>
+</div>
+<p>For the determined analyst and citizen data scientist, our recommended vehicle for getting you in the game quickly is where we go next with Low/No Code Applications.</p>
+<h4>Low/No Code Applications</h4>
+<p>Now for the fun!  If the idea of opening a text editor to a blank screen and being asked to “go write some code” doesn’t sound appealing to you, you’re going to love this.  There’s a whole host of tools and applications available that allow you to explore and visualize data, build exploratory models, and even deploy your applications, all from a user-friendly drag and drop kind of interface without needing to code.  These kinds of tools and applications are generally referred to as low, or no code applications.</p>
+<p>There are lots you could choose from, but we’re going to recommend <a href="https://www.knime.com/">KNIME</a> for it’s ease of use, open source community, and end-to-end capabilities.  Below in <a class="reference internal" href="#knime-fig"><span class="std std-numref">Fig. 2.10</span></a> you can see what’s known as a workflow in the KNIME application.  This is your home base for building a model or analytical study, via connected “nodes”, or steps, of the end-to-end process.</p>
+<figure class="align-default" id="knime-fig">
+<a class="reference internal image-reference" href="../_images/KNIME.png"><img alt="../_images/KNIME.png" src="../_images/KNIME.png" style="width: 900px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2.10 </span><span class="caption-text">KNIME Analytics platform workflow</span><a class="headerlink" href="#knime-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The idea with these kinds of model building tools, is for you to spend the majority of your time thinking about the business problem and the value in quick analytics, versus spending all of your time enmeshed in the nitty gritty behind the scenes details of model building.  Don’t get me wrong, these behind the scenes details are extremely important; however, what these applications have done is abstracted away the complicated and nuanced decisions we have to make, by using intelligent automation and exposing the places where you can make selections via simple drag and drop screens.</p>
+<p>All of our Labs and Exercises will be built using KNIME, so we’ll postpone getting into the details until then.  There’s plenty of hands-on exposure coming soon.</p>
+<p><strong><h3>Code Management</h3></strong></p>
+<p>Next we discuss code management.  This section will be more applicable to the professional data scientist vs. the citizen, but we will cover it briefly in an attempt to be thorough in outlining the complete toolkit in the data science space.</p>
+<p>So what are we really talking about?  Code management involves the notion of keeping master files separate from developmental files.  It allows a team to edit offline, track changes, implement tight version control, revert to a previous copy if needed, and enables multiple people to work on the same project at the same time.  Pretty cool stuff.</p>
+<p>There are a couple of extremely common tools here that nearly everyone you’ll run into uses.  First is Git, which is the actual version control system used under the hood.  Next is Github, which is essentially built on top of Git and gives you the UI tools and framework to create repositories of code and notebooks.  Feel free to start reading the user docs to get a sense of the basic functionalities they offer.</p>
+<ul class="simple">
+<li><p><a href="https://git-scm.com/">Git</a></p></li>
+<li><p><a href="https://github.com/">GitHub</a></p></li>
+</ul>
+<figure class="align-default" id="git-workflow-fig">
+<a class="reference internal image-reference" href="../_images/git_workflow.png"><img alt="../_images/git_workflow.png" src="../_images/git_workflow.png" style="width: 900px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2.11 </span><span class="caption-text">Git workflow example staying in sync between Github and local files</span><a class="headerlink" href="#git-workflow-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>We won’t go into further details in this course, but you should be able to get the idea from <a class="reference internal" href="#git-workflow-fig"><span class="std std-numref">Fig. 2.11</span></a>.  There’s a master repository, called a “repo”, where everything is either being pulled from, or pushed to.  You can pull down the current version, work on making updates and changes to the code, and then send it back to be approved for inclusion into the main repository.  All of these updates and changes are annotated, tracked, and capable of being reversed if needed.</p>
+<p>Imagine a simple example of a production model saved to our main repository.  This model, code, and notebook have been tested and approved by the team, and committed as the current version.</p>
+<div class="math notranslate nohighlight">
+\[
+y\hat{} = \alpha + \beta_1(x_1)
+\]</div>
+<p>Now, let’s say you work on this team and had the bright idea that we should add the effects of a second feature to make better predictions, like so,</p>
+<div class="math notranslate nohighlight">
+\[
+y\hat{} = \alpha + \beta_1(x_1) + \beta_2(x_2)
+\]</div>
+<p>You would simple pull down the current version of the code to your local files, make the change and validate your idea, and then finally “push” your changes back to the admin for approval and committal of your updates so they become part of the new version of the main code.  Of course it gets much more complicated in real life, but hopefully you get the idea.</p>
+<p>At the end of the day, this code management process allows a team to work more efficiently on the same project at the same time.  It also ensures everyone is working on the most current version, avoiding unnecessary conflicts, and there’s also a clear process for testing and allowing updates to be made safely without the dangers of losing the last known working copy.</p>
+<p><strong><h3>User Interface/User Experience (UI/UX)</h3></strong></p>
+<p>Now we get to the user interface (UI) and user experience (UX).  Far too often these ideas are left until the end of a project, which is a mistake in my opinion.  You should have a clear understanding up front of how the end users expect to be able to access and work with your solution.  They likely will not be comfortable reading code, working in any of the technologies we’ve discussed thus far, and therefore will need a much more business friendly GUI and front-end to interact with your program.</p>
+<p>The basic idea here is that when you’re all done solving the business problem, users will likely need some way to upload new data, select dynamic inputs, or to simply run your program on demand.  Not every project in the real world will need a front-end like this, but in cases requiring interactivity from your end users, your application will need to be “live” and deployed to the user in some way.  There are tons of ways this can be done, in technologies and applications ranging from simple to complex.</p>
+<p>Let’s start with the first consideration though: The User Experience.</p>
+<p>The <strong>UX</strong> is a wholistic understanding how the users will experience working with your application.  This is a never ending list of questions, but the central idea is trying to understand if you’ve reduced any friction to using your application as much as possible.  User adoption is a major issue in the real world, and you want to make sure you’re doing everything you can to ensure the users <em>want</em> to user your solution.</p>
+<ul class="simple">
+<li><p>Is the app intuitive and easy to understand?</p></li>
+<li><p>Is it natural navigating through the app?  Are there multiple tabs or pages?</p></li>
+<li><p>What functionality does the user need?  Dropdowns, list boxes, dynamic graphs, multi selection/cascading widgets, etc.?</p></li>
+<li><p>Did you create “How To Guides” and User Documentation?</p></li>
+<li><p>How will they user request support or report bugs?</p></li>
+<li><p>Are there any special security considerations?</p></li>
+</ul>
+<p>The <strong>UI</strong> is the actual front-end the user will see when they use your solution.  There are few rules here beyond beautiful design principles, so whichever method or vehicle serves the end users needs is generally what we do, and these will look different for quick prototypes vs. in production.  You’ll need to think about whatever you’ve built, and what that application requires.  For example, if I’m deploying a sales forecasting model that requires the previous month’s sales dollars, then the UI will need a text box which allows the user to type in the dollar amount for the last month, assuming you haven’t automated the data pull in the backend somehow.  In addition, if it’s an application that’s only run on demand when the users wants to use it, then you’ll also need a button that activates or runs the program.</p>
+<p>Some popular choices for quick and simple are shown below.  These integrate tightly with Python code and Jupyter Notebooks so there’s typically little overhead to learning a new language or framework.  As before with the coding suggestions, these options are only necessary if you’re going the more robust path of learning to code and needing to build your own web applications from scratch.</p>
+<ul class="simple">
+<li><p><a href="https://streamlit.io/">Streamlit</a></p></li>
+<li><p><a href="https://dash.plotly.com/">Dash</a></p></li>
+<li><p><a href="https://bokeh.org/">Bokeh</a></p></li>
+</ul>
+<figure class="align-default" id="streamlit-ex-fig">
+<a class="reference internal image-reference" href="../_images/streamlit_ex.png"><img alt="../_images/streamlit_ex.png" src="../_images/streamlit_ex.png" style="width: 900px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2.12 </span><span class="caption-text">Streamlit web app demo example<br />Source: <a class="reference external" href="https://echarts.streamlit.app/">https://echarts.streamlit.app/</a></span><a class="headerlink" href="#streamlit-ex-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Good design and usability always start with thinking about the needs of the end user:  What does the user expect, and how will they need to be able to interact with your application to have those expectations met?</p>
+</div>
+<p>In our case as the citizen data scientist, you’ll be able to provide users access to your application and deploy from the same low/no code environment you built it in, KNIME.  Stay tuned, we’ll get there.</p>
+<p><strong><h3>What Did We Learn?</h3></strong></p>
+<p>This was again a lot of new ideas and terminology thrown at you without too much detail.  Don’t worry if you’re still not quite able to see the forest through the trees just yet.  We will get to all of these as we progress through the course.</p>
+<p>As long as you understand the following for now, then you’re right on track.</p>
+<h4>Programming Language</h4>
+<p>If you want to dive into the deep end and learn what the professionals use, there are a few core programming languages you’ll want under your belt to get started.  Start with <strong>Python/Anaconda</strong> (plus NumPy, Pandas, matplotlib/seaborn, scikit-Learn libraries), then <strong>SQL</strong> as your second foundational language.</p>
+<p>If you simply want to quickly power up your analytical skills in whatever domain you work in, then start out with a low/no code analytics platform such as <strong>KNIME</strong>.</p>
+<h4>Analytics Platform</h4>
+<p>You’ll need an environment to build your solutions and programs.  If you’re going the full coding route, start with <strong>JupyterLab</strong> for learning, prototyping, and dev work, but you may also consider investigating local IDE’s from any number of choices (e.g. <strong>Spyder, VS Code, PyCharm</strong>).</p>
+<p>If you’re still on the citizen data scientist and quick value track, then stick with a low/no code end-to-end analytics platform like <strong>KNIME</strong>.</p>
+<h4>Code Management</h4>
+<p>While not completely necessary for the beginner or citizen data scientist, learning the basics of common code management tools could pay off in a number of ways.  If you’re ever going to work on a team or with other more seasoned analytics practioners, if you would like to start building a public portfolio of your work, or if you think you may possibly move into more professional data scient work at some point, learning these tools would be a huge benefit.  The most popular are the <strong>Git</strong> and <strong>Github</strong> environments and frameworks.</p>
+<h4>UI/UX</h4>
+<p>And finally, you’ll likely need to learn some ways to publish your solutions to your end users.  If you’ve built something from scratch in a coding language like python, start exploring and selecting a favorite web app option which allows you to continue in the same language you’re comfortable with (e.g. <strong>Streamlit, Dash, Bokeh, Panel</strong>).</p>
+<p>If you’ve gone the end-to-end analytics platform route with <strong>KNIME</strong>, then good news.  You’re all set.  KNIME has this capability built in.</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Chapter2"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="fields_of_study.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">2.2. </span>Fields of Study</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="roles.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">2.4. </span>Roles</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Brian Brady
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
