@@ -1,9 +1,8 @@
 # Book settings
-# Learn more at https://jupyterbook.org/customize/config.html
 
-title: "A Beginner's Guide To Citizen Data Science"
+title: A Beginner's Guide To Citizen Data Science
 author: Brian Brady
-#logo: images/althoff_logo.png
+logo: images/npp_logo.png
 copyright: "2025"
 
 # Force re-execution of notebooks on each build.

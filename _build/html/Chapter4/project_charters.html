@@ -1,0 +1,558 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>4.3. Project Charters &#8212; A Beginner&#39;s Guide To Citizen Data Science</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Chapter4/project_charters';</script>
+    <link rel="canonical" href="https://bradybr.github.io/citizen_data_science/intro/Chapter4/project_charters.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="4.4. CRISP-DM" href="CRISP-DM.html" />
+    <link rel="prev" title="4.2. Project Ideation" href="project_ideation.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/npp_logo.png" class="logo__image only-light" alt="A Beginner's Guide To Citizen Data Science - Home"/>
+    <script>document.write(`<img src="../_static/npp_logo.png" class="logo__image only-dark" alt="A Beginner's Guide To Citizen Data Science - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Beginner’s Guide To Citizen Data Science:
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter1/introduction.html">1. Introduction</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/book_organization.html">1.1. Book Organization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/objectives.html">1.2. Objectives</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter2/what_is_data_science.html">2. What Is Data Science?</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter2/problems_we_solve.html">2.1. Problems We Solve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter2/fields_of_study.html">2.2. Fields of Study</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter2/skills_and_tools.html">2.3. Skills &amp; Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter2/roles.html">2.4. Roles</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter3/citizen_data_scientist.html">3. The Citizen Data Scientist</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter3/how_they_add_value.html">3.1. How They Add Value</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter3/prerequisites.html">3.2. Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter3/getting_started.html">3.3. Getting Started</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="business_analytics.html">4. Business Analytics Overview</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="analytics_continuum.html">4.1. Analytics Continuum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="project_ideation.html">4.2. Project Ideation</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">4.3. Project Charters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CRISP-DM.html">4.4. CRISP-DM</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter5/project_workflow.html">5. The Project Workflow</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Chapter5/data.html">5.1. Data</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/data_types.html">5.1.1. Data Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/data_acquisition.html">5.1.2. Data Acquisition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/data_integrity.html">5.1.3. Data Integrity</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../zreferences.html">6. References</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Chapter4/project_charters.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Project Charters</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="project-charters">
+<h1><span class="section-number">4.3. </span>Project Charters<a class="headerlink" href="#project-charters" title="Permalink to this heading">#</a></h1>
+<p>At this point consider you’ve gone through the ideation stage and you’ve iteratively whittled down your full list to one stand out idea you want to turn into a project.  You could easily just get started with what you know today; however, I would strongly encourage you to spend a little more time and energy on flushing out key details first.  Projects can and often go sideways very quickly from what you originally set out to accomplish, and you can minimize the risks of getting off course if you take the time to document and get the proper engagement from your stakeholders.</p>
+<p>This section is all about setting you up for success by being intentional and explicit right from the start.  The person responsible for this step will vary across organizations and may not be the data scientist, but possibly the business analyst, project lead, project sponsor, or project manager, among others.  Regardless of who, and whether or not it’s an official Charter, going through the accounting and documentation actitivies that follow will unquestionably be time well spent.</p>
+<p><strong><h3>What Is a Project Charter?</h3></strong></p>
+<p>Whether it’s an official Charter, Executive Summary, Project Plan, or simply an outline in a Word or PowerPoint doc, the answer is essentially the same.  Primarily what we’re talking about is documenting the <em>Who</em>, <em>What</em>, <em>When</em>, <em>Where</em>, <em>Why,</em> and <em>How’s</em> of a project.  The most formal of the bunch is the Project Charter, which serves as a high-level project overview and commitment from multiple key participants involved in the life of an engagement.</p>
+<p>At one level we have the requesting and functional owner of the effort (business sponsor) coming to terms with the working team (analytics team plus business subject matter experts) regarding the details of what they want someone to go off and work on, and their expectations for what that working team needs to deliver at the end of the project to be considered a “success”.  At a commonly higher level, there may also be the need for awareness and oversight from a Steering Committee for necessary support or approval (capital, human resources, or change management).  This group of leaders will typically have the power to authorize financial support, communicate expectations, set priorities, and clear any blockers for the working team.</p>
+<p>A common set of the details found in a Charter are listed below, with an example in <a class="reference internal" href="#project-charter-fig"><span class="std std-numref">Fig. 4.6</span></a>.</p>
+<ol class="arabic simple">
+<li><p>Business Context/Need</p></li>
+<li><p>Objectives</p></li>
+<li><p>Scope</p></li>
+<li><p>Deliverables</p></li>
+<li><p>KPI/Performance Metrics</p></li>
+<li><p>Resourcing Requirements</p></li>
+<li><p>Project Plan</p></li>
+</ol>
+<figure class="align-default" id="project-charter-fig">
+<a class="reference internal image-reference" href="../_images/project_charter.png"><img alt="../_images/project_charter.png" src="../_images/project_charter.png" style="width: 900px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4.6 </span><span class="caption-text">Example of a one-page Project Charter template</span><a class="headerlink" href="#project-charter-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>A Project Charter should ideally be kept to a one-page document, highlighting all of the details someone would need to understand your project without requiring any further context.  In general, you can’t control what happens to a presentation or document after you publish or hit send in your email, so it’s a good habit to get into to assume anything you share will get passed on to someone else that may not have the context or opportunity to hear you speak over the content.</p>
+<p>Anyone should be able to pull up this document and understand the motivation behind the effort, what you’re trying to solve for and deliver, why it’s valuable for the company, the teams and resources involved, as well as a very high-level timeline of major milestones and stage gates.  This is a living document which may require revisions and updates, but the general idea is to lock in understanding and agreement so there’s no ambiguity and slippage in terms of the asks and commitments after the project gets underway.</p>
+<h4>Business Need/Context</h4>
+<p>The logical place to start is with the <em>What</em> and <em>Why</em>.  Think of the Business Need and Context as setting the stage and laying out what’s going on in the business environment related to the ask.</p>
+<p>This can be framed as <em>“The problem is today the business does <strong>this</strong>, but tomorrow they would like to be able to do…”</em>.</p>
+<blockquote>
+<div><p><em>What problem does the business have today?</em> <br>
+<em>Why are they seeking a solution of some kind?</em> <br>
+<em>Do they have a method in place today that is falling short of addressing the issue?</em></p>
+</div></blockquote>
+<h4>Objectives</h4>
+<p>With the Objectives, we begin to move closer to the idea of the desired future state.  We take what we learned from the Business Need &amp; Context, and continue here by outlining the solve for the problem, or <em>How</em> we’re going to address their needs.</p>
+<p>For example, if we heard the business state they have no visibility into their upcoming demand for a specific product, which effects their ability to coordinate resources and plan production schedules for the next quarter, then the Objectives could be to “Provide the business with advanced visibility and insights into future product demand prior to when their plans need to be submittted for resourcing and production scheduling”.</p>
+<p>This is separate from the specific metrics and success criteria we will get to shortly.  Here we simply want to define the focus of how we plan to address the issue and solve what the business has said they need.</p>
+<blockquote>
+<div><p><em>What is the solve or solution we plan to deliver, and how does it address the problem expressed by the business?</em></p>
+</div></blockquote>
+<h4>Scope</h4>
+<p>Now for the Scope - What’s in and what’s out?</p>
+<p>Sometimes it’ll make sense for you to first test out the idea in your most complicated location instead of the easiest.  Sometimes the business only cares about a specific brand at the moment so you’ll only want to consider certain product lines.  Often there’s a certain event or condition that needs to be included within the analysis.  The opposite situations exist as well.  There will times we want to limit the analysis to specific locations, products, and events that may skew your results or don’t make sense to be included for whatever reason.  We’ll need to be sure to carefully pay attention to what’s being <em>included</em> and <em>excluded</em> as dictated by the requirements of the project.</p>
+<blockquote>
+<div><p><em>Are we starting with a limited scope?  If so, what will be included?  Specific locations, products, customers, activities, etc.?</em> <br>
+<em>Are there any specific situations or required conditions that need to be included or excluded?</em> <br>
+<em>What is the plan for future phases and scaling?</em></p>
+</div></blockquote>
+<p>It’s pretty much that simple, but know this is the area that has the most potential to cause issues during the course of a project.  It may seem minor at the time.  Add an extra product line to the analysis that we didn’t originally talk about…  Allow an additional condition or capability that was not originally agreed to…  Change the method of deployment from a Proof of Value (POV) to now requiring all of the bells and whistles of a customer facing usable Minimum Viable Product (MVP)…  All of these changes are what’s known as <strong>scope creep</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><em>Scope creep</em> is any minor or major changes to a plan, compared to what was originally agreed to and approved for working on during the course of a project.</p>
+</div>
+<p>Often we don’t jump straight away into a full scale deployment so we need to be very clear about what kind of effort we’re running.  Part of scoping a project is deciding on what the delivery plan looks like.  Will you be doing phased iterations of testing, learning, and deployment?  Are certain requested deliverables off the table for the first version, or does everything need to be delivered all at once?  Depending on what matters for our project sponors, there are options to manage the project goverened by various constraints at different times, such as time, money, resources, priority, etc., and to deliver the project in phases.</p>
+<p>We may want to start first with a smaller scale limited Proof of Concept (POC) to quickly test the idea before worrying about anything else.  Maybe we want to begin with a Proof of Value (POV) to prove the potential benefit truly exists before we’d spend time on any of the end user functionality.  Or we could deliver a bare bones prototype called a Minimum Viable Product (MVP) to quickly realize a return.  It doesn’t need to be pretty, but it will work and prove out the concept, as well as allow the business to capture actual value.  Another option is to possibly deploy a full featured Pilot, carefully built out to the full business requirements.  This version is carefully tested in production environments, and ready to scale to a wider scope after an adequate period of time monitoring the solution in real-time.</p>
+<p>Some changes to the scope and deliverables are obvious and easy to reject for being out of scope; however, the ones you really need to watch out for are the little changes that seem minor and within acceptable tolerances to let slide.  The additive and cummulative effects of taking people off task, even in short bursts, can have a devastating effect on the overall timeline.  Remember, the original plan did not include for these tasks and more often than not it pays to strictly adhere to the plan.  This is the exact reason we create these kinds of documents so there are no surprises and we stay on track.</p>
+<h4>Deliverables</h4>
+<p>Under the Success Criteria, we begin with what we’ve agreed to actually deliver at the end of the project effort.  Think of this as when you turn the keys over to the new owner, what will they be driving away in?  This can be in a range of any number of formats, from code or white papers, to a functioning web application.</p>
+<p>What we want to document here is exactly what we’ve committed to overall, but also any special conditions or functional requests from the business called out as a requirement.  This may can be anything from the ability to change the level of analysis from Customer to Product by clicking a button before hitting “run”, maybe a specific visual, graph, or view, or a requirement to have the ability to export the analysis into Excel, and so on.</p>
+<blockquote>
+<div><p><em>Is this a one time analytical study or a resuable model?</em> <br>
+<em>Does the delivery include a customer facing application with a user interface?</em> <br>
+<em>Are there any specific capabilities or functions the sponsor has requested?</em></p>
+</div></blockquote>
+<h4>KPI/Performance Metrics</h4>
+<p>Also under the header of Success Criteria, we want to be very clear on what is an acceptable level of performance.  There should be no ambiguity when we get to this stage after completing a project.  We should know at the onset what outcome will be considered acceptable, and what result would cause our solution to be rejected at the conclusion.</p>
+<p>There are typically units of measures and standard Key Performance Indicators (KPI), or functional business metrics, which are already top of mind for the business.  In sales forecasting this might be mean absolute percentage error (MAPE), in manufacturing production it might be critical failures, and in human resources it might be employee retention.</p>
+<blockquote>
+<div><p><em>What are the key metrics used to measure the impact of the solution?</em> <br>
+<em>What are the specific attainment levels of the KPI that need to be achieved (benchmarks or improvements)?</em></p>
+</div></blockquote>
+<p>It’s unlikely you’ll have to search too hard to uncover the metrics the business cares about.  Where it gets a little tricky is trying to uncover what “good enough” looks like.  Is it a 5% reduction in error?  Maybe 7%?  Or just anything better than what their current process achieves today?  Maybe it’s some combination of performance being at least on par with the current method, but also the time savings that come with the automation of the activities?  And so on.</p>
+<p>The recommendation is to focus less on specific target improvement values, but instead on any improvement over the benchmark of the existing process in place today.
+For example, if today 10% of our shipments are considered “late” by our customers and the cause of $5MM in late fees, our KPI measure of success could be to reduce the percentage of late trucks to less than 10% by any margin over the next 12 months.  In other words, we build our predictive model that identifies shipments which have a high probability of being late, task someone in transportation to take some preemptive actions designed to keep them from actually being late, and then at the end of the year if our percentage of late trucks is less than 10% by any amount, BINGO!  We’ve succeeded!  By virtue of simply beating the current KPI rate, we should naturally see the $5MM chargeback value be reduced.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The simple value in advanced analytics is to give the business something better than what they have today.  That’s it, and it doesn’t need to be any more complicated than that.</p>
+</div>
+<h4>Resource Requirements</h4>
+<p>Work gets completed through people and teams.  Often resources are pulled and shared across functional business units and managerial lines, so we regularly have to deal with complications arising from conflicting priorities and time allocation, i.e. what associates are expected to spend effort working on for some period of time.  Managers are always fighting for, and to protect, their resources.  First, we want to make sure someone is not over allocated and being asked to do too much since there are only so many hours in a day.  Secondly, we need to make sure that if we plan for someone to be on a project, that we can trust and depend on a certain number of hours each week to be dedicated towards that project, which allows us to manage our timelines effectively.</p>
+<p>With a chartered project, we have a formal allocation of resources and an expectation of committment.  If an associate is added to a charter as a project team member, then I know their supervisor has approved their allocation of time to my project.  In addition, we want to assign roles and responsiblities to each team member so we’re clear as to who’s doing what.  A nice encompassing approach is to use what’s know as a RACI (Responsible, Accountable, Consult, Inform) framework.  RACIs clearly delinate the various personas on a project and make it easier to understand expectations for their involvement.</p>
+<h4>Project Plan</h4>
+<p>Lastly, you will need to be able to build out at least a high-level time line for the work.  For the audience we’re communicating to with a Project Charter, we’re generally only concerned with major milestones or stage gates.  These are the places in your project where you will have completed some major piece of effort, are advancing to a new bucket or section of work, or want to set hard go/no go checks and balances in the plan that require certain conditions to be met before advancing to the next action items.</p>
+<p>These line items will of course vary by project, but often they will share many of the same high-level steps regardless of the specifics.  It can be a good idea to start with the following, and then tailor to the specifics as needed.</p>
+<ol class="arabic simple">
+<li><p>Kick-Off (milestone)</p></li>
+<li><p>Design &amp; Build</p></li>
+<li><p>Stakeholder Approval (stage gate)</p></li>
+<li><p>Deployment</p></li>
+<li><p>Hypercare</p></li>
+<li><p>Results Share Out (milestone)</p></li>
+</ol>
+<p>You will likely need a much more detailed plan behind the scenes to manage the day-to-day activities for the team, but something along the lines of above will give your stakeholders enough information to understand the time associated with your expected progess.  Any changes, or potential risks, to the plan should be communicated swiftly and transparently as appropriate.</p>
+<p><strong><h3>What Did We Learn?</h3></strong></p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Chapter4"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="project_ideation.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">4.2. </span>Project Ideation</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="CRISP-DM.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">4.4. </span>CRISP-DM</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Brian Brady
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

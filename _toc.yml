@@ -9,4 +9,28 @@ chapters:
   - file: Chapter1/book_organization
   - file: Chapter1/objectives
 - file: Chapter2/what_is_data_science
+  sections:
+  - file: Chapter2/problems_we_solve
+  - file: Chapter2/fields_of_study
+  - file: Chapter2/skills_and_tools
+  - file: Chapter2/roles
+- file: Chapter3/citizen_data_scientist
+  sections:
+  - file: Chapter3/how_they_add_value
+  - file: Chapter3/prerequisites
+  - file: Chapter3/getting_started
+- file: Chapter4/business_analytics
+  sections:
+  - file: Chapter4/analytics_continuum
+  - file: Chapter4/project_ideation
+  - file: Chapter4/project_charters
+  - file: Chapter4/CRISP-DM
+- file: Chapter5/project_workflow
+  sections:
+  - file: Chapter5/data
+    sections:
+    - file: Chapter5/data_structure
+    - file: Chapter5/data_types
+    - file: Chapter5/data_acquisition
+    - file: Chapter5/data_integrity
 - file: zreferences

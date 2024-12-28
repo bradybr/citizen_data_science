@@ -1,6 +1,9 @@
+# Beginner's Guide To Citizen Data Science:
+<h4>Anyone Can Find Value In Advanced Analytics</h4>
+
 Welcome to the course reading material for BUS152 - Business Practicum II.
 
-Introduction to Citizen Data Science and Machine Learning methodologies, theory, mathematics, and real-world applications in making predictions, forecasting, statistical analysis, and optimization. Emphasis on hands-on coding labs/exercises and the practical development and execution of analytical business use-cases.
+Introduction to Citizen Data Science and Machine Learning methodologies, theory, mathematics, and real-world applications in making predictions, forecasting, statistical analysis, and optimization. Emphasis on hands-on labs/exercises and the practical development and execution of analytical business use-cases.
 
 Spring 2025<br>
 Brian Brady

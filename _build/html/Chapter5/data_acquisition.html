@@ -1,0 +1,749 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>5.1.3. Data Acquisition &#8212; A Beginner&#39;s Guide To Citizen Data Science</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Chapter5/data_acquisition';</script>
+    <link rel="canonical" href="https://bradybr.github.io/citizen_data_science/intro/Chapter5/data_acquisition.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="5.1.4. Data Integrity" href="data_integrity.html" />
+    <link rel="prev" title="5.1.2. Data Types" href="data_types.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/npp_logo.png" class="logo__image only-light" alt="A Beginner's Guide To Citizen Data Science - Home"/>
+    <script>document.write(`<img src="../_static/npp_logo.png" class="logo__image only-dark" alt="A Beginner's Guide To Citizen Data Science - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Beginner’s Guide To Citizen Data Science:
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter1/introduction.html">1. Introduction</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/book_organization.html">1.1. Book Organization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/objectives.html">1.2. Objectives</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter2/what_is_data_science.html">2. What Is Data Science?</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter2/problems_we_solve.html">2.1. Problems We Solve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter2/fields_of_study.html">2.2. Fields of Study</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter2/skills_and_tools.html">2.3. Skills &amp; Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter2/roles.html">2.4. Roles</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter3/citizen_data_scientist.html">3. The Citizen Data Scientist</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter3/how_they_add_value.html">3.1. How They Add Value</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter3/prerequisites.html">3.2. Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter3/getting_started.html">3.3. Getting Started</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter4/business_analytics.html">4. Business Analytics Overview</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter4/analytics_continuum.html">4.1. Analytics Continuum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter4/project_ideation.html">4.2. Project Ideation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter4/project_charters.html">4.3. Project Charters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter4/CRISP-DM.html">4.4. CRISP-DM</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="project_workflow.html">5. The Project Workflow</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="data.html">5.1. Data</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="data_structure.html">5.1.1. Data Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data_types.html">5.1.2. Data Types</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">5.1.3. Data Acquisition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data_integrity.html">5.1.4. Data Integrity</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../zreferences.html">6. References</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Chapter5/data_acquisition.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Data Acquisition</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="data-acquisition">
+<h1><span class="section-number">5.1.3. </span>Data Acquisition<a class="headerlink" href="#data-acquisition" title="Permalink to this heading">#</a></h1>
+<p>Time to talk about how we go about getting real data.  There are numerous different ways we go about sourcing data for our projects in the real world.  Some require specialized infrastructures and environements, and others are great for quickly building prototypes, or for learning and testing purposes.</p>
+<p>In a production data science team, there will likely be a preference for working within the confines of a reproducible, scalable, and sustainable architecture, which includes the data acquisition pipelines.  Of course this doesn’t mean we can’t find value in quickly getting our hands on an Excel file, reading it in to a tool like KNIME, and running a simple prediction model.  There’s a time and place for both.</p>
+<p>The Citizen Data Scientist being our focus, will likely favor and gravitate towards the simple points of access, due to needings additional specialized skills to begin working with complex and industrial data warehousing and retrieval systems.  The good news is since our focus is the front line analytics team within a business unit, these resources are already working with their data in some way they’re comfortable with.  This may be a syndicated aggregator like Nielsen, data provider like Circana, or business warehouse like SAP.  All of which allow associates to pull data directly from a user friendly front end and export to Excel.</p>
+<p>In this section we’ll cover just a few of the most popular methods for the acquisition of data, for the beginner, as well as advanced practitioner.  What works for you will be dependent upon your situation, resources, and end goals.</p>
+<p>We’ll cover the following for this section.</p>
+<ul class="simple">
+<li><p>Downloading files</p></li>
+<li><p>Database/Warehouse</p></li>
+<li><p>APIs</p></li>
+</ul>
+<p><strong><h3>Downloading Files</h3></strong></p>
+<p>By far the most common way you’ll get data as a citizen data scientist is by simply downloading a files.  There are tons of different file extensions you will run into in the wild so there’s no hope we could be exhaustive here, but we can review a couple of the most common ones which should cover you for the majority of use cases.</p>
+<p>In practice, you’ll occasionally run into new extensions you’ve never worked with before, and even errors running the most basic ingestion methods like reading in an Excel file due to encoding issues or unknown formatting problems in the file.   Google will always be your best friends when you run into errors or new files types regardless of whether your’re coding on working in an off the shelf tool.  You can generally bet that someone else has run into the same problem you’re having and that the Q&amp;A is out on the internet somewhere.</p>
+<p>So in this section we discuss downloading into flat files of some sort like CSV, Excel, and Text files.</p>
+<p>Off we go!</p>
+<h4>CSV/Excel/TXT Files</h4><p>Businesses run on Excel.  I can’t say this enough.  It is the most common data storage and analytics tool for a reason.  It simply works and is super intuitive.  Excel puts some very sophisticated tools in the hands of non-technical resources, and it’s the lowest and cheapest bar to entry for analytics.  Most companies will use it for these reasons, so skills are transferable from company to company and there’s no lock out due to prohibitive commercial licensing.</p>
+<p>We already saw this in the <a class="reference internal" href="data_types.html"><span class="doc">Data Types</span></a> section, but let’s again read in a CSV/Excel file from our Github storage.  To do so we’ll use pandas <code class="docutils literal notranslate"><span class="pre">pd.read_csv()</span></code> method.  This is an <em>extremely</em> common way to read in data as you’ll quickly learn.  Here we’re pointing to our Github repository, but you will most often have your files in local storage on your computer so you’ll just point the URL path to your working directory or local file.  Simple as that.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read in Davis height/weight data from Github as a .csv file</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://github.com/bradybr/practical-data-science-and-ml/blob/main/datasets/Davis.csv?raw=true&#39;</span>
+<span class="n">dat</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">dat</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Read in Davis height/weight data from Github as a .csv file</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://github.com/bradybr/practical-data-science-and-ml/blob/main/datasets/Davis.csv?raw=true&#39;</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">dat</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">dat</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;pd&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>There are a ton of parameters with this function, so definitely read the documentation and do some Googling when you run into any difficulties.  For example, let’s see what happens if we read in our file as a “tab-delimited” text file.  To do that we’ll use the separator argument <code class="docutils literal notranslate"><span class="pre">sep</span> <span class="pre">=</span> <span class="pre">&quot;\t&quot;</span></code> in <code class="docutils literal notranslate"><span class="pre">pd.read_csv()</span></code> call.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read in Davis height/weight data from Github as a .txt file</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://github.com/bradybr/practical-data-science-and-ml/blob/main/datasets/Davis.csv?raw=true&#39;</span>
+<span class="n">dat</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">dat</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Interesting.  It looks like we do need to understand if our file is comma, tab, semicolon, or otherwise separated.  If our file was semicolon delimited, we would have written <code class="docutils literal notranslate"><span class="pre">sep</span> <span class="pre">=</span> <span class="pre">&quot;;&quot;</span></code>, but as it turns out, this one matched the default with comma separated so it was able to parse it out into a dataframe as-is.</p>
+<p>If you have a true .xls file instead of a .csv file, then check out <code class="docutils literal notranslate"><span class="pre">pd.read_excel()</span></code> function, which handles the specialities which come with the more complex file type.</p>
+<h4>XML/HTML Tables</h4><p>Reading data from the internet can often be very finicky and challenging.  Technology often gets involved, and you also need to know a little bit about the language of the internet: HTML.</p>
+<p>The most painful part is that a method which worked yesterday can easily break tomorrow.  Sites can change their HTML code anytime so you always have to stay on your toes.  It’s also a burden on the sites resources you’re trying to reach so it’s quite common to have your IP address blocked if you abuse requesting information too often.  Specific types of sites are more sensitive to this than others, specifically ones that believe their data is a competitive advantage or proprietary in some way.  There are constant legal battles going on regarding whether or not the data belongs in the public domain after it’s been published.</p>
+<p>To illustrate, we’ll read in a standing table from Wikipedia that shouldn’t give us any trouble.  The code below queries a specific Wikipedia page listing all of the public companies currently listed in the <a href="https://en.wikipedia.org/wiki/List_of_S%26P_500_companies">S&amp;P500</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="kn">import</span> <span class="nn">certifi</span>
+<span class="kn">import</span> <span class="nn">urllib</span>
+<span class="kn">from</span> <span class="nn">io</span> <span class="kn">import</span> <span class="n">StringIO</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+
+<span class="c1"># URL path</span>
+<span class="n">url</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;https://en.wikipedia.org/wiki/List_of_S%26P_500_companies&quot;</span><span class="p">)</span>
+
+<span class="c1"># Open URL &amp; parse table content</span>
+<span class="n">html</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">cafile</span> <span class="o">=</span> <span class="n">certifi</span><span class="o">.</span><span class="n">where</span><span class="p">())</span>
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">html</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+<span class="n">tables</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">findAll</span><span class="p">(</span><span class="s2">&quot;table&quot;</span><span class="p">)</span>
+
+<span class="c1"># Convert to dataframe</span>
+<span class="n">dat</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="n">StringIO</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">tables</span><span class="p">[</span><span class="mi">0</span><span class="p">])))[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">dat</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Symbol</th>
+      <th>Security</th>
+      <th>GICS Sector</th>
+      <th>GICS Sub-Industry</th>
+      <th>Headquarters Location</th>
+      <th>Date added</th>
+      <th>CIK</th>
+      <th>Founded</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>MMM</td>
+      <td>3M</td>
+      <td>Industrials</td>
+      <td>Industrial Conglomerates</td>
+      <td>Saint Paul, Minnesota</td>
+      <td>1957-03-04</td>
+      <td>66740</td>
+      <td>1902</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>AOS</td>
+      <td>A. O. Smith</td>
+      <td>Industrials</td>
+      <td>Building Products</td>
+      <td>Milwaukee, Wisconsin</td>
+      <td>2017-07-26</td>
+      <td>91142</td>
+      <td>1916</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>ABT</td>
+      <td>Abbott</td>
+      <td>Health Care</td>
+      <td>Health Care Equipment</td>
+      <td>North Chicago, Illinois</td>
+      <td>1957-03-04</td>
+      <td>1800</td>
+      <td>1888</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>ABBV</td>
+      <td>AbbVie</td>
+      <td>Health Care</td>
+      <td>Biotechnology</td>
+      <td>North Chicago, Illinois</td>
+      <td>2012-12-31</td>
+      <td>1551152</td>
+      <td>2013 (1888)</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>ACN</td>
+      <td>Accenture</td>
+      <td>Information Technology</td>
+      <td>IT Consulting &amp; Other Services</td>
+      <td>Dublin, Ireland</td>
+      <td>2011-07-06</td>
+      <td>1467373</td>
+      <td>1989</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>498</th>
+      <td>YUM</td>
+      <td>Yum! Brands</td>
+      <td>Consumer Discretionary</td>
+      <td>Restaurants</td>
+      <td>Louisville, Kentucky</td>
+      <td>1997-10-06</td>
+      <td>1041061</td>
+      <td>1997</td>
+    </tr>
+    <tr>
+      <th>499</th>
+      <td>ZBRA</td>
+      <td>Zebra Technologies</td>
+      <td>Information Technology</td>
+      <td>Electronic Equipment &amp; Instruments</td>
+      <td>Lincolnshire, Illinois</td>
+      <td>2019-12-23</td>
+      <td>877212</td>
+      <td>1969</td>
+    </tr>
+    <tr>
+      <th>500</th>
+      <td>ZBH</td>
+      <td>Zimmer Biomet</td>
+      <td>Health Care</td>
+      <td>Health Care Equipment</td>
+      <td>Warsaw, Indiana</td>
+      <td>2001-08-07</td>
+      <td>1136869</td>
+      <td>1927</td>
+    </tr>
+    <tr>
+      <th>501</th>
+      <td>ZION</td>
+      <td>Zions Bancorporation</td>
+      <td>Financials</td>
+      <td>Regional Banks</td>
+      <td>Salt Lake City, Utah</td>
+      <td>2001-06-22</td>
+      <td>109380</td>
+      <td>1873</td>
+    </tr>
+    <tr>
+      <th>502</th>
+      <td>ZTS</td>
+      <td>Zoetis</td>
+      <td>Health Care</td>
+      <td>Pharmaceuticals</td>
+      <td>Parsippany, New Jersey</td>
+      <td>2013-06-21</td>
+      <td>1555280</td>
+      <td>1952</td>
+    </tr>
+  </tbody>
+</table>
+<p>503 rows × 8 columns</p>
+</div></div></div>
+</div>
+<p>This example is taking advantage of a known “table” structure on a webpage.  Often however you’ll need parse an entire page and crawl through the HTML nodes by parent, children, and various tags to find exactly what you’re looking for.  This is referred to as <em>web scraping</em> and <em>parsing</em>.  You will definitely need to do some googling and researching a bit with lots of trial and error when you begin to work with scraping web data for real.</p>
+<p>There’s much more you can do with the topic of web scrapping and accessing XML and HTML structures, but this is a bit beyond the scope of our lessons.  If you’re interested, definitely check out Beautiful Soup, Selenium, and Scrappy libraries, just to name a few…</p>
+<p><strong><h3>Database/Warehouse Data</h3></strong></p>
+<p>Retrieving data stored in some kind of structured relational database is also extremely common.  You may have a free version like MySQL setup for your personal use, or maybe a more powerful commerical cloud based offering like Microsoft Azure and Data Lake.  This is a deep and specific subject due to the techologies, installations, and authorizations required, which are also a bit outside of the scope for these lessons.</p>
+<p>Since we’ll be dealing mostly with downloading files or accessing data via Python libraries, we’ll leave this as an exercise for the reader to investigate further in his or her own time.  Below is the link to the popular and free MySQL offering where you can read more about connecting with Python.</p>
+<h4>MySQL</h4><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>And remember when we suggested learning the SQL language might be a good thing when discussing programming languages?  This is where it will come into play.  These relational databases are extremely common for warehousing enterprise data, and SQL is by far the most popular programming language to work with these data repositories.  SQL is also the foundational language behind many of the big data cloud computing languages like Spark, so it will absolutely pay divends to learn it if you really want to enter the workforce in the field.
+
+&lt;a href=&quot;https://dev.mysql.com/doc/connector-python/en/connector-python-introduction.html&quot;&gt;MySQL Python Connector&lt;/a&gt;
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  Cell In[8], line 1
+    And remember when we suggested learning the SQL language might be a good thing when discussing programming languages?  This is where it will come into play.  These relational databases are extremely common for warehousing enterprise data, and SQL is by far the most popular programming language to work with these data repositories.  SQL is also the foundational language behind many of the big data cloud computing languages like Spark, so it will absolutely pay divends to learn it if you really want to enter the workforce in the field.
+        ^
+SyntaxError: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
+<figure class="align-default" id="mysql-connector-fig">
+<a class="reference internal image-reference" href="images/mysql_connector.png"><img alt="images/mysql_connector.png" src="images/mysql_connector.png" style="width: 900px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 5.2 </span><span class="caption-text">MySQL Python Connector Introduction documentation</span><a class="headerlink" href="#mysql-connector-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p><strong><h3>APIs</h3></strong></p>
+<h4>JSON Data</h4><p>We’ve actually just seen an example of an API call to retrieve data from the Department of Energy.  API stands for Application Programming Interface, and are standard protocols which allow programs and applications to communicate with each other.  They are essentially end-to-end connection points that have been set up to faciliate the transfer of data using request calls and responses.</p>
+<p>The DOE call above is just one example, however API’s have become very common with the explosion of business monetization of data as a core competency.  Social media sites like Twitter, Facebook, and the like, as well as other companies working with popular consumable data such as weather, stock prices, etc. are commonly utilizing this technology.  Companies typically open these up to what are known as the “Developer” community.  You can sign up for an account and receive API Keys and authentication tokens which allow you to begin accessing data straight away.  Because this data is often a revenue stream for the provider, unfortunatly you will frequently run into a paywall for good data though.  Hard to blame them, seeing as they’ve incurred all of the expenses towards collecting and hosting the data, so it does seem only fair that they’re compensated for it somehow.</p>
+<p>We won’t go into any more detail here since we’ve already shown an example and due to needing to create developer profiles.  Our work for this course will be mostly with downloaded files or through Python packages.</p>
+<p>Closely coupled with internet data is the JSON structure type.  JSON stands for JavaScript Object Notation, and is a simple and convenient way to store and transport data in a text format.  You may run into this one with websites who choose to make their data publically available for download.  It’s also very common to send and receive data this way in industrialized cloud infrastructures within large companies.</p>
+<p>Below we’ll retrieve the <a href="https://www.eia.gov/outlooks/steo/data/browser/">US Department of Energy’s Short-Term Engergy Outlook</a> for Petroleum using their API call which returns data in a JSON format.  You’ll need to sign up for your own API Key password if you’d like to try and replicate yourself.</p>
+<p>Notice how the data returned in a format that looks very much like a Python dictionary?  Pretty cool, huh?  The JSON format is very close to native Python language and should hopefully be pretty easy to deal with after you’ve access it.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://api.eia.gov/v2/petroleum/move/wkly/data/?frequency=weekly&amp;data[0]=value&amp;facets[series][]=WCREXUS2&amp;sort[0][column]=period&amp;sort[0][direction]=desc&amp;offset=0&amp;length=5000&amp;api_key=&quot;</span> <span class="o">+</span> <span class="n">pw</span> <span class="o">+</span> <span class="s2">&quot;&amp;start=2024-01-01&quot;</span>
+<span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Chapter5"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="data_types.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">5.1.2. </span>Data Types</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="data_integrity.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">5.1.4. </span>Data Integrity</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Brian Brady
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

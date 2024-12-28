@@ -1,0 +1,542 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>4.2. Project Ideation &#8212; A Beginner&#39;s Guide To Citizen Data Science</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Chapter4/project_ideation';</script>
+    <link rel="canonical" href="https://bradybr.github.io/citizen_data_science/intro/Chapter4/project_ideation.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="4.3. Project Charters" href="project_charters.html" />
+    <link rel="prev" title="4.1. Analytics Continuum" href="analytics_continuum.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/npp_logo.png" class="logo__image only-light" alt="A Beginner's Guide To Citizen Data Science - Home"/>
+    <script>document.write(`<img src="../_static/npp_logo.png" class="logo__image only-dark" alt="A Beginner's Guide To Citizen Data Science - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Beginner’s Guide To Citizen Data Science:
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter1/introduction.html">1. Introduction</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/book_organization.html">1.1. Book Organization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/objectives.html">1.2. Objectives</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter2/what_is_data_science.html">2. What Is Data Science?</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter2/problems_we_solve.html">2.1. Problems We Solve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter2/fields_of_study.html">2.2. Fields of Study</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter2/skills_and_tools.html">2.3. Skills &amp; Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter2/roles.html">2.4. Roles</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter3/citizen_data_scientist.html">3. The Citizen Data Scientist</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter3/how_they_add_value.html">3.1. How They Add Value</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter3/prerequisites.html">3.2. Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter3/getting_started.html">3.3. Getting Started</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="business_analytics.html">4. Business Analytics Overview</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="analytics_continuum.html">4.1. Analytics Continuum</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">4.2. Project Ideation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="project_charters.html">4.3. Project Charters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CRISP-DM.html">4.4. CRISP-DM</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter5/project_workflow.html">5. The Project Workflow</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Chapter5/data.html">5.1. Data</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/data_types.html">5.1.1. Data Formats &amp; Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/data_acquisition.html">5.1.2. Data Acquisition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/data_integrity.html">5.1.3. Data Integrity</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../zreferences.html">6. References</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Chapter4/project_ideation.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Project Ideation</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="project-ideation">
+<h1><span class="section-number">4.2. </span>Project Ideation<a class="headerlink" href="#project-ideation" title="Permalink to this heading">#</a></h1>
+<p><em>“I want to use AI to…”</em> <br>
+<em>“I’d like you to build me a prediction model to…”</em> <br>
+<em>“I need an optimization and simulation tool for…”.</em></p>
+<p>With this section I’m going to share one of the biggest challenges we face in this field.  Far too often we start at the end.  We lead with our assumption of what the final solution should be.  That is, someone at the point of origin for the business use case will lead with telling a technical practitioner how they want them to solve their problem.</p>
+<a class="bg-primary mb-1 reference internal image-reference" href="../_images/frustrated_man.png"><img alt="frustrated man" class="bg-primary mb-1 align-right" src="../_images/frustrated_man.png" style="width: 400px;" /></a>
+<p>Hopefully this strikes you as putting the cart before the horse.  Instead, ideally we’d hear:</p>
+<p><em>“My problem is today we do <strong>this</strong>, but tomorrow I’d like to be able to do…”.</em></p>
+<p>While it may be obvious that we’re going to deliver a model to forecast sales, or maybe we’re going to build a model to predict late shipments, and so on, but it’s an infinitely better approach to let multiple people, all with different skills and specialties, come to the table and start from the beginning with the problem.  Let the business domain owner do what they do, and that is understand and explain the business problem and context, and let the analytics practitioner do what they do, which is understand how to solve business problems with math.  A marriage made in heaven.</p>
+<p>It’s critical to be able to work with your business domain experts to generate a large backlog of project ideas.  It’s the simple idea of common brainstorming.  Generating a large and unfiltered list of blue sky ideas without trying to qualify or solve the problems at the same time, is a far more valuable exercise than starting with just one idea and jumping in.  Most of the ideas will go nowhere, but having a long list to talk about will allow you to rank, prioritize, and choose what to work on based on a number of factors.</p>
+<p><strong><h3>Project Ideas &amp; Funnel</h3></strong></p>
+<p>Let’s start with how you might go about the exercise of working with the business to get their creative juices flowing.  Instead of trying to start at the end with solutions to ill-defined problems, how do we get people talking freely and easily getting all of their specialized knowledge out on the table?</p>
+<p>The best way to approach these ideation sessions is to have the data science team play facilitator, moderator, and consultancy roles up front.  Let the busines experts do what they do best, which is talk about what they know - the business.  This is where the projects come from, not from the data science domain.  This point can’t be oversold.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The data science projects should originate from the business domains, not the analytics team.</p>
+</div>
+<p>What this means is the data science resources are not the project sponsors.  The project problem should always come from some other function within the organziation, or at least with them having a seat at the table when flushing out the idea.  Remember, we’re the skilled problem solvers armed with advanced methodologies, but most likely know very little about what the business teams care about.  There’s no point in us working on something that a business team doesn’t care about just because <em>we</em> think it’s important.  Believe it or not, this point is overlooked far too often and we try to push our solutions without support from the functional business owners.  It rarely works.</p>
+<p>Now for a simple framework that makes it simple and organic to extract the important information from the key resources who will likely not understand, or have the interest to hear all of the technical math speak we might try to use.</p>
+<p>Take a look at <a class="reference internal" href="#ideation-ex-fig"><span class="std std-numref">Fig. 4.5</span></a>.  It’s a simple and logical progression that gently guides us to arrive at a currated list of ideas ranked by sponsor interest and potential value.  The key is to move from one question to the next flushing out each topic that comes from your business subject matter experts.</p>
+<figure class="align-default" id="ideation-ex-fig">
+<a class="reference internal image-reference" href="../_images/ideation_ex.png"><img alt="../_images/ideation_ex.png" src="../_images/ideation_ex.png" style="width: 900px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4.5 </span><span class="caption-text">Example of an ideation session with a project sponsor</span><a class="headerlink" href="#ideation-ex-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<h4>Responsibilities</h4>
+<p>Recall our Senior Financial Analyst job description example from Chapter 2?  Well, this is the same idea.  There’s naturally a set of primary duties and <strong>Responsibilities</strong> that every associate cares about.  People care about what they’re incentivized to care about, and Jim’s responsibilities are what he’s going to want to focus on.  In this case, there’s no point in talking about ideas to do with supply chain, marketing, or some other function since he’s in sales.</p>
+<p>To get us started, we ask Jim to start spit balling all of the things he’s responsible for.</p>
+<blockquote>
+<div><p><em>What are all of the high-level and big bucket things you’re <strong>Responsible</strong> for?</em></p>
+</div></blockquote>
+<p>Everything.  Stream of conciousness stuff here with no value judgements.  We don’t worry about the quality of the information we’re compiling just yet.  We’re simply trying to list out everything Jim cares about to get all of the <em>potential</em> out on the table for further discussion later.</p>
+<h4>Decisions/Tasks</h4>
+<p>Next, we go through his responsibilities list we just created one by one, and ask the same question for each:</p>
+<blockquote>
+<div><p><em>What are all the <strong>Decisions</strong> you make and Tasks you have, related to this Responsibility?</em></p>
+</div></blockquote>
+<p>Why are we asking?  Because this is often what we can help with.  My data science solution can either somehow help him make a better decision than he can do on his own, or it might actually fully automate the decision entirely freeing Jim up to work on other things.  Decisions and Tasks are generally the “things” an associate will care about on a day-to-day basis.  This is where we should be mining for gold looking for opportunities.</p>
+<h4>Inputs/Data</h4>
+<p>Tied to each Decision Jim makes should also be considerations for what <strong>Inputs</strong>, or data, he uses when working with each of those decisions.  Maybe we won’t end up making his ultimate decision for him, but we might be able to supply him superior data or inputs that he can then use to make a better decision than he could without us.</p>
+<p>Maybe there’s a sales data report published monthly after each month closes that Jim uses to shape his action plans for the next 2-3 months.  It might be valuable if we could provide earlier insights as to what sales are likely to be <em>before</em> the actual sales are known.</p>
+<p>For each Decision he makes and Task he accomplishes, we now go through and ask about what data or inputs he uses when considering what to do.</p>
+<blockquote>
+<div><p><em>What are all of the <strong>Inputs</strong> and data you consider and use to make this Decision or complete the Task?</em></p>
+</div></blockquote>
+<p>Coupled with what we learned from the Descisions &amp; Tasks questions, collecting detail around Inputs &amp; Data should give us all we need to build up a solid list of opportunties to consider.</p>
+<h4>Value</h4>
+<p>After the Decisions and Inputs, we’re on to one of the most important ideas:  <strong>Value</strong> estimates.</p>
+<p>Just as important as being able to build a robust backlog of potential project ideas, is to be able to quantify the estimated return on investment (ROI) and value of a project, which ultimately allows us to prioritize the list of projects so we can select which ones we’re going to work on.</p>
+<p>Unfortunately you may find that this value estimation step can be a royal pain in your behind.  It’s just never as not as easy as it sounds.  Often what happens is everyone just intuitively understands and agrees that having this “thing” you’re going to build is valuable, but when pressed to actually quantify or define that value, <em>crickets…</em>  No one may question what we want is a positive and good idea, but we need to be able to compare opportunities based on effort versus reward.  Just because it’s obviously a nice “thing” to have, it doesn’t mean it makes sense to work on right now.</p>
+<p>We need to consider resourcing and available capacity to work on new projects, the payback window (how long will it take to start seeing a return on the work), do we have leadership support since it’s much more difficult to get engagement if no one is being told they should care about it, and so on.  It really boils down to large effort and small reward versus small effort and large reward.  If you have the resources and investments already in place and it’s a quick turnaround with expected adoption plus a huge qualified dollar return for that effort, these types of projects should be your priority.</p>
+<blockquote>
+<div><p><em>What’s the estimated <strong>Value</strong> of an incremental improvement in the Decision or Task?</em></p>
+</div></blockquote>
+<p>This may all sound obvious, but let me assure you companies waste thousands of hours each year talking about and working on projects that probably should have been passed over.  Again, this is a tough one, but we’ve got to try.  My suggestion is to come up with simple ways to attach ballpark estimates.  We don’t need to be perfect here.  Just values we can use to compare and rank each idea.  So if it’s a time savings kind of project, use a simple formula like</p>
+<div class="math notranslate nohighlight">
+\[
+total\:annual\:$\:savings = avg\:hrs\:saved\:\times\:avg\:$\:per\:hr\:\times\:2080\:annual\:hrs
+\]</div>
+<h4>What If...</h4>
+<p>Ok great, we hopefully have a long list of potential <strong>Decisions</strong> and <strong>Inputs/Data</strong> we could predict, forecast, or optimize in some way with <strong>Value</strong> estimates attached for each. Now what? Now we get to the fun stuff.  We get to start doing what <em>we</em> do!  We get to start asking a whole bunch of <strong>What if</strong> questions for the ideas that filtered to the top based on the value and ROI potential estimates we compiled in the previous step.</p>
+<blockquote>
+<div><p><em>What if we could predict…?</em> <br>
+<em>Would it be helpful if we could tell you…?</em> <br>
+<em>What resources, human, capital, or otherwise, would you allocate differently if I could…?</em></p>
+</div></blockquote>
+<p>The key details to get out of this line of questioning is if the business sponsor truly cares about the proposed solution.  They’ve told us there’s expected value in the idea, but now they should be able to articulate the how’s and why’s behind why they care.  How are they going to us it?  Why would it be helpful to them if we delivered some solution?  The main thing to get alignment on here is if they would actually do something different tomorrow, than they do today.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The main value Advanced Analytics delivers is enabling better decision making, which allows for a more informed and analytically driven allocation of resources (human, capital, or otherwise).</p>
+</div>
+<p>If the business cannot think of how a solution will change what they do in some way, then it’s not worth the time and effort. Period.  This is how companies can avoid working on the wrong things at the wrong times.</p>
+<p>At this point you should be starting to see some serious potential for a good idea to work up a proof of concept with.  Hopefully this is resonating and you’re beginning to visualize and see how this might work in the real world or within your domain.</p>
+<p>Next up we go to scoping and outlining the details needed before beginning any project.</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Chapter4"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="analytics_continuum.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">4.1. </span>Analytics Continuum</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="project_charters.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">4.3. </span>Project Charters</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Brian Brady
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

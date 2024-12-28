@@ -1,0 +1,584 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>4.4. CRISP-DM &#8212; A Beginner&#39;s Guide To Citizen Data Science</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Chapter4/CRISP-DM';</script>
+    <link rel="canonical" href="https://bradybr.github.io/citizen_data_science/intro/Chapter4/CRISP-DM.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="5. The Project Workflow" href="../Chapter5/project_workflow.html" />
+    <link rel="prev" title="4.3. Project Charters" href="project_charters.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/npp_logo.png" class="logo__image only-light" alt="A Beginner's Guide To Citizen Data Science - Home"/>
+    <script>document.write(`<img src="../_static/npp_logo.png" class="logo__image only-dark" alt="A Beginner's Guide To Citizen Data Science - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Beginner’s Guide To Citizen Data Science:
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter1/introduction.html">1. Introduction</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/book_organization.html">1.1. Book Organization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/objectives.html">1.2. Objectives</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter2/what_is_data_science.html">2. What Is Data Science?</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter2/problems_we_solve.html">2.1. Problems We Solve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter2/fields_of_study.html">2.2. Fields of Study</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter2/skills_and_tools.html">2.3. Skills &amp; Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter2/roles.html">2.4. Roles</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter3/citizen_data_scientist.html">3. The Citizen Data Scientist</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter3/how_they_add_value.html">3.1. How They Add Value</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter3/prerequisites.html">3.2. Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter3/getting_started.html">3.3. Getting Started</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="business_analytics.html">4. Business Analytics Overview</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="analytics_continuum.html">4.1. Analytics Continuum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="project_ideation.html">4.2. Project Ideation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="project_charters.html">4.3. Project Charters</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">4.4. CRISP-DM</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter5/project_workflow.html">5. The Project Workflow</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Chapter5/data.html">5.1. Data</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/data_types.html">5.1.1. Data Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/data_acquisition.html">5.1.2. Data Acquisition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/data_integrity.html">5.1.3. Data Integrity</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../zreferences.html">6. References</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Chapter4/CRISP-DM.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>CRISP-DM</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="crisp-dm">
+<h1><span class="section-number">4.4. </span>CRISP-DM<a class="headerlink" href="#crisp-dm" title="Permalink to this heading">#</a></h1>
+<p>Now that you understand how we get to the point of undertaking a project, let’s turn the page to see what the actual process of working through one looks like.</p>
+<p>Picutre this: You’ve just been tapped to jump into a meeting to help with some vague notion of a business problem one of your teams is talking about.  Now what?  Do you sit back and let them all flush out the idea, and then you swoop in at the end with your fancy math and solve the problem they’ve come up with?  You could, but I’d be willing to be you the project will get off the rails and miss the mark somewhere along the lines if you do.</p>
+<p>Ok then, is there a better way?  Glad you asked.  Yes there is.  There’s no reason to reinvent the wheel.  Some really smart people came before us a long time ago and gave us a pretty well thought out end-to-end process for data mining/science projects.  Enter CRISP-DM.</p>
+<p><strong><h3>Cross Industry Standard Process for Data Mining</h3></strong></p>
+<p>Have you heard of deductive or inductive reasoning?  With deductive reasoning, we begin with a few basic axioms - simple true statements regarding how the world around us works.  Inductive is exactly the opposite where uncovering simple truths about some phenomenon is the <em>goal</em> of the investigation, not the <em>starting</em> point.  Out of inductive reasoning we get the scientific method we briefly touched on in Chapter 2.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The process cycle we follow is a combination of the deductive mathematical methods in data mining, and experimentation and testing steps from the inductive scientific method <span id="id1">[<a class="reference internal" href="../zreferences.html#id7" title="R. Nisbet, J. F. Elder, and G. Miner. Handbook of Statistical Analysis and Data Mining Applications. Academic Press/Elsevier, Burlington, MA, 2009.">NEM09</a>]</span>.</p>
+</div>
+<p>The most widely used framework in the industry for data mining and analytics is called <strong>CRISP-DM</strong> (Cross Industry Standard Process for Data Mining), below in <a class="reference internal" href="#crisp-dm-fig"><span class="std std-numref">Fig. 4.7</span></a>.  There have been proposed extensions and adaptations over time to address deficiencies in the model, but it is still regarded as the dominant guide which many teams follow.  You may also find it’s common to add in a layer of project management via either an agile or scrum methodology (e.g. IBM’s Analytics Solutions Unified Method <span id="id2">[<a class="reference internal" href="../zreferences.html#id6" title="IBM Corporation. Mar 2016. URL: https://public.dhe.ibm.com/software/data/sw-library/services/ASUM.pdf.">Cor16</a>]</span>).</p>
+<figure class="align-default" id="crisp-dm-fig">
+<a class="reference internal image-reference" href="../_images/CRISP-DM.png"><img alt="../_images/CRISP-DM.png" src="../_images/CRISP-DM.png" style="width: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4.7 </span><span class="caption-text">CRISP-DM phases as the industry standard workflow process for data mining and analytics</span><a class="headerlink" href="#crisp-dm-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<h4>Business Understanding</h4>
+<p>Starting from the beginning with Business Understanding.  We need to understand the business context, sure of course, you’re probably saying.  Saying it and doing it well are two different things in practice though.  This one is deceivingly simple.  What could go wrong?  Well, first of all, do you think the business sponsor you’re working with understands what your specialty is?  What you could do to help them?  What kinds of information you need to know?  Hopefully you answered “no” to all of these questions because I would bet they do not.  Unfortunately what this means is it’s up to you, or at least someone on the team that understands the bridge between the business and data science, to be sure to ask all of the right questions and collect the relevant information you’ll need to know.  And there’s a long open-ended list of questions that will vary for each project.</p>
+<p>We can cover a few common ones that will be good starter questions regardless of the project specifics.</p>
+<ul class="simple">
+<li><p>What is the current process you have now?</p></li>
+<li><p>What’s the current level of performance (KPI’s, metrics, etc.)?  Do you understand why it’s not good enough?</p></li>
+<li><p>Are there special exceptions and considerations?</p></li>
+<li><p>What are the objectives for the project?  What are we trying to solve for?</p></li>
+<li><p>What are the deliverables?  A one time study?  A re-useable production solution?</p></li>
+<li><p>Who are the end users and what are their needs?</p></li>
+<li><p>And so many more…</p></li>
+</ul>
+<p>You’ll need to become comfortable with general fact-finding and surveying your business domain experts.  Asking one question and getting an answer is generally not the end of it.  Follow up questions will be required, new questions and clarifications will spring from their answers, and you’ll need to observe the loop from Data Understanding back to Business Understanding in <a class="reference internal" href="#crisp-dm-fig"><span class="std std-numref">Fig. 4.7</span></a> as new information becomes available.</p>
+<p>This understanding of the business context is so critical to the success of a project that we devote the next section <a class="reference internal" href="project_charters.html"><span class="doc">Project Charters</span></a> to it as well.  We will really drive home this idea of finding value through the citizen data scientist being embedded within a business unit in the coming sections.</p>
+<h4>Data Understanding</h4>
+<p>All of our high-powered methods rely on data.  This one is also extremely vital to the success of the project (as they all are really), but there’s a few plot twists to consider when we start thinking about data.  The first is the data generation process, followed by access and acquisition, and lastly data quality and understanding.</p>
+<p>On a practical level, do you know how the data was actually created?  I mean the actual physical process making the data available.  Is someone manually entering data into a spreadsheet?  Is it system generated?  Which systems?  When is it updated?  Are there revisions or restatements that you need to account for?  And many more questions.  Next, from a statistical point of view, do you have any understanding of the <strong>data generation process</strong>, or <em>DGP</em>, which is the phenomenon or mechanism that actually creates the data we’re observing.  If you can build a mathematical model that accurately reflects this process which created your data, then you’ve hit a home run.  You can now do all sorts of interesting things with your model, like investigating how changes to specific parameters will affect the system, simulate new data to study, make predictions, and run scenario planning queries.</p>
+<p>Now let’s talk about actually getting your hands on the data.  Do we have access to all of the technical environments that house the data?  Are we going to import offline manual files, open up an API (application programming interface) connection, or get it from the source?  Will the proof of concept method of ingesting data be the same as when we get to the production version, or do we need to create a new process?  If so, who will maintain the process after deployment?  Do we have any legal or contractual restrictions with what we’re allowed to do with the data?  Are there security and compliance considerations if we’re using private personal information (PPI) data?  You definitely do not want to be the reason your company gets splashed into the news with some kind of data breach that exposed sensitive consumer data into the public domain.</p>
+<p>Ok now we have our data, but do we understand it?  Are there special codes or idiosyncrasies we need to ask the domain experts to explain?  Do we understand the time intervals or frequencies being pulled?  Are there hierarchies or aggregated levels in the data?  Is anything being filtered out or omitted?  How are missing values handled, e.g. empty, nulls, NA’s, 9999 placeholders.  This step also includes a descriptive exploratory analyses step known as exploratory data analysis (EDA).  Numerical summaries and distributions, mode frequencies and counts for categorical features, and descriptive plots will be one of the first things you want to do when you get started.  We’ll discuss all of this later in <span class="xref std std-doc">../Chapter5/EDA</span>.</p>
+<p>You’ll often hear the phrase “garbage in, garbage out”.  Please believe it.  You can’t expect to be able to predict sales accurately if the historical data you collect to inform your models is completely untrustworthy and inaccurate or you don’t understand it.  Or don’t expect to be able to predict when a piece of machinery is going to break down if you can’t get your hands on data without missing time windows.</p>
+<h4>Data Preparation</h4>
+<p>Notice there are two sections associated with data in the <a class="reference internal" href="#crisp-dm-fig"><span class="std std-numref">Fig. 4.7</span></a> framework?  That’s because we spend the majority of our time working with data.  It was a bit surprising to me when I found out how much.  General estimates are that we spend ~70-80% of our time dealing with data.  I came into the field thinking it was all math and modeling, to find out it’s really only a small perentage of our time.  By far, we spend most of our time acquiring, understanding, transforming, restructuring, enhancing, and prepping the data <em>for</em> the modeling work.</p>
+<p>Data preparation may not be the most talked about steps in the cycle, but it is one of the coolest in my opinion.  Why?  Because it allows you to be creative and solve a problem in a way that maybe no one else thought of.  This is where the magic really happens and will make or break your ability to get good results.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The world has plenty of algorithms.  What it can always use more of is creative associates and analysts capable of thinking critically and being imaginative with how they present data to those algorithms.</p>
+</div>
+<p>This is the stuff of data preparation.  We’ll cover all of these in greater detail in the <span class="xref std std-doc">../Chapter5/wrangling</span> and <span class="xref std std-doc">../Chapter5/feat_engineering</span> sections, but below is just a taste.  Again, at this stage it’s more about conceptual understanding than anything else.</p>
+<p>When you start working with data, you’ll learn about data distributions and what are called statistical moments.  Some distributions are especially desireable, like the standard normal distribution; whereas some like a non theoretical multimodal ones will give your algorithms fits and make your results untrustworthy if you don’t recognize what you’re working with.  Most of the machine learning algorithms we deal with will perform better if your data is normally distributed.  So when we get into learning about Feature Engineering transformations, you see that we often want to try and induce normality when we come across a skewed distribution, like the exponential one below.</p>
+<p>Let’s generate some data from normal and exponential distributions and plot them so we can see what they look like side-by-side.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="test">
+<img alt="seaborn tips data" class="align-center" src="../_images/23763a9158e0ee549100123425b3bdb12215344eb94e68edc5b710155f214fd3.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.8 </span><span class="caption-text">Distributions</span><a class="headerlink" href="#test" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id3">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure Size: (640 x 480)&gt;
+</pre></div>
+</div>
+<figcaption>
+<p><span class="caption-number">Fig. 4.9 </span><span class="caption-text">Distributions</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<p>See how the “skewed” graph on the right is not at all symmeterical with a clear exponential shape?  Now, what if we try to <em>transform</em> our skewed data and rescale it so it behaves more like a normal distribution instead of an exponential one?  We can do that with what’s known as the boxcox method using the <code class="docutils literal notranslate"><span class="pre">boxcox()</span></code> function.  This function will find the optimal parameter to transform our skewed data to be as close as possible to a normal distribution.  Let’s see if it works below and then re-plot.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="test2">
+<img alt="seaborn tips data" class="align-center" src="../_images/a35459d4a399f876e15e9c5cfac3abc36bcee6f6fcfd01f572036714cef2c5f7.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.10 </span><span class="caption-text">Description</span><a class="headerlink" href="#test2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id4">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure Size: (640 x 480)&gt;
+</pre></div>
+</div>
+<figcaption>
+<p><span class="caption-number">Fig. 4.11 </span><span class="caption-text">Description</span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<p>Success!  See how the “Transformed Skewed” plot looks much more symmetrical like the “Normal” graph than it does like the original data it came from in the “Skewed” graph? Pretty cool.</p>
+<p>This is just one example of transforming your data so it sets us up for success down the line in a subsequent step, as with modeling up next.</p>
+<h4>Modeling</h4>
+<p>Next up is modeling after you’ve wrangled, transformed, and aggregated your data to the appropriate levels of analysis.  Notice the backwards and forwards link between Data Preparation and Modeling in <a class="reference internal" href="#crisp-dm-fig"><span class="std std-numref">Fig. 4.7</span></a>.  Iterations are very common for multiple steps, and this one is no exception.  You’ll try certain things, test and learn, go back and reformat, and then try modeling again.</p>
+<p>First of all, do you know what a model is?  This is one of those “blinking” words that has many definitions across multiple fields, and means something very different depending on who’re talking to.  A business person might think you’re talking about a conceptual framework like Maslow’s Hierarchy of Needs model, a designer/enginner might think you’re talking about a physical or even a computer-aided design (CAD) representation, and an informations systems resource might hear the word and think you’re talking about a data model for representing the relationships between data and architectural end points.</p>
+<p>In our data science world when we hear the word model, we’re talking about a mathematical formula.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A data science model is a mathematical formula mapping inputs, an internal algorithmic logic, and outputs, designed to uncover the data generation process of some external phenomenon.</p>
+</div>
+<p>Lots of big words I know, but it really is a simple idea.  Remember back when we talked about uncovering the data generation process?  That’s what our model is.  It’s the simplified mathematical representation of whatever process created our data.  It can be a super simple deterministic model like,</p>
+<div class="math notranslate nohighlight">
+\[
+output(c) = input(A + B)
+\]</div>
+<p>or it can be extremely complicated and non linear, and not approximated by any known theoretical distribution.  At their simplest, these models all have inputs, internal algorithmic operations, and then outputs.</p>
+<p>When you get to this stage you’ll have some choices to make.  First up is the class of math you need for the problem at hand.  We’ll cover this in depth in subsequent chapters, but for now recall the discussion with the types of machine learning algorithms in the <a class="reference internal" href="../Chapter2/what_is_data_science.html"><span class="doc">What Is Data Science?</span></a> section.  If it’s a supervised classification problem, then your choices of algorithms will be different from those available if it’s an unsupervised clustering type of problem.  Next, you’ll need to understand there’s no way to know beforehand, or apriori, which type of mathematical model will suit the idiosyncrasies of your data best.  This means that even though you know you need a classification algorithm, which one?  There are tons to choose from.  We’ll discuss some best practices and where to start when we get there.  Lastly, understand that no matter which algorithm you choose, there are likely going to be some parameters or arugments that may need to be tuned to get the best result.  For example, if you’re working with a neural network model, then you’ll need to consider how you settle on the number of layers, the number of nodes for each layer, which activation functions, the learning rate, etc.  Again, don’t worry.  We’ll get there.</p>
+<p>Before we move on to the final evaluation phase, we will be doing lots of model building iterations, scoring of in some way, and comparing between all of the candidate models we have to choose from.  We’ll cover topics such as the natural error rate, cross validation, loss functions, and more.</p>
+<h4>Evaluation</h4>
+<p>You’ll go back and forth between Data Preparation and Modeling for quite some time, but eventually you’ll want to move beyond development into evaluation of the best model you’ve been able to create. Like everything else, there are many ways you can go about it. First of all, it depends on the use case and types of modeling we’re working with. If it’s a classification model, then it’s quite possible we ultimately want to use something called a confusion matrix, or even a step beyond called a cost matrix which considers the total sum of penalties and rewards for the different types of errors and correct predictions. If it’s a forecasting project, then you may want something more along the lines of a metric called root mean squared error (RMSE), or a simple mean absolute percentage error (MAPE) to give you an understanding of the average +/- error you can expect from your model.</p>
+<p>Our models must be better than chance and stand up to scrutiny from the business domain experts by way of some performance measure they care about. By the time we get here, we either solved the problem and are ready to move into the final Deployment phase where we put the model in actual practice, or rightfully we should go back to the drawing board and the beginning if we failed. We’ll discuss soon why you really shouldn’t go backwards from this stage back into Modeling due to something known as overfitting.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>It’s actually common for a model to not go into deployment for a variety of reasons.  Unacceptable results, adoption issues, resource commitments, etc.  The good news is, there’s value in simply being able to iterate quickly to learn what shows promise and what doesn’t, whether you move into production or not.</p>
+</div>
+<h4>Deployment</h4>
+<p>Finally, assuming we passed the evaluation phase, then we’re moving on to Deployment!  If you’ve done your job well with the project scoping and Business Understanding phases then we should actually be pretty well set up here with few expected surprises.</p>
+<p>We’ll likely need to involve others to enact our plan at his stage.  Were we going to deploy in the cloud with pipeline architecture, or a simple web app with manual excel file uploads?  Whatever it was, it’s time to reengage all of those additional team member resources like data engineers and MLOps resources to help make it happen.</p>
+<p>What about documentation?  The project should not wither away if you happen to leave the role or company.  Are all of the technical considerations and details outlined?  Are the code files hosted in a networked sharing site like Github?  What about user training and documentation for the business users?</p>
+<p>The final consideration is monitoring and maintenance.  The team should have a standard operating procedure for how this is done and by whom.  All models degrade over time.  The environments in which they were trained change, the inputs change, human behavior changes, etc.  The metrics by which we monitor and decide if model degradation has begun to take place will vary by the project and math type.  We’ll cover some of the simple and more common ways this can be done when we get to live examples.</p>
+<p><strong><h3>What Did We Learn?</h3></strong></p>
+<p>Hopefully you’re starting to see why it’s so much easier to just say “throw me an excel file so I can get started!”, rather than doing it the right way by asking lots of questions and committing to understanding the process and data before proceeding too far.</p>
+<p>I’ll caution you again though.  This framework exists for a reason.  I can promise you’ll pay for it down the road with wasted time and effort if you skip it or don’t give it the attention it deserves.</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Chapter4"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="project_charters.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">4.3. </span>Project Charters</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../Chapter5/project_workflow.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>The Project Workflow</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Brian Brady
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
