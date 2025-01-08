@@ -6,9 +6,9 @@ Data has lots of facets and tentacles into various other topics like technology,
 
 - {doc}`data_structure`
 - {doc}`data_types`
+- {doc}`dataset_types`
 - {doc}`data_acquisition`
-- {doc}`data_integrity`
 
 <br>
 
-Let's get into it.  On to Data Types!
+Let's get into it.  On to Data Structure!

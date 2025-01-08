@@ -182,6 +182,12 @@ The basic idea here is that when you're all done solving the business problem, u
 
 Let's start with the first consideration though: The User Experience.
 
+````{margin}
+```{note}
+**UX** stands for _user experience_, and is a wholistic understanding how the users will experience working with your application.
+```
+````
+
 The **UX** is a wholistic understanding how the users will experience working with your application.  This is a never ending list of questions, but the central idea is trying to understand if you've reduced any friction to using your application as much as possible.  User adoption is a major issue in the real world, and you want to make sure you're doing everything you can to ensure the users _want_ to user your solution.
 
 - Is the app intuitive and easy to understand?
@@ -190,6 +196,12 @@ The **UX** is a wholistic understanding how the users will experience working wi
 - Did you create "How To Guides" and User Documentation?
 - How will they user request support or report bugs?
 - Are there any special security considerations?
+
+````{margin}
+```{note}
+**UI** stands for _user interface_, and is the actual front-end the user will see and engage with when they use your solution.
+```
+````
 
 The **UI** is the actual front-end the user will see when they use your solution.  There are few rules here beyond beautiful design principles, so whichever method or vehicle serves the end users needs is generally what we do, and these will look different for quick prototypes vs. in production.  You'll need to think about whatever you've built, and what that application requires.  For example, if I'm deploying a sales forecasting model that requires the previous month's sales dollars, then the UI will need a text box which allows the user to type in the dollar amount for the last month, assuming you haven't automated the data pull in the backend somehow.  In addition, if it's an application that's only run on demand when the users wants to use it, then you'll also need a button that activates or runs the program.
 

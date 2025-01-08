@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>5.1.2. Data Types &#8212; A Beginner&#39;s Guide To Citizen Data Science</title>
+    <title>5.1.2. Feature Data Types &#8212; My Jupyter Book</title>
   
   
   
@@ -66,7 +66,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="canonical" href="https://bradybr.github.io/citizen_data_science/intro/Chapter5/data_types.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="5.1.3. Data Acquisition" href="data_acquisition.html" />
+    <link rel="next" title="5.1.3. Dataset Types" href="dataset_types.html" />
     <link rel="prev" title="5.1.1. Data Structure" href="data_structure.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -154,8 +154,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/npp_logo.png" class="logo__image only-light" alt="A Beginner's Guide To Citizen Data Science - Home"/>
-    <script>document.write(`<img src="../_static/npp_logo.png" class="logo__image only-dark" alt="A Beginner's Guide To Citizen Data Science - Home"/>`);</script>
+    <img src="../_static/BGTDA_logo.png" class="logo__image only-light" alt="My Jupyter Book - Home"/>
+    <script>document.write(`<img src="../_static/BGTDA_logo.png" class="logo__image only-dark" alt="My Jupyter Book - Home"/>`);</script>
   
   
 </a></div>
@@ -165,7 +165,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../intro.html">
-                    Beginner’s Guide To Citizen Data Science:
+                    <span style="color:white">Beginner’s Guide To Citizen Data Science</span>
                 </a>
             </li>
         </ul>
@@ -195,12 +195,25 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../Chapter4/CRISP-DM.html">4.4. CRISP-DM</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="project_workflow.html">5. The Project Workflow</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="analytics_workflow.html">5. The Analytics Workflow</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="data.html">5.1. Data</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="data_structure.html">5.1.1. Data Structure</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">5.1.2. Data Types</a></li>
-<li class="toctree-l3"><a class="reference internal" href="data_acquisition.html">5.1.3. Data Acquisition</a></li>
-<li class="toctree-l3"><a class="reference internal" href="data_integrity.html">5.1.4. Data Integrity</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">5.1.2. Feature Data Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dataset_types.html">5.1.3. Dataset Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data_acquisition.html">5.1.4. Data Acquisition</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="EDA.html">5.2. Exploratory Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="data_understanding.html">5.2.1. Data Understanding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dqr.html">5.2.2. Data Quality Report</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plots.html">5.2.3. Plots &amp; Graphs</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="data_wrangling.html">5.3. Data Wrangling</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="preprocessing.html">5.3.1. Preprocessing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsetting.html">5.3.2. Subsetting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aggregating.html">5.3.3. Aggregating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="groupby.html">5.3.4. Group By</a></li>
 </ul>
 </li>
 </ul>
@@ -342,7 +355,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Data Types</h1>
+    <h1>Feature Data Types</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -356,510 +369,194 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="data-types">
-<h1><span class="section-number">5.1.2. </span>Data Types<a class="headerlink" href="#data-types" title="Permalink to this heading">#</a></h1>
-<p>In addition to all of the structures and shapes our data may take, there are several different types of data we will encounter.  We’ll discuss the properties of each in more detail when we get to the <span class="xref std std-doc">../Chapter6/machine_learning</span> section, so here we’ll only introduce the types and cover a high level understanding of the following.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="feature-data-types">
+<h1><span class="section-number">5.1.2. </span>Feature Data Types<a class="headerlink" href="#feature-data-types" title="Permalink to this heading">#</a></h1>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Data type</strong> refers to the way variables are represented and encoded in either numeric, categorical, date &amp; time, boolean, or other less common formats.</p>
+</div>
+</aside>
+<p>Data features can be represented in many different forms.  Some are obvious as with numbers and text, and some are more nuanced, as you’ll see with the differences between a numeric integer and a float.  The way variables are represented and encoded in either numeric, categorical, date &amp; time, boolean, or other less common formats, is known as the <strong>data type</strong> of a feature.</p>
+<p>The associated data type with each variables is an extremely important topic.  Not paying attention to this one will have consequences up and down your workflow.  Functional processing and compilation errors are super common when you have mismatched types and are trying to perform certain operations on them.</p>
+<p>You’ll see soon when we start to processing our data and they’ll need to be the correct data type.  You can’t perform mathematical operations on text, and you don’t want to treat numeric variables as objects, so they must be cast into the correct type if they’re incorrect for some reason.</p>
+<p>Let’s run through the most common feature data types with minimal examples below, and then we can jump into our real data.  There are many others besides these main types, and even further subdivisions under each category type that you’ll learn as you begin practicing.</p>
 <ul class="simple">
-<li><p>Cross sectional</p></li>
-<li><p>Time series</p></li>
-<li><p>Panel</p></li>
-<li><p>Text</p></li>
+<li><p>Numeric</p></li>
+<li><p>Categorical</p></li>
+<li><p>Date &amp; Time</p></li>
 </ul>
-<p>Most of the data will fall into the category of “structured” data, think rows and columns (like Excel), with Text data being the most common exception usually coming in “unstructred” blocks of text.  There are other more exotic data, but this will cover the common ones you’ll deal with the most often.</p>
-<p><strong><h3>Cross Sectional</h3></strong></p>
-<p>The one is very common and you’ll run into it often.  Think of <strong>cross sectional</strong> as a snapshot of some collection of data points at a given point in time.</p>
+<p><strong><h3>Numeric</h3></strong></p>
+<p>As simple as it sounds - numeric features are <em>numbers</em>.  There are a couple of different types and other common words you’ll hear to mean the same thing, so let’s see an example and go over them now.</p>
+<p>Below we show a list of 5 <strong>integer</strong>, or whole numbers.</p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Cross Sectional data refers to variables and measures recorded at the same point in time.</p>
+<p><strong>Numeric</strong>, or continuous numbers, i.e. numbers that truly represent values on a numeric scale, will generally be expressed using an <strong>integer</strong> or <strong>float</strong> data type.</p>
 </div>
-<p>Recall our Iris data set from earlier?  It’s a classic example of cross-sectional data because it’s a collection of measurements (lengths and widths) for multiple flowers, all recorded at the same time.</p>
+</aside>
 <div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>sepal_length</th>
-      <th>sepal_width</th>
-      <th>petal_length</th>
-      <th>petal_width</th>
-      <th>species</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>57</th>
-      <td>4.9</td>
-      <td>2.4</td>
-      <td>3.3</td>
-      <td>1.0</td>
-      <td>versicolor</td>
-    </tr>
-    <tr>
-      <th>23</th>
-      <td>5.1</td>
-      <td>3.3</td>
-      <td>1.7</td>
-      <td>0.5</td>
-      <td>setosa</td>
-    </tr>
-    <tr>
-      <th>94</th>
-      <td>5.6</td>
-      <td>2.7</td>
-      <td>4.2</td>
-      <td>1.3</td>
-      <td>versicolor</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>5.1</td>
-      <td>3.5</td>
-      <td>1.4</td>
-      <td>0.3</td>
-      <td>setosa</td>
-    </tr>
-    <tr>
-      <th>138</th>
-      <td>6.0</td>
-      <td>3.0</td>
-      <td>4.8</td>
-      <td>1.8</td>
-      <td>virginica</td>
-    </tr>
-    <tr>
-      <th>66</th>
-      <td>5.6</td>
-      <td>3.0</td>
-      <td>4.5</td>
-      <td>1.5</td>
-      <td>versicolor</td>
-    </tr>
-    <tr>
-      <th>28</th>
-      <td>5.2</td>
-      <td>3.4</td>
-      <td>1.4</td>
-      <td>0.2</td>
-      <td>setosa</td>
-    </tr>
-    <tr>
-      <th>116</th>
-      <td>6.5</td>
-      <td>3.0</td>
-      <td>5.5</td>
-      <td>1.8</td>
-      <td>virginica</td>
-    </tr>
-    <tr>
-      <th>67</th>
-      <td>5.8</td>
-      <td>2.7</td>
-      <td>4.1</td>
-      <td>1.0</td>
-      <td>versicolor</td>
-    </tr>
-    <tr>
-      <th>95</th>
-      <td>5.7</td>
-      <td>3.0</td>
-      <td>4.2</td>
-      <td>1.2</td>
-      <td>versicolor</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
-</div>
-<p>It often helps to understand your data through graphs and visualizations, as you’ll learn soon when we get to the Exploratory Data Analysis section, so let’s plot a couple of the variables in this set and look at the relationship between <code class="docutils literal notranslate"><span class="pre">petal_width</span></code> and <code class="docutils literal notranslate"><span class="pre">petal_length</span></code>.</p>
-<div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
-<div class="cell_output docutils container">
-<img alt="../_images/490b0bfc00592b10d65a7f5b0305111d4b0a980f7774b2e2721891da21b452dd.png" src="../_images/490b0bfc00592b10d65a7f5b0305111d4b0a980f7774b2e2721891da21b452dd.png" />
-</div>
-</div>
-<p><strong><h3>Time Series</h3></strong></p>
-<p>When we’re dealing with what’s known as <em>univariate</em> (only a single dependent variable), the data tends to be very simple.  We usually just have a column or two with categorical fields like “Customer” or “Region”, then some kind of time variable such as “Day”, “Month”, or “Year”, and then some numeric value of interest like “Sales”, “Profit”, or maybe “Price”.  This would be an example of <strong>time series</strong> data.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Time Series data refers to a subject and variables recorded at different points in time (usually at regular intervals).</p>
-</div>
-<p>The key point of distinction for time series data is repeated measurements of data at multiple points in time.  Below you can see an example with a 1 year sample of prices for the Dow Jones Industrial Average from 1968 by Month.</p>
-<div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Date</th>
-      <th>Price</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>637</th>
-      <td>1968-01-01</td>
-      <td>884.77</td>
-    </tr>
-    <tr>
-      <th>638</th>
-      <td>1968-02-01</td>
-      <td>847.20</td>
-    </tr>
-    <tr>
-      <th>639</th>
-      <td>1968-03-01</td>
-      <td>834.76</td>
-    </tr>
-    <tr>
-      <th>640</th>
-      <td>1968-04-01</td>
-      <td>893.37</td>
-    </tr>
-    <tr>
-      <th>641</th>
-      <td>1968-05-01</td>
-      <td>905.22</td>
-    </tr>
-    <tr>
-      <th>642</th>
-      <td>1968-06-01</td>
-      <td>906.82</td>
-    </tr>
-    <tr>
-      <th>643</th>
-      <td>1968-07-01</td>
-      <td>905.32</td>
-    </tr>
-    <tr>
-      <th>644</th>
-      <td>1968-08-01</td>
-      <td>883.72</td>
-    </tr>
-    <tr>
-      <th>645</th>
-      <td>1968-09-01</td>
-      <td>922.80</td>
-    </tr>
-    <tr>
-      <th>646</th>
-      <td>1968-10-01</td>
-      <td>955.47</td>
-    </tr>
-    <tr>
-      <th>647</th>
-      <td>1968-11-01</td>
-      <td>964.12</td>
-    </tr>
-    <tr>
-      <th>648</th>
-      <td>1968-12-01</td>
-      <td>965.39</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
-</div>
-<p>Time series data is a fun one to display graphically.  Time across the x-axis, and the numeric value in the y-axis.  You’ll build these kinds of graphs frequently when you get into real time series projects.</p>
-<br><div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
-<div class="cell_output docutils container">
-<img alt="../_images/9a2f232a1d57d484c188a8e7efda8bc5ba1c0fd3f09237cfb99fe4196e1564aa.png" src="../_images/9a2f232a1d57d484c188a8e7efda8bc5ba1c0fd3f09237cfb99fe4196e1564aa.png" />
-</div>
-</div>
-<p><strong><h3>Panel</h3></strong></p>
-<p>Next up, <strong>Panel</strong> data.  We’ve already seen an example of panel data as well if you recall from a previous section.  Remember the Gas Consumption dataset?  Recall how the unit of analysis was “Gas Consumption, by Country, by Year”?  Well, that’s panel data.  Multiple cross-sections of subjects recorded at multiple points in time.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Panel, or longitudinal data refers to variables and measures across multiple cross sections at different points in time.</p>
-</div>
-<p>Sounds confusing, but it’s the logical next step going from a single slice, or cross sectional, then to multiple points in time with time series, all building up to put them together as we get with panel data.</p>
-<p>Let’s see it in action.</p>
-<div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>country</th>
-      <th>year</th>
-      <th>lgaspcar</th>
-      <th>lincomep</th>
-      <th>lrpmg</th>
-      <th>lcarpcap</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>1</th>
-      <td>AUSTRIA</td>
-      <td>1960</td>
-      <td>4.173244</td>
-      <td>-6.474277</td>
-      <td>-0.334548</td>
-      <td>-9.766840</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>AUSTRIA</td>
-      <td>1961</td>
-      <td>4.100989</td>
-      <td>-6.426006</td>
-      <td>-0.351328</td>
-      <td>-9.608622</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>AUSTRIA</td>
-      <td>1962</td>
-      <td>4.073177</td>
-      <td>-6.407308</td>
-      <td>-0.379518</td>
-      <td>-9.457257</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>AUSTRIA</td>
-      <td>1963</td>
-      <td>4.059509</td>
-      <td>-6.370679</td>
-      <td>-0.414251</td>
-      <td>-9.343155</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>AUSTRIA</td>
-      <td>1964</td>
-      <td>4.037689</td>
-      <td>-6.322247</td>
-      <td>-0.445335</td>
-      <td>-9.237739</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>338</th>
-      <td>U.S.A.</td>
-      <td>1974</td>
-      <td>4.798626</td>
-      <td>-5.328694</td>
-      <td>-1.231467</td>
-      <td>-7.617558</td>
-    </tr>
-    <tr>
-      <th>339</th>
-      <td>U.S.A.</td>
-      <td>1975</td>
-      <td>4.804932</td>
-      <td>-5.346190</td>
-      <td>-1.200377</td>
-      <td>-7.607010</td>
-    </tr>
-    <tr>
-      <th>340</th>
-      <td>U.S.A.</td>
-      <td>1976</td>
-      <td>4.814891</td>
-      <td>-5.297946</td>
-      <td>-1.154682</td>
-      <td>-7.574748</td>
-    </tr>
-    <tr>
-      <th>341</th>
-      <td>U.S.A.</td>
-      <td>1977</td>
-      <td>4.811032</td>
-      <td>-5.256606</td>
-      <td>-1.175910</td>
-      <td>-7.553458</td>
-    </tr>
-    <tr>
-      <th>342</th>
-      <td>U.S.A.</td>
-      <td>1978</td>
-      <td>4.818454</td>
-      <td>-5.221232</td>
-      <td>-1.212062</td>
-      <td>-7.536176</td>
-    </tr>
-  </tbody>
-</table>
-<p>342 rows × 6 columns</p>
-</div></div></div>
-</div>
-<p>Just as before, plotting our data really helps us to visualize what we have and spot the differences between categorical groups.</p>
-<div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
-<div class="cell_output docutils container">
-<img alt="../_images/f1ecafbce76c6befcc2ed0b40a58e64f5b23cd51c4af832dcea3db087a8bf4e1.png" src="../_images/f1ecafbce76c6befcc2ed0b40a58e64f5b23cd51c4af832dcea3db087a8bf4e1.png" />
-</div>
-</div>
-<p><strong><h3>Text</h3></strong></p>
-<p>Text data can come in a variety of formats.  It can be in a corpus, which is a collection of text or audio, a simple column in a file with one or a few words, or you might see it as below, which is free form text in the form of sentences.  Let’s read in a public dataset from the UCI Repository <span id="id1">[<a class="reference internal" href="../zreferences.html#id12" title="UC Irvine. 2024. URL: https://archive.ics.uci.edu/.">Irv24</a>]</span> listing email text for spam classification.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Text data refers to any sort of written data stored in a text/character format.</p>
-</div>
-<p>Let’s print out the first 15 records in the data.</p>
-<div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     Go until jurong point, crazy.. Available only in bugis n great world la e buffet... Ci...
-1                                                                 Ok lar... Joking wif u oni...
-2     Free entry in 2 a wkly comp to win FA Cup final tkts 21st May 2005. Text FA to 87121 t...
-3                                             U dun say so early hor... U c already then say...
-4                                 Nah I don&#39;t think he goes to usf, he lives around here though
-5     FreeMsg Hey there darling it&#39;s been 3 week&#39;s now and no word back! I&#39;d like some fun y...
-6                 Even my brother is not like to speak with me. They treat me like aids patent.
-7     As per your request &#39;Melle Melle (Oru Minnaminunginte Nurungu Vettam)&#39; has been set as...
-8     WINNER!! As a valued network customer you have been selected to receivea Â£900 prize r...
-9     Had your mobile 11 months or more? U R entitled to Update to the latest colour mobiles...
-10    I&#39;m gonna be home soon and i don&#39;t want to talk about this stuff anymore tonight, k? I...
-11    SIX chances to win CASH! From 100 to 20,000 pounds txt&gt; CSH11 and send to 87575. Cost ...
-12    URGENT! You have won a 1 week FREE membership in our Â£100,000 Prize Jackpot! Txt the ...
-13    I&#39;ve been searching for the right words to thank you for this breather. I promise i wo...
-14                                                          I HAVE A DATE ON SUNDAY WITH WILL!!
-Name: text, dtype: object
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 4, 0, 3, 1]
 </pre></div>
 </div>
 </div>
 </div>
-<p>We can see it’s text in long form written sentences.  There are many things we could do to start preprocessing this data, but let’s make it simple and jump right into looking at frequency counts.  Often one on the analyses you’ll want to look at with text data is the number of times, occurrences, or frequency, in which a word appears in a corpus of data.  Let’s run the counts and print out the 10 most used words in this spam data.</p>
+<p>But don’t forget about everyone’s favorite grade school math topic, fractions!  Besides whole numbers, you will run into fractional decimal numbers as well.  Your analytical platform may refer to these by any number of terms, but likely you can expect to see them called <strong>float</strong>.</p>
 <div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>word</th>
-      <th>frequency</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>12</th>
-      <td>to</td>
-      <td>53</td>
-    </tr>
-    <tr>
-      <th>71</th>
-      <td>you</td>
-      <td>42</td>
-    </tr>
-    <tr>
-      <th>43</th>
-      <td>I</td>
-      <td>30</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>a</td>
-      <td>26</td>
-    </tr>
-    <tr>
-      <th>63</th>
-      <td>and</td>
-      <td>22</td>
-    </tr>
-    <tr>
-      <th>163</th>
-      <td>the</td>
-      <td>22</td>
-    </tr>
-    <tr>
-      <th>73</th>
-      <td>for</td>
-      <td>18</td>
-    </tr>
-    <tr>
-      <th>184</th>
-      <td>i</td>
-      <td>17</td>
-    </tr>
-    <tr>
-      <th>102</th>
-      <td>your</td>
-      <td>16</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>in</td>
-      <td>15</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[5.57, -0.18, -0.94, 1.92, 2.46]
+</pre></div>
 </div>
-<p>Hmm… maybe not so interesting or useful yet as you can see a lot of the top words are what we call “stop” words, or uninformative.  They give us little information in regards to subjects or context.  We would normally clean the data up a bit first before analyzing, but hopefully you can at least see what we’re after.</p>
-<p>Let’s plot the top 50 words and see if we start to see a bit more interesting words show up.</p>
-<div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
+</div>
+</div>
+<p>There are other edge cases with numbers for sure, but this is the main gist for numeric values.  Continuous numbers, i.e. numbers that truly represent numbers on a numeric scale, will generally be expressed using an <em>integer</em> or <em>float</em> designation.  The main point to keep in mind is that if something is a number, then certain rules must hold true.</p>
+<p>For example, if you have three numbers, [3,6,9], then they must be able to be represented on a numeric scale at regular intervals and reference to each other such:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 6 must be 2 times the value of 3</span>
+<span class="mi">6</span><span class="o">/</span><span class="mi">3</span>
+</pre></div>
+</div>
+</div>
 <div class="cell_output docutils container">
-<img alt="../_images/c3ce60117914067f40668241245ab939084ccf6377c6cd4efba5c1286dcf3ffd.png" src="../_images/c3ce60117914067f40668241245ab939084ccf6377c6cd4efba5c1286dcf3ffd.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.0
+</pre></div>
 </div>
 </div>
-<p>We’ve plotted the most commonly used words in all of the emails, but notice how many of the words are still uninformative?  When you get into working with text for real, you’ll learn that there’s a <em>ton</em> of preprocessing that needs to happen before you can properly analzye your data.  Simply expanding from 10 to 50 wasn’t enough.  We’ll need to remove stop words, deal with special characters and punctutations, truncate words down to their root, and likely need to look at combinations of words in sequences as well!</p>
-<p>This at least gives you a basic feel for looking at text, doing some simple manipulations, and plotting basic count frequencies.  More to come.</p>
-<h3>What Did We Learn?</h3><p>I know this was a long section, but hopefully you’re starting to get a taste for what some real data looks like, how to interpret a few format types you’ll see, how to perform a few simple manipulations in Python code, and even what kinds of use cases these datasets may line up with.</p>
-<p>There’s always so much more detail we could go into, but we will see more of these as we work through the hands on sections that dig into project steps and methogologies.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 9 must be 3 times the value of 3</span>
+<span class="mi">9</span><span class="o">/</span><span class="mi">3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>In this example of [3,6,9], 6 must be 2 times greater than 3, and 9 must be 3 times greater.  Basic arithmetic.</p>
+<p><strong><h3>Categorical</h3></strong></p>
+<p>This is kind of a tricky one.  There are several designations I could have used, but categorical seemed to make the most sense as the umbrella term.  They may not all be “categorical” in the strictest sense, but categorical as a designation for the high-level classification of non-numeric values is appropriate.</p>
+<p>Let’s create a couple of lists of categorical features to illustrate.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">countries</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Argentina&#39;</span><span class="p">,</span> <span class="s1">&#39;Belgium&#39;</span><span class="p">,</span> <span class="s1">&#39;Colombia&#39;</span><span class="p">,</span> <span class="s1">&#39;Denmark&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Mickey&#39;</span><span class="p">,</span><span class="s1">&#39;Phil&#39;</span><span class="p">,</span><span class="s1">&#39;Bob&#39;</span><span class="p">,</span><span class="s1">&#39;Bill&#39;</span><span class="p">,</span><span class="s1">&#39;Jerry&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="s1">&#39;purple&#39;</span><span class="p">,</span> <span class="s1">&#39;green&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Pretty simple, right?  Can you see why these would be called categorical features?  Simple enough, because these values contained in the feature refer to some “category” or grouping, e.g. countries, names, colors.</p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Categorical</strong>, or non-numerical features, i.e. values that are not represented or understood on a numeric scale, will generally be expressed using an <strong>object</strong>, <strong>string</strong>, or <strong>character</strong> data type.</p>
+</div>
+</aside>
+<p>The word <strong>categorical</strong> can be thought of as an over arching term to represent these types of variables, but it’s more likely you’ll see them referred to as an <strong>object</strong>, <strong>string</strong>, or possibly <strong>character</strong> in your analytical tool or platform.  No matter the specific data type, they all essentially mean the same thing, non-numeric values represented as a “category” of some sort.</p>
+<p>Before moving on, let’s address one of the exceptions relating to when categorical variables are represented as numbers.  We’ll use a real example you may run across when dealing with personal demographic data.  It’s not uncommon to see levels of education attained represented by the year, or grade of schooling, as below.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grade_level</span> <span class="o">=</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now ask yourself, even though these are truly “numbers”, are they really <em>continuous numeric values</em>?  This is a tricky one, so think about it for a minute.</p>
+<p>On the one hand yes, they can be continous numeric values if we think about them as <em>years</em> of schooling.  Then they would map at regular intervals, meaning the distance between them maintains a linear and regular distance, and moving from year 2 to year 3 maintains the same interpretation as moving from year 11 to year 12.  You’ve increased by 1 year.</p>
+<p>On the other hand, and in the way the question was posed, the answer is no, however.  The trick word being used here is education “level”.  Thinking about education by levels instead of years.  Does that carry the same interpretation?  Hopefully you said no.</p>
+<p>Think about it this way - Is moving from grade-level 9, to grade-level 10, understood by saying you attained a 10% higher education?  Hopefully that doesn’t seem plausible to you.  It really only makes sense if you think about it in terms of “year” and not “level”.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Moving from grade 10 to grade 11 as a percentage change</span>
+<span class="p">(</span><span class="mi">11</span> <span class="o">-</span> <span class="mi">10</span><span class="p">)</span> <span class="o">/</span> <span class="mi">10</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.1
+</pre></div>
+</div>
+</div>
+</div>
+<p>We’ll see this again, so don’t worry if it’s a little fuzzy.  For now just think of the distinction as true numeric values are intended to be counted on a continous scale like money or sales, whereas as something like levels, groups, or indicators being represented using numbers are better encoded as categorical variables instead.</p>
+<p><strong><h3>Date &amp; Time</h3></strong></p>
+<p>Next up, dates and time.  This is an easy one to grasp, however the intricacies of actually dealing with them can often be maddening.  We won’t complicate things until we need to, so for now we’ll just cover the basics.</p>
+<p>Let’s type out a common date format in python below and check the data type.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">begin_date</span> <span class="o">=</span> <span class="s1">&#39;05/12/2023 12:00:00&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">begin_date</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">begin_date</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;str&#39;&gt;
+05/12/2023 12:00:00
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can see what’s often going to happen when you run into date and time objects, regardless of the platform you’re using.  If the format and syntax is not exactly what your application is expecting or isn’t explicted stated, it will default to a string or object data type of some sort like above.  So in this case, we need to be explict and tell python that our date is actually a <strong>datetime</strong> data type.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+
+<span class="n">begin_date</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="s1">&#39;05/12/2023 12:00:00&#39;</span><span class="p">,</span> <span class="s2">&quot;%m/</span><span class="si">%d</span><span class="s2">/%Y %H:%M:%S&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">begin_date</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">begin_date</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;datetime.datetime&#39;&gt;
+2023-05-12 12:00:00
+</pre></div>
+</div>
+</div>
+</div>
+<p>Notice the difference in print outs by how the data was representation going into the <code class="docutils literal notranslate"><span class="pre">type</span></code> call.  The first example came out exactly how it went in, as “05/12/2023 12:00:00”.  The second example came out reformatted as a standard <code class="docutils literal notranslate"><span class="pre">datetime</span></code> object as “2023-05-12 12:00:00”, with a <em>datetime</em> data type.</p>
+<p>The last thing we’ll introduce for now is that once you have dates and times represented as the correct data types, then you can perform all kinds of interesting operations with them.  For a simple example, let’s create an <code class="docutils literal notranslate"><span class="pre">end_date</span></code> to go with our <code class="docutils literal notranslate"><span class="pre">begin_date</span></code>.  The obvious operation might be that you want to know how many days have elapsed from the the beginning to end.</p>
+<p>First we’ll create an ending date of 6/20/2023 at 4:00pm to go with our beginning date of 5/12/2023 at 12:00pm, and then check the difference by simply subtracting the two datetime objects.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create an end date as a &quot;datetime&quot; data type</span>
+<span class="n">end_date</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="s1">&#39;06/20/2023 16:00:00&#39;</span><span class="p">,</span> <span class="s2">&quot;%m/</span><span class="si">%d</span><span class="s2">/%Y %H:%M:%S&quot;</span><span class="p">)</span>
+
+<span class="n">date_diff</span> <span class="o">=</span> <span class="n">end_date</span> <span class="o">-</span> <span class="n">begin_date</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">date_diff</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>39 days, 4:00:00
+</pre></div>
+</div>
+</div>
+</div>
+<p>Exactly as expected!  The difference between the start and end date is 39 days and 4 hours.</p>
+<p>There are actually several other data types we could cover, but for now this is plenty to get you working with enough understanding to cover the large marjority of what you’ll see with commom project types.  Now that we have the details of data types out of the way, let’s move on to the main topic of the Data Quality Report - Feature Summaries.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -902,11 +599,11 @@ Name: text, dtype: object
       </div>
     </a>
     <a class="right-next"
-       href="data_acquisition.html"
+       href="dataset_types.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">5.1.3. </span>Data Acquisition</p>
+        <p class="prev-next-title"><span class="section-number">5.1.3. </span>Dataset Types</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

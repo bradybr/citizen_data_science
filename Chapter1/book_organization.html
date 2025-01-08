@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>1.1. Book Organization &#8212; A Beginner&#39;s Guide To Citizen Data Science</title>
+    <title>1.1. Book Organization &#8212; My Jupyter Book</title>
   
   
   
@@ -154,8 +154,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/npp_logo.png" class="logo__image only-light" alt="A Beginner's Guide To Citizen Data Science - Home"/>
-    <script>document.write(`<img src="../_static/npp_logo.png" class="logo__image only-dark" alt="A Beginner's Guide To Citizen Data Science - Home"/>`);</script>
+    <img src="../_static/BGTDA_logo.png" class="logo__image only-light" alt="My Jupyter Book - Home"/>
+    <script>document.write(`<img src="../_static/BGTDA_logo.png" class="logo__image only-dark" alt="My Jupyter Book - Home"/>`);</script>
   
   
 </a></div>
@@ -165,7 +165,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../intro.html">
-                    Beginner’s Guide To Citizen Data Science:
+                    <span style="color:white">Beginner’s Guide To Citizen Data Science</span>
                 </a>
             </li>
         </ul>
@@ -195,8 +195,27 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../Chapter4/CRISP-DM.html">4.4. CRISP-DM</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter5/project_workflow.html">5. The Project Workflow</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Chapter5/data.html">5.1. Data</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter5/analytics_workflow.html">5. The Analytics Workflow</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Chapter5/data.html">5.1. Data</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/data_structure.html">5.1.1. Data Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/data_types.html">5.1.2. Feature Data Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/dataset_types.html">5.1.3. Dataset Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/data_acquisition.html">5.1.4. Data Acquisition</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Chapter5/EDA.html">5.2. Exploratory Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/data_understanding.html">5.2.1. Data Understanding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/dqr.html">5.2.2. Data Quality Report</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/plots.html">5.2.3. Plots &amp; Graphs</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Chapter5/data_wrangling.html">5.3. Data Wrangling</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/preprocessing.html">5.3.1. Preprocessing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/subsetting.html">5.3.2. Subsetting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/aggregating.html">5.3.3. Aggregating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/groupby.html">5.3.4. Group By</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../zreferences.html">6. References</a></li>
@@ -352,6 +371,19 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="book-organization">
 <h1><span class="section-number">1.1. </span>Book Organization<a class="headerlink" href="#book-organization" title="Permalink to this heading">#</a></h1>
+<p>The organization for the material follows a natural progression from introductory and expository, to practical use.</p>
+<p><strong>Chapter 2</strong> <br>
+Is designed to introduce the reader to basic definitions and concepts.  The <em>what</em>, we are talking about in this course.  There are lots of new terms and buzz words in this field and it’s easy to get confused.  Here we introduce the essential subsets of study and try to explain some of the overlap and distinctions between the fields.  We’ll also cover the various roles and personas involved with data science and machine learning, discuss how they work together, and what kind of knowledge and tools are involved.</p>
+<p><strong>Chapter 3</strong><br>
+Gives us the first introduction to our hero - the Citizen Data Scientist.  This section is all about explaining the concept and why it’s worth our attention.  Front line analytics are everywhere.  Empowering the domain experts with new technical knowledge, skills, and capabilities pays huge dividends.  Here we talk about the <em>why’s</em> and <em>how’s</em> of gaining some traction and getting started.</p>
+<p><strong>Chapters 4</strong><br>
+Opens the door to the different kinds of analytics in practice, and how we go about setting ourselves up for success in the planning and actuation stages.  Jumping in too quickly usually results in dealing with misaligned objectives, overdue deliveries, and nothing but headaches.  This section lays out the action items that give you the best chance of chance and staying on track during the course of a project.</p>
+<p><strong>Chapters 5</strong><br>
+Reveals the common steps of an actual machine learning project.  There’s nothing but possibilities and different ways to solve each problem we’ll come across, but these are the well understood steps we should familiarize ourselves with for consideration.  Here we’ll cover the best practices and most common things you’ll want to be aware of when tackling building a solution.</p>
+<p><strong>Chatper 6-7</strong><br>
+Exposes the reader to some of the basic mathematics, theory, and methodologies data scientists work with.  These are the fundamental building blocks required to make use of these powerful tools.  We won’t be able to become masters in our understanding of these topics in this short discourse, but it’s critical we discuss some special theorems and topics as best we can.</p>
+<p><strong>Chapters 8</strong><br>
+Summary, recommendations, and next steps.</p>
 </section>
 
     <script type="text/x-thebe-config">

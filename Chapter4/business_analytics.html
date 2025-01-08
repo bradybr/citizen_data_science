@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>4. Business Analytics Overview &#8212; A Beginner&#39;s Guide To Citizen Data Science</title>
+    <title>4. Business Analytics Overview &#8212; My Jupyter Book</title>
   
   
   
@@ -154,8 +154,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/npp_logo.png" class="logo__image only-light" alt="A Beginner's Guide To Citizen Data Science - Home"/>
-    <script>document.write(`<img src="../_static/npp_logo.png" class="logo__image only-dark" alt="A Beginner's Guide To Citizen Data Science - Home"/>`);</script>
+    <img src="../_static/BGTDA_logo.png" class="logo__image only-light" alt="My Jupyter Book - Home"/>
+    <script>document.write(`<img src="../_static/BGTDA_logo.png" class="logo__image only-dark" alt="My Jupyter Book - Home"/>`);</script>
   
   
 </a></div>
@@ -165,7 +165,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../intro.html">
-                    Beginner’s Guide To Citizen Data Science:
+                    <span style="color:white">Beginner’s Guide To Citizen Data Science</span>
                 </a>
             </li>
         </ul>
@@ -195,11 +195,25 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="CRISP-DM.html">4.4. CRISP-DM</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter5/project_workflow.html">5. The Project Workflow</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter5/analytics_workflow.html">5. The Analytics Workflow</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../Chapter5/data.html">5.1. Data</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Chapter5/data_types.html">5.1.1. Data Formats &amp; Types</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Chapter5/data_acquisition.html">5.1.2. Data Acquisition</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Chapter5/data_integrity.html">5.1.3. Data Integrity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/data_structure.html">5.1.1. Data Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/data_types.html">5.1.2. Feature Data Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/dataset_types.html">5.1.3. Dataset Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/data_acquisition.html">5.1.4. Data Acquisition</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Chapter5/EDA.html">5.2. Exploratory Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/data_understanding.html">5.2.1. Data Understanding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/dqr.html">5.2.2. Data Quality Report</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/plots.html">5.2.3. Plots &amp; Graphs</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Chapter5/data_wrangling.html">5.3. Data Wrangling</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/preprocessing.html">5.3.1. Preprocessing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/subsetting.html">5.3.2. Subsetting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/aggregating.html">5.3.3. Aggregating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/groupby.html">5.3.4. Group By</a></li>
 </ul>
 </li>
 </ul>
@@ -358,15 +372,15 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="business-analytics-overview">
 <h1><span class="section-number">4. </span>Business Analytics Overview<a class="headerlink" href="#business-analytics-overview" title="Permalink to this heading">#</a></h1>
 <blockquote>
-<div><p>Everyone has a plan until they get punched in the face.</p>
-<p>– <cite>Mike Tyson</cite></p>
+<div><p>Even if you’re on the right track, you’ll get run over if you just sit there.</p>
+<p>– <cite>Will Rogers</cite></p>
 </div></blockquote>
 <p>Being truly great at something is an interesting thing.  Consider the dedication and effort it takes to become really amazing in some pursuit?  Like the best in the world.  All of the impressive feats of human accomplishment, innovation, and achievements we tend to revere as a society, are often born from obsession.  Someone, or a group of people, were so singularly focused devoting an unbelievable amount of time towards their endeavor that the results can be staggering, and often paradigm shifting.</p>
 <p>These achivements come at great personal expense unfortunately.  It’s time spent away from our loved ones, a drain on our mental and physical health, and can easily ruin personal relationships.  Think Bobby Fischer of the chess world, Steve Jobs and Steve Wozniak with Apple, or Albert Einstein.  All very interesting origin stories and histories if you have the time…  Sadly, most people simply aren’t willing, or able, to invest in that kind of ruthless dedication to become the world’s best at something so these feats will continue to be outlier behavior.</p>
 <p>I find the subject of becoming truly great at something super interesting, but I digress.  I actually have a point here.  When you find something you passionately enjoy doing and have spent a tremendous amount of time becoming skilled in the capability, you tend to want to do it.  When you want to use a hammer, everything looks like a nail.</p>
 <a class="bg-primary mb-1 reference internal image-reference" href="../_images/painting_with_a_hammer.png"><img alt="painting with a hammer" class="bg-primary mb-1 align-right" src="../_images/painting_with_a_hammer.png" style="width: 500px;" /></a>
 <p>In our context, this means we often get so excited about simply being able to solve a challenging problem that we may fail to devote enough time and due dillegence to the less exciting steps in the process, e.g. project ideation and scoping, success criteria, and valuation steps.  We often want to get right into solving the problem after hearing the idea versus spending adequate time weighing the <em>worth</em> of the idea.</p>
-<p>There have been plenty of times in my career where I’ve wanted to work on something that did not make any sense from an objective business point of view, and it was difficult for me to admit it and move on.  These two notions of <strong>fun</strong> and <strong>valuable</strong> can often be at odds in the real world.  Fun and cool does not always guarantee it’s something we should do.  Unfortunately this is a basic fact of corporate life.  The good news is that just by virtue of <em>what</em> we do, our projects are usually pretty fun and cool anyway.  However we do need an objective measuring stick to guide us so we don’t get tripped up working on non value added projects.</p>
+<p>There have been plenty of times in my career where I’ve wanted to work on something that did not make any sense from an objective business point of view, and it was difficult for me to admit it and move on.  These two notions of <em>fun</em> and <em>valuable</em> can often be at odds in the real world.  Fun and cool does not always guarantee it’s something we should do.  Unfortunately this is a basic fact of corporate life.  The good news is that just by virtue of <em>what</em> we do, our projects are usually pretty fun and cool anyway.  However we do need an objective measuring stick to guide us so we don’t get tripped up working on non value added projects.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Your time will increasingly become the most precious commodity in your life as you get older.  Use it wisely.</p>

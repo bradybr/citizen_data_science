@@ -66,12 +66,13 @@ At this point we've covered the outer ring of {numref}`ds-venn-fig`, which are t
 
 **<h3>Machine Learning</h3>**
 
-As you'll come to understand further, the application of specialty mathematics is a major part of what we do.  Where math & statistics and computer science overlap gives us what's known as **Machine Learning**.
-
+````{margin}
 ```{note}
-_Machine Learning_ is the application of code, algorithms, and data, giving computers the ability to learn and perform a variety of tasks.
+**Machine Learning** is the application of code, algorithms, and data, giving computers the ability to learn and perform a variety of tasks.
 ```
-<br>
+````
+
+As you'll come to understand further, the application of specialty mathematics is a major part of what we do.  Where math & statistics and computer science overlap gives us what's known as **Machine Learning**.
 
 Tightly coupled with the types of analytics we've already covered, you'll learn there are groups of methodologies that allow us to teach our models to learn and find patterns, which ultimately gives us the ability to solve our problems.  For example, to solve a Prediction problem previously discussed, we may choose to employ what's known as a _Classification_ algorithm from the Supervised Learning group of machine learning methods.
 

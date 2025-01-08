@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>4.3. Project Charters &#8212; A Beginner&#39;s Guide To Citizen Data Science</title>
+    <title>4.3. Project Charters &#8212; My Jupyter Book</title>
   
   
   
@@ -154,8 +154,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/npp_logo.png" class="logo__image only-light" alt="A Beginner's Guide To Citizen Data Science - Home"/>
-    <script>document.write(`<img src="../_static/npp_logo.png" class="logo__image only-dark" alt="A Beginner's Guide To Citizen Data Science - Home"/>`);</script>
+    <img src="../_static/BGTDA_logo.png" class="logo__image only-light" alt="My Jupyter Book - Home"/>
+    <script>document.write(`<img src="../_static/BGTDA_logo.png" class="logo__image only-dark" alt="My Jupyter Book - Home"/>`);</script>
   
   
 </a></div>
@@ -165,7 +165,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../intro.html">
-                    Beginner’s Guide To Citizen Data Science:
+                    <span style="color:white">Beginner’s Guide To Citizen Data Science</span>
                 </a>
             </li>
         </ul>
@@ -195,11 +195,25 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="CRISP-DM.html">4.4. CRISP-DM</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter5/project_workflow.html">5. The Project Workflow</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter5/analytics_workflow.html">5. The Analytics Workflow</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../Chapter5/data.html">5.1. Data</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Chapter5/data_types.html">5.1.1. Data Types</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Chapter5/data_acquisition.html">5.1.2. Data Acquisition</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Chapter5/data_integrity.html">5.1.3. Data Integrity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/data_structure.html">5.1.1. Data Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/data_types.html">5.1.2. Feature Data Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/dataset_types.html">5.1.3. Dataset Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/data_acquisition.html">5.1.4. Data Acquisition</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Chapter5/EDA.html">5.2. Exploratory Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/data_understanding.html">5.2.1. Data Understanding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/dqr.html">5.2.2. Data Quality Report</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/plots.html">5.2.3. Plots &amp; Graphs</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Chapter5/data_wrangling.html">5.3. Data Wrangling</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/preprocessing.html">5.3.1. Preprocessing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/subsetting.html">5.3.2. Subsetting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/aggregating.html">5.3.3. Aggregating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/groupby.html">5.3.4. Group By</a></li>
 </ul>
 </li>
 </ul>
@@ -360,6 +374,13 @@ document.write(`
 <p>At this point consider you’ve gone through the ideation stage and you’ve iteratively whittled down your full list to one stand out idea you want to turn into a project.  You could easily just get started with what you know today; however, I would strongly encourage you to spend a little more time and energy on flushing out key details first.  Projects can and often go sideways very quickly from what you originally set out to accomplish, and you can minimize the risks of getting off course if you take the time to document and get the proper engagement from your stakeholders.</p>
 <p>This section is all about setting you up for success by being intentional and explicit right from the start.  The person responsible for this step will vary across organizations and may not be the data scientist, but possibly the business analyst, project lead, project sponsor, or project manager, among others.  Regardless of who, and whether or not it’s an official Charter, going through the accounting and documentation actitivies that follow will unquestionably be time well spent.</p>
 <p><strong><h3>What Is a Project Charter?</h3></strong></p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A <strong>Project Charter</strong> is a high-level overview of the who, what, where, when, why, and how’s of a project, and commitments from multiple key participants involved in the life of an engagement.</p>
+</div>
+</aside>
 <p>Whether it’s an official Charter, Executive Summary, Project Plan, or simply an outline in a Word or PowerPoint doc, the answer is essentially the same.  Primarily what we’re talking about is documenting the <em>Who</em>, <em>What</em>, <em>When</em>, <em>Where</em>, <em>Why,</em> and <em>How’s</em> of a project.  The most formal of the bunch is the Project Charter, which serves as a high-level project overview and commitment from multiple key participants involved in the life of an engagement.</p>
 <p>At one level we have the requesting and functional owner of the effort (business sponsor) coming to terms with the working team (analytics team plus business subject matter experts) regarding the details of what they want someone to go off and work on, and their expectations for what that working team needs to deliver at the end of the project to be considered a “success”.  At a commonly higher level, there may also be the need for awareness and oversight from a Steering Committee for necessary support or approval (capital, human resources, or change management).  This group of leaders will typically have the power to authorize financial support, communicate expectations, set priorities, and clear any blockers for the working team.</p>
 <p>A common set of the details found in a Charter are listed below, with an example in <a class="reference internal" href="#project-charter-fig"><span class="std std-numref">Fig. 4.6</span></a>.</p>
@@ -403,11 +424,14 @@ document.write(`
 <em>Are there any specific situations or required conditions that need to be included or excluded?</em> <br>
 <em>What is the plan for future phases and scaling?</em></p>
 </div></blockquote>
-<p>It’s pretty much that simple, but know this is the area that has the most potential to cause issues during the course of a project.  It may seem minor at the time.  Add an extra product line to the analysis that we didn’t originally talk about…  Allow an additional condition or capability that was not originally agreed to…  Change the method of deployment from a Proof of Value (POV) to now requiring all of the bells and whistles of a customer facing usable Minimum Viable Product (MVP)…  All of these changes are what’s known as <strong>scope creep</strong>.</p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><em>Scope creep</em> is any minor or major changes to a plan, compared to what was originally agreed to and approved for working on during the course of a project.</p>
+<p><strong>Scope creep</strong> is any minor or major change to a plan, compared to what was originally agreed to and approved for working on during the course of a project.</p>
 </div>
+</aside>
+<p>It’s pretty much that simple, but know this is the area that has the most potential to cause issues during the course of a project.  It may seem minor at the time.  Add an extra product line to the analysis that we didn’t originally talk about…  Allow an additional condition or capability that was not originally agreed to…  Change the method of deployment from a Proof of Value (POV) to now requiring all of the bells and whistles of a customer facing usable Minimum Viable Product (MVP)…  All of these changes are what’s known as <strong>scope creep</strong>.</p>
 <p>Often we don’t jump straight away into a full scale deployment so we need to be very clear about what kind of effort we’re running.  Part of scoping a project is deciding on what the delivery plan looks like.  Will you be doing phased iterations of testing, learning, and deployment?  Are certain requested deliverables off the table for the first version, or does everything need to be delivered all at once?  Depending on what matters for our project sponors, there are options to manage the project goverened by various constraints at different times, such as time, money, resources, priority, etc., and to deliver the project in phases.</p>
 <p>We may want to start first with a smaller scale limited Proof of Concept (POC) to quickly test the idea before worrying about anything else.  Maybe we want to begin with a Proof of Value (POV) to prove the potential benefit truly exists before we’d spend time on any of the end user functionality.  Or we could deliver a bare bones prototype called a Minimum Viable Product (MVP) to quickly realize a return.  It doesn’t need to be pretty, but it will work and prove out the concept, as well as allow the business to capture actual value.  Another option is to possibly deploy a full featured Pilot, carefully built out to the full business requirements.  This version is carefully tested in production environments, and ready to scale to a wider scope after an adequate period of time monitoring the solution in real-time.</p>
 <p>Some changes to the scope and deliverables are obvious and easy to reject for being out of scope; however, the ones you really need to watch out for are the little changes that seem minor and within acceptable tolerances to let slide.  The additive and cummulative effects of taking people off task, even in short bursts, can have a devastating effect on the overall timeline.  Remember, the original plan did not include for these tasks and more often than not it pays to strictly adhere to the plan.  This is the exact reason we create these kinds of documents so there are no surprises and we stay on track.</p>

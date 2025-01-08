@@ -22,9 +22,15 @@ Ok then, is there a better way?  Glad you asked.  Yes there is.  There's no reas
 
 Have you heard of deductive or inductive reasoning?  With deductive reasoning, we begin with a few basic axioms - simple true statements regarding how the world around us works.  Inductive is exactly the opposite where uncovering simple truths about some phenomenon is the _goal_ of the investigation, not the _starting_ point.  Out of inductive reasoning we get the scientific method we briefly touched on in Chapter 2.  
 
-```{note}
+```{tip}
 The process cycle we follow is a combination of the deductive mathematical methods in data mining, and experimentation and testing steps from the inductive scientific method {cite}`NIS_2009`.
 ```
+
+````{margin}
+```{note}
+**CRISP-DM**, or Cross Industry Standard Process for Data Mining, is the most widely used framework for activating and delivering data ming and analytics projects.
+```
+````
 
 The most widely used framework in the industry for data mining and analytics is called **CRISP-DM** (Cross Industry Standard Process for Data Mining), below in {numref}`CRISP-DM-fig`.  There have been proposed extensions and adaptations over time to address deficiencies in the model, but it is still regarded as the dominant guide which many teams follow.  You may also find it's common to add in a layer of project management via either an agile or scrum methodology (e.g. IBM's Analytics Solutions Unified Method {cite}`IBM_WP_2016`).
 
@@ -58,6 +64,12 @@ This understanding of the business context is so critical to the success of a pr
 
 All of our high-powered methods rely on data.  This one is also extremely vital to the success of the project (as they all are really), but there's a few plot twists to consider when we start thinking about data.  The first is the data generation process, followed by access and acquisition, and lastly data quality and understanding.
 
+````{margin}
+```{note}
+**Data generation process (DGP)** is the phenomenon, mechanism, or physical process that actually creates the data being studied.
+```
+````
+
 On a practical level, do you know how the data was actually created?  I mean the actual physical process making the data available.  Is someone manually entering data into a spreadsheet?  Is it system generated?  Which systems?  When is it updated?  Are there revisions or restatements that you need to account for?  And many more questions.  Next, from a statistical point of view, do you have any understanding of the **data generation process**, or _DGP_, which is the phenomenon or mechanism that actually creates the data we're observing.  If you can build a mathematical model that accurately reflects this process which created your data, then you've hit a home run.  You can now do all sorts of interesting things with your model, like investigating how changes to specific parameters will affect the system, simulate new data to study, make predictions, and run scenario planning queries.
 
 Now let's talk about actually getting your hands on the data.  Do we have access to all of the technical environments that house the data?  Are we going to import offline manual files, open up an API (application programming interface) connection, or get it from the source?  Will the proof of concept method of ingesting data be the same as when we get to the production version, or do we need to create a new process?  If so, who will maintain the process after deployment?  Do we have any legal or contractual restrictions with what we're allowed to do with the data?  Are there security and compliance considerations if we're using private personal information (PPI) data?  You definitely do not want to be the reason your company gets splashed into the news with some kind of data breach that exposed sensitive consumer data into the public domain.
@@ -88,11 +100,11 @@ tags: ["remove-input"]
 mystnb:
   image:
     align: center
-    alt: seaborn tips data
+    alt: skewed
   figure:
     caption: |
       Distributions
-    name: test
+    name: dists
 ---
 
 import warnings
@@ -128,7 +140,7 @@ tags: ["remove-input"]
 mystnb:
   image:
     align: center
-    alt: seaborn tips data
+    alt: transformed
   figure:
     caption: |
       Description
@@ -159,13 +171,13 @@ Next up is modeling after you've wrangled, transformed, and aggregated your data
 
 First of all, do you know what a model is?  This is one of those "blinking" words that has many definitions across multiple fields, and means something very different depending on who're talking to.  A business person might think you're talking about a conceptual framework like Maslow's Hierarchy of Needs model, a designer/enginner might think you're talking about a physical or even a computer-aided design (CAD) representation, and an informations systems resource might hear the word and think you're talking about a data model for representing the relationships between data and architectural end points.
 
-In our data science world when we hear the word model, we're talking about a mathematical formula.  
-
+````{margin}
 ```{note}
-A data science model is a mathematical formula mapping inputs, an internal algorithmic logic, and outputs, designed to uncover the data generation process of some external phenomenon.
+A data science model is a mathematical formula mapping inputs, an internal algorithmic logic, and outputs, designed to uncover the data generation process of some phenomenon.
 ```
+````
 
-Lots of big words I know, but it really is a simple idea.  Remember back when we talked about uncovering the data generation process?  That's what our model is.  It's the simplified mathematical representation of whatever process created our data.  It can be a super simple deterministic model like,
+In our data science world when we hear the word model, we're talking about a mathematical formula that maps inputs, an internal algorithmic logic, and outputs into an equation designed to uncover the data generation process of some phenomenon.  The definition may sounds complicated with lots of big words I know, but it really is a simple idea.  Remember back when we talked about uncovering the data generation process?  That's what our model is.  It's the simplified mathematical representation of whatever process created our data.  It can be a super simple deterministic model like,
 
 $$
 output(c) = input(A + B)

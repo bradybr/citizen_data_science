@@ -1,0 +1,1406 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>5.2.3. Plots &amp; Graphs &#8212; My Jupyter Book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Chapter5/plots';</script>
+    <link rel="canonical" href="https://bradybr.github.io/citizen_data_science/intro/Chapter5/plots.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="5.3. Data Wrangling" href="data_wrangling.html" />
+    <link rel="prev" title="5.2.2. Data Quality Report" href="dqr.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/BGTDA_logo.png" class="logo__image only-light" alt="My Jupyter Book - Home"/>
+    <script>document.write(`<img src="../_static/BGTDA_logo.png" class="logo__image only-dark" alt="My Jupyter Book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    <span style="color:white">Beginner’s Guide To Citizen Data Science</span>
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter1/introduction.html">1. Introduction</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/book_organization.html">1.1. Book Organization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter1/objectives.html">1.2. Objectives</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter2/what_is_data_science.html">2. What Is Data Science?</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter2/problems_we_solve.html">2.1. Problems We Solve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter2/fields_of_study.html">2.2. Fields of Study</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter2/skills_and_tools.html">2.3. Skills &amp; Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter2/roles.html">2.4. Roles</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter3/citizen_data_scientist.html">3. The Citizen Data Scientist</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter3/how_they_add_value.html">3.1. How They Add Value</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter3/prerequisites.html">3.2. Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter3/getting_started.html">3.3. Getting Started</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter4/business_analytics.html">4. Business Analytics Overview</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter4/analytics_continuum.html">4.1. Analytics Continuum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter4/project_ideation.html">4.2. Project Ideation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter4/project_charters.html">4.3. Project Charters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter4/CRISP-DM.html">4.4. CRISP-DM</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="analytics_workflow.html">5. The Analytics Workflow</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="data.html">5.1. Data</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="data_structure.html">5.1.1. Data Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data_types.html">5.1.2. Feature Data Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dataset_types.html">5.1.3. Dataset Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data_acquisition.html">5.1.4. Data Acquisition</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="EDA.html">5.2. Exploratory Analysis</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="data_understanding.html">5.2.1. Data Understanding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dqr.html">5.2.2. Data Quality Report</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">5.2.3. Plots &amp; Graphs</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="data_wrangling.html">5.3. Data Wrangling</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="preprocessing.html">5.3.1. Preprocessing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsetting.html">5.3.2. Subsetting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aggregating.html">5.3.3. Aggregating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="groupby.html">5.3.4. Group By</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../zreferences.html">6. References</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Chapter5/plots.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Plots & Graphs</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="plots-graphs">
+<h1><span class="section-number">5.2.3. </span>Plots &amp; Graphs<a class="headerlink" href="#plots-graphs" title="Permalink to this heading">#</a></h1>
+<p>Time to unleash the right side of your brain!</p>
+<p>Truthfuly, we should have been working with plots for the last few sections way more extensively than we have.  Instead of introducing too many topics at once, we intentionally paused delving into the the visual exploration side of things so we could focus on one thing at a time.  Now that the analytical side of Exploratory Data Analysis (EDA) is behind us, it’s time to see how adding some visual creativity to your arsenal will pay huge dividends!</p>
+<figure class="align-default" id="right-brain-fig">
+<a class="reference internal image-reference" href="../_images/right_brain.png"><img alt="../_images/right_brain.png" src="../_images/right_brain.png" style="width: 600px;" /></a>
+</figure>
+<p>Plots and graphs will come into play in multiple stages during the course of your project.  For now, they’ll help in your EDA work with basic understandings of what you’re working with, investigating raw features, and helping to identify if there are any potential issues in the data.  Then once you start moving into feature engineering and transformations you’ll begin visualizing your updates and relational effects between your variables.  Finally, when you start getting into building models and iterating through versions, you’ll need some way to visualize the progress, tuning, and performance of your candidate models.</p>
+<p>At our current stage, all of the visuals and graphics you’ll be building are purely for your benefit.  They can be as simple and utilitarian, or as pretty as you want them to be.  The main focus during this early investigatory phase is to advance your understanding of the data under study.</p>
+<p>Let’s begin with talking about the various types of plots you should know about and feel comfortable with the situational usages for each.</p>
+<p><strong><h3>Types of Plots</h3></strong></p>
+<p>First off, you’ll often see the words “plots” and “graphs” used interchangeably, but usually intended to mean the same thing.  These are simply visual graphics of some kind.  Plots more commonly refer to the techinical side of what we’re doing in our application environments, and serve as a catch-all to encompass all kinds of visuals, from proper graphs to images.  Graphs will mostly be referencing the visualization of numeric or categorical data in some way.</p>
+<p>Borrowing, and gently updating <a class="reference internal" href="#plot-types-fig"><span class="std std-numref">Fig. 5.3</span></a> below from the <a href="https://seaborn.pydata.org/tutorial.html">Seaborn User Guide and Tutorial</a>, is about as straight forward as I’ve ever seen an illustration laying out the most common graphs and their uses.  There are of course others and more exotic plot types for specific purposes, such as heatmaps, area, autocorrelation, 3D, graph networks, images, word clouds, animated/interactive, and so on, but what we’ll reveiw will cover the overwhelming majority of our needs for now.</p>
+<figure class="align-default" id="plot-types-fig">
+<a class="reference internal image-reference" href="../_images/plot_types.png"><img alt="../_images/plot_types.png" src="../_images/plot_types.png" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 5.3 </span><span class="caption-text">Source: <a class="reference external" href="https://seaborn.pydata.org/tutorial/function_overview.html">https://seaborn.pydata.org/tutorial/function_overview.html</a></span><a class="headerlink" href="#plot-types-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>For each pillar of plot types, we’ll discuss in more detail when we get to each section, but for now hopefully you can see there are really only a few different reasons you might want to display data graphically, i.e. for Relational, Distributions, and Categorical data.  That’s pretty much it for the most part.</p>
+<p>You either want to compare some values or sequence of values <strong>(relational)</strong>, investigate the dispersion of a data sample under study <strong>(distributions)</strong>, or you want to visualize the frequencies or proportionality of <strong>categorical</strong> (non numeric) data in some way.</p>
+<p>All of the plot types under each pillar simply give you options and flexibility to tailer your view to the specifics of your actual data.  Honestly, you could probably learn three or four different types of graphs and be all set for 95% of the analytics we need to perform.  Of course we love having the flexibility and options to really dial in our graphics, but you could get by nonetheless.</p>
+<p>We’ll use <a class="reference internal" href="#plot-types-fig"><span class="std std-numref">Fig. 5.3</span></a> as the reference to motivate our examples below.</p>
+<p>A couple of final thoughts before jumping in.</p>
+<ol class="arabic simple">
+<li><p>Start with thinking about your data before thinking about the types of plots</p>
+<ul class="simple">
+<li><p>What type of data do I have?  e.g. cross sectional, time series</p></li>
+<li><p>What’s the unit of analysis?</p></li>
+<li><p>What are the values (the features and data points you want to see in the plot) in your data?</p></li>
+<li><p>Are there any categorical features you may want to condition on or separate (group/compare/facet) your values with?</p></li>
+</ul>
+</li>
+<li><p>Simple is always better</p>
+<ul class="simple">
+<li><p>Going overboard and adding too many dimensions (values, groupings, color, size, shapes, etc.) in your plots is generally a bad idea</p></li>
+<li><p>Complicated visuals will overwhelm and confuse most audiences</p></li>
+</ul>
+</li>
+<li><p>Exploratory graphics do not have to be pretty</p>
+<ul class="simple">
+<li><p>EDA plots are for you, and only need to be what you need them to be to get value out of</p></li>
+<li><p>Presentation graphics are for others, and need to be simple, clear, and informative</p></li>
+</ul>
+</li>
+</ol>
+<p>Enough words.  Let’s see some examples!</p>
+<p><strong><h3>Relational Plots</h3></strong></p>
+<p>These are probably the most common types of graphs we work with.  <em>Relational</em> means you have some variable(s) of interest you’d like to compare with other features or across time.  Sounds complicated, but it’s really pretty straightforward.</p>
+<p>We’ll again use the “tips” dataset to work through our examples below.  This popular dataset holds the record of tips received by a waiter over the course of several months.  Features present are the tip amount, bill total, sex/gender of the payer, if any smokers were present in the party, the day of the week, the time of day, and the size of the party.</p>
+<p>Let’s take a look.</p>
+<div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+</style>
+<table id="T_89d43">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_89d43_level0_col0" class="col_heading level0 col0" >total_bill</th>
+      <th id="T_89d43_level0_col1" class="col_heading level0 col1" >tip</th>
+      <th id="T_89d43_level0_col2" class="col_heading level0 col2" >sex</th>
+      <th id="T_89d43_level0_col3" class="col_heading level0 col3" >smoker</th>
+      <th id="T_89d43_level0_col4" class="col_heading level0 col4" >day</th>
+      <th id="T_89d43_level0_col5" class="col_heading level0 col5" >time</th>
+      <th id="T_89d43_level0_col6" class="col_heading level0 col6" >size</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_89d43_level0_row0" class="row_heading level0 row0" >17</th>
+      <td id="T_89d43_row0_col0" class="data row0 col0" >$16.29</td>
+      <td id="T_89d43_row0_col1" class="data row0 col1" >$3.71</td>
+      <td id="T_89d43_row0_col2" class="data row0 col2" >Male</td>
+      <td id="T_89d43_row0_col3" class="data row0 col3" >No</td>
+      <td id="T_89d43_row0_col4" class="data row0 col4" >Sun</td>
+      <td id="T_89d43_row0_col5" class="data row0 col5" >Dinner</td>
+      <td id="T_89d43_row0_col6" class="data row0 col6" >3</td>
+    </tr>
+    <tr>
+      <th id="T_89d43_level0_row1" class="row_heading level0 row1" >18</th>
+      <td id="T_89d43_row1_col0" class="data row1 col0" >$16.97</td>
+      <td id="T_89d43_row1_col1" class="data row1 col1" >$3.50</td>
+      <td id="T_89d43_row1_col2" class="data row1 col2" >Female</td>
+      <td id="T_89d43_row1_col3" class="data row1 col3" >No</td>
+      <td id="T_89d43_row1_col4" class="data row1 col4" >Sun</td>
+      <td id="T_89d43_row1_col5" class="data row1 col5" >Dinner</td>
+      <td id="T_89d43_row1_col6" class="data row1 col6" >3</td>
+    </tr>
+    <tr>
+      <th id="T_89d43_level0_row2" class="row_heading level0 row2" >19</th>
+      <td id="T_89d43_row2_col0" class="data row2 col0" >$20.65</td>
+      <td id="T_89d43_row2_col1" class="data row2 col1" >$3.35</td>
+      <td id="T_89d43_row2_col2" class="data row2 col2" >Male</td>
+      <td id="T_89d43_row2_col3" class="data row2 col3" >No</td>
+      <td id="T_89d43_row2_col4" class="data row2 col4" >Sat</td>
+      <td id="T_89d43_row2_col5" class="data row2 col5" >Dinner</td>
+      <td id="T_89d43_row2_col6" class="data row2 col6" >3</td>
+    </tr>
+    <tr>
+      <th id="T_89d43_level0_row3" class="row_heading level0 row3" >20</th>
+      <td id="T_89d43_row3_col0" class="data row3 col0" >$17.92</td>
+      <td id="T_89d43_row3_col1" class="data row3 col1" >$4.08</td>
+      <td id="T_89d43_row3_col2" class="data row3 col2" >Male</td>
+      <td id="T_89d43_row3_col3" class="data row3 col3" >No</td>
+      <td id="T_89d43_row3_col4" class="data row3 col4" >Sat</td>
+      <td id="T_89d43_row3_col5" class="data row3 col5" >Dinner</td>
+      <td id="T_89d43_row3_col6" class="data row3 col6" >2</td>
+    </tr>
+    <tr>
+      <th id="T_89d43_level0_row4" class="row_heading level0 row4" >21</th>
+      <td id="T_89d43_row4_col0" class="data row4 col0" >$20.29</td>
+      <td id="T_89d43_row4_col1" class="data row4 col1" >$2.75</td>
+      <td id="T_89d43_row4_col2" class="data row4 col2" >Female</td>
+      <td id="T_89d43_row4_col3" class="data row4 col3" >No</td>
+      <td id="T_89d43_row4_col4" class="data row4 col4" >Sat</td>
+      <td id="T_89d43_row4_col5" class="data row4 col5" >Dinner</td>
+      <td id="T_89d43_row4_col6" class="data row4 col6" >2</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<p>So what can we say about this data set?</p>
+<p><em>What kind of data is it?</em>  <strong>Panel</strong> <br>
+<em>What’s the unit of analysis?</em>  <strong>Total bill and tip amounts, by guest party (size, sex, smoker), by day (day, time)</strong> <br>
+<em>What are the values?</em>  <strong>Total bill &amp; tip $ amounts</strong> <br>
+<em>What are the categorical (conditioning) variables?</em>  <strong>sex, smoker, day, time, size</strong></p>
+<h4>Scatter Plots</h4><p>Scatter plots are excellent places to get started because they’re pretty simple, and usually only a couple of variables.  While these types of plots could be used with categorical data such as <code class="docutils literal notranslate"><span class="pre">day</span></code> on the x axis, it makes much more sense to view the relationships between numeric features.  Here we have three continuous variables in <code class="docutils literal notranslate"><span class="pre">total_bill</span></code>, <code class="docutils literal notranslate"><span class="pre">tip</span></code>, and <code class="docutils literal notranslate"><span class="pre">size</span></code>.</p>
+<p>You’ll come to start thinking about your data in terms of primary and secondary, and/or aesthetic variables, meaning information you could use to segment or further subclassify your data to give further contextual information.</p>
+<div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
+<div class="cell_output docutils container">
+<img alt="../_images/66ed6a1ee49160259c5e916cdb0ca020680691fab56fbff4151fad4e9ddf474d.png" src="../_images/66ed6a1ee49160259c5e916cdb0ca020680691fab56fbff4151fad4e9ddf474d.png" />
+</div>
+</div>
+<p>Cool.  Our first exploratory plot!  We’re <em>relating</em> the size of each individual <code class="docutils literal notranslate"><span class="pre">tip</span></code> amount to the overall size of their <code class="docutils literal notranslate"><span class="pre">total</span> <span class="pre">bill</span></code>.  So what can we see?  Maybe you noticed a nice linear trend as the total bill gets larger, generally so does the size of the tip?  Maybe you noticed a few points that do <em>not</em> follow those same general patterns?  Like the anomaly of someone tipping over $5 on a $7 bill?</p>
+<p>Good start, but what else could we do here?  Maybe you thought about adding an additional segmentation <em>aesthetic</em> using color in some way?  How about if we highlight each point by <code class="docutils literal notranslate"><span class="pre">sex</span></code>(male or female)?</p>
+<div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
+<div class="cell_output docutils container">
+<img alt="../_images/ef904885387adc7292c414cc7487ec3b200683049250b12448138d7cb1d7e3d9.png" src="../_images/ef904885387adc7292c414cc7487ec3b200683049250b12448138d7cb1d7e3d9.png" />
+</div>
+</div>
+<p>Hmm… unfortunately looks like pretty uniform dispersion so it doesn’t appear to be too informational.  What if we add linear fit trendlines for each gender?</p>
+<div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
+<div class="cell_output docutils container">
+<img alt="../_images/cfc2ab9a656d21b9f4764f6a43d5739a900b08062bfacb2f4494e4a787afe5e7.png" src="../_images/cfc2ab9a656d21b9f4764f6a43d5739a900b08062bfacb2f4494e4a787afe5e7.png" />
+</div>
+</div>
+<p>As we first suspected.  Not much difference based on the sexes; however, the up sloping trendlines do confirm what we first observed in a general up trend of tipping more as the total bill increases.</p>
+<p>Let’s move on to segment, or facet, by whether or not each group was a <code class="docutils literal notranslate"><span class="pre">smoker</span></code> group or not, and also we’ll use a coloring aesthetic to highlight the size of each group.</p>
+<div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
+<div class="cell_output docutils container">
+<img alt="../_images/dbb5f76490b441aaa59e55a165ac389d1e0db1ec139f036a381b7e88a74234bd.png" src="../_images/dbb5f76490b441aaa59e55a165ac389d1e0db1ec139f036a381b7e88a74234bd.png" />
+</div>
+</div>
+<p>Anything jump out at you?  Maybe the differences in the slopes (angles) of the regression lines?  Or the wider confidence intervals (widths) at the extreme values for the <code class="docutils literal notranslate"><span class="pre">smoker</span> <span class="pre">=</span> <span class="pre">Yes</span></code> group? There’s a ton of information in this one, but I’ll leave it to you to pick it apart further.</p>
+<p>Although we could, we don’t want to spend all day on scatterplots.  We need to move on to some other types.</p>
+<p>Next up, line plots.</p>
+<h4>Line Plots</h4><p>Line plots are pretty straightforward.  These are the stuff of <em>time series</em> data that we discussed in our <a class="reference internal" href="data_types.html"><span class="doc">Feature Data Types</span></a> section.  It doesn’t really make sense to connect data point by point if they’re independent observations that have no dependency across time.  Let’s see what we’re talking about by reading in a dataset from the St. Louis Federal Reserve <span id="id1">[<a class="reference internal" href="../zreferences.html#id4" title="2024. URL: https://fred.stlouisfed.org/.">FRE24</a>]</span> with the following features:</p>
+<ul class="simple">
+<li><p>DATE - Month</p></li>
+<li><p>CPI - Consumer Price Index</p></li>
+<li><p>PCE - Personal Consumption Expendature</p></li>
+<li><p>AHW - Average Hourly Wage</p></li>
+<li><p>CSI - Consumer Sentiment Index</p></li>
+</ul>
+<p>Recall from our discussion about time series data types, what you should notice straight away is that this data carries a <em>time</em> component.  This is what allows you to connect the points in time over the x-axis.</p>
+<div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>DATE</th>
+      <th>CPI</th>
+      <th>PCE</th>
+      <th>AHW</th>
+      <th>CSI</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1/1/2007</td>
+      <td>85.832240</td>
+      <td>9538.7</td>
+      <td>20.59</td>
+      <td>96.9</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2/1/2007</td>
+      <td>86.165127</td>
+      <td>9566.0</td>
+      <td>20.68</td>
+      <td>91.3</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3/1/2007</td>
+      <td>86.613197</td>
+      <td>9611.7</td>
+      <td>20.73</td>
+      <td>88.4</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4/1/2007</td>
+      <td>86.873093</td>
+      <td>9643.6</td>
+      <td>20.78</td>
+      <td>87.1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5/1/2007</td>
+      <td>87.232139</td>
+      <td>9685.8</td>
+      <td>20.84</td>
+      <td>88.3</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>count</th>
+      <th>mean</th>
+      <th>min</th>
+      <th>25%</th>
+      <th>50%</th>
+      <th>75%</th>
+      <th>max</th>
+      <th>std</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>DATE</th>
+      <td>204</td>
+      <td>2015-06-16 19:31:45.882352896</td>
+      <td>2007-01-01 00:00:00</td>
+      <td>2011-03-24 06:00:00</td>
+      <td>2015-06-16 00:00:00</td>
+      <td>2019-09-08 12:00:00</td>
+      <td>2023-12-01 00:00:00</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>CPI</th>
+      <td>204.0</td>
+      <td>102.634476</td>
+      <td>85.83224</td>
+      <td>94.436791</td>
+      <td>100.202939</td>
+      <td>108.037504</td>
+      <td>130.307109</td>
+      <td>11.143778</td>
+    </tr>
+    <tr>
+      <th>PCE</th>
+      <td>204.0</td>
+      <td>12820.531373</td>
+      <td>9538.7</td>
+      <td>10644.0</td>
+      <td>12291.65</td>
+      <td>14299.025</td>
+      <td>19001.7</td>
+      <td>2616.071004</td>
+    </tr>
+    <tr>
+      <th>AHW</th>
+      <td>204.0</td>
+      <td>25.885931</td>
+      <td>20.59</td>
+      <td>22.9</td>
+      <td>24.985</td>
+      <td>28.1875</td>
+      <td>34.27</td>
+      <td>3.694348</td>
+    </tr>
+    <tr>
+      <th>CSI</th>
+      <td>203.0</td>
+      <td>79.699015</td>
+      <td>50.0</td>
+      <td>69.85</td>
+      <td>79.0</td>
+      <td>91.8</td>
+      <td>101.4</td>
+      <td>13.309146</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>We can see that some of these variables are indexes, and others are one very different range scales, so let’s start with just one series before getting too complicated.</p>
+<div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
+<div class="cell_output docutils container">
+<img alt="../_images/c52585687ec8b6b53719de1cf86eb1a9dfd16412b450b3230a04be86ead4539d.png" src="../_images/c52585687ec8b6b53719de1cf86eb1a9dfd16412b450b3230a04be86ead4539d.png" />
+</div>
+</div>
+<p>Now what if we wanted to plot all 4 of the series together?  Could we do that?  Yes we could, but unfortunately you wouldn’t be able to read them due to the issue of them all being on different scales.  We would have to normalize or standardize each individual series to be on the same scale first.  Otherwise, the large values of the PCE series would overwhelm the smaller ones and you would not be able to see any variance.</p>
+<p>Another way we can get them all on one plot <em>without</em> adjusting the values is called faceting.  Faceting essentially breaks out each series into its own subplot and allows each to have independent y-axis ranges instead of sharing.</p>
+<p>See below.</p>
+<div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
+<div class="cell_output docutils container">
+<img alt="../_images/9f8eb00573c297e636da25976c28352b6ed115adfdc6186195070176c50f8823.png" src="../_images/9f8eb00573c297e636da25976c28352b6ed115adfdc6186195070176c50f8823.png" />
+</div>
+</div>
+<p>One more for good measure.  Let’s see how we’d normalize each series so we could get them all on one graph instead of the subplots, in case that’s what you’re after.</p>
+<p>There are several ways we could do this, but we’re going to keep it simple and create a normalized index out of each variable.  Notice the scale and shapes remain the same, but we no longer can see the original values.  We’ll talk more about this soon when we get to transformations in the Feature Engineering section.</p>
+<div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
+</div>
+<div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
+<div class="cell_output docutils container">
+<img alt="../_images/acf5aa582e25754f085c8b6d9cff95c3bb23f9a51450ec7e252eeefff213fdd1.png" src="../_images/acf5aa582e25754f085c8b6d9cff95c3bb23f9a51450ec7e252eeefff213fdd1.png" />
+</div>
+</div>
+<p><strong><h3>Distributional Plots</h3></strong></p>
+<p>Plots that show the statistical moments of the data in a distribution, or spread, of the data can be extremely helpful in understanding the behavior of our sample under study.  We’ll start with the most common and cover a few lesser used as well.</p>
+<p>Continuing with the tips dataset.</p>
+<div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+</style>
+<table id="T_30dab">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_30dab_level0_col0" class="col_heading level0 col0" >total_bill</th>
+      <th id="T_30dab_level0_col1" class="col_heading level0 col1" >tip</th>
+      <th id="T_30dab_level0_col2" class="col_heading level0 col2" >sex</th>
+      <th id="T_30dab_level0_col3" class="col_heading level0 col3" >smoker</th>
+      <th id="T_30dab_level0_col4" class="col_heading level0 col4" >day</th>
+      <th id="T_30dab_level0_col5" class="col_heading level0 col5" >time</th>
+      <th id="T_30dab_level0_col6" class="col_heading level0 col6" >size</th>
+      <th id="T_30dab_level0_col7" class="col_heading level0 col7" >tip_pct</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_30dab_level0_row0" class="row_heading level0 row0" >17</th>
+      <td id="T_30dab_row0_col0" class="data row0 col0" >$16.29</td>
+      <td id="T_30dab_row0_col1" class="data row0 col1" >$3.71</td>
+      <td id="T_30dab_row0_col2" class="data row0 col2" >Male</td>
+      <td id="T_30dab_row0_col3" class="data row0 col3" >No</td>
+      <td id="T_30dab_row0_col4" class="data row0 col4" >Sun</td>
+      <td id="T_30dab_row0_col5" class="data row0 col5" >Dinner</td>
+      <td id="T_30dab_row0_col6" class="data row0 col6" >3</td>
+      <td id="T_30dab_row0_col7" class="data row0 col7" >0.227747</td>
+    </tr>
+    <tr>
+      <th id="T_30dab_level0_row1" class="row_heading level0 row1" >18</th>
+      <td id="T_30dab_row1_col0" class="data row1 col0" >$16.97</td>
+      <td id="T_30dab_row1_col1" class="data row1 col1" >$3.50</td>
+      <td id="T_30dab_row1_col2" class="data row1 col2" >Female</td>
+      <td id="T_30dab_row1_col3" class="data row1 col3" >No</td>
+      <td id="T_30dab_row1_col4" class="data row1 col4" >Sun</td>
+      <td id="T_30dab_row1_col5" class="data row1 col5" >Dinner</td>
+      <td id="T_30dab_row1_col6" class="data row1 col6" >3</td>
+      <td id="T_30dab_row1_col7" class="data row1 col7" >0.206246</td>
+    </tr>
+    <tr>
+      <th id="T_30dab_level0_row2" class="row_heading level0 row2" >19</th>
+      <td id="T_30dab_row2_col0" class="data row2 col0" >$20.65</td>
+      <td id="T_30dab_row2_col1" class="data row2 col1" >$3.35</td>
+      <td id="T_30dab_row2_col2" class="data row2 col2" >Male</td>
+      <td id="T_30dab_row2_col3" class="data row2 col3" >No</td>
+      <td id="T_30dab_row2_col4" class="data row2 col4" >Sat</td>
+      <td id="T_30dab_row2_col5" class="data row2 col5" >Dinner</td>
+      <td id="T_30dab_row2_col6" class="data row2 col6" >3</td>
+      <td id="T_30dab_row2_col7" class="data row2 col7" >0.162228</td>
+    </tr>
+    <tr>
+      <th id="T_30dab_level0_row3" class="row_heading level0 row3" >20</th>
+      <td id="T_30dab_row3_col0" class="data row3 col0" >$17.92</td>
+      <td id="T_30dab_row3_col1" class="data row3 col1" >$4.08</td>
+      <td id="T_30dab_row3_col2" class="data row3 col2" >Male</td>
+      <td id="T_30dab_row3_col3" class="data row3 col3" >No</td>
+      <td id="T_30dab_row3_col4" class="data row3 col4" >Sat</td>
+      <td id="T_30dab_row3_col5" class="data row3 col5" >Dinner</td>
+      <td id="T_30dab_row3_col6" class="data row3 col6" >2</td>
+      <td id="T_30dab_row3_col7" class="data row3 col7" >0.227679</td>
+    </tr>
+    <tr>
+      <th id="T_30dab_level0_row4" class="row_heading level0 row4" >21</th>
+      <td id="T_30dab_row4_col0" class="data row4 col0" >$20.29</td>
+      <td id="T_30dab_row4_col1" class="data row4 col1" >$2.75</td>
+      <td id="T_30dab_row4_col2" class="data row4 col2" >Female</td>
+      <td id="T_30dab_row4_col3" class="data row4 col3" >No</td>
+      <td id="T_30dab_row4_col4" class="data row4 col4" >Sat</td>
+      <td id="T_30dab_row4_col5" class="data row4 col5" >Dinner</td>
+      <td id="T_30dab_row4_col6" class="data row4 col6" >2</td>
+      <td id="T_30dab_row4_col7" class="data row4 col7" >0.135535</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<h4>Histograms</h4><p>Histograms are probably the most familiar, and the most common to visualize the frequency counts of data series.  These graphs show the frequency of numerical data in the form of vertical rectangles illustrating how many times that value range was observed in the data (higher = more frequent).</p>
+<p>Let’s see what the range of values looks like in our <code class="docutils literal notranslate"><span class="pre">total_bill</span></code> variable.</p>
+<div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>count</th>
+      <th>mean</th>
+      <th>std</th>
+      <th>min</th>
+      <th>25%</th>
+      <th>50%</th>
+      <th>75%</th>
+      <th>max</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>total_bill</th>
+      <td>244.0</td>
+      <td>19.785943</td>
+      <td>8.902412</td>
+      <td>3.07</td>
+      <td>13.3475</td>
+      <td>17.795</td>
+      <td>24.1275</td>
+      <td>50.81</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>We can see that the average value is around $20 dollars, with the inner quartile range of $13-24.  Now let’s see what this looks like plotted in a historgram.</p>
+<div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
+<div class="cell_output docutils container">
+<img alt="../_images/f8cf73ebc9413252da3cea91b59581e0dab74e331213137d5c8cc06be1e01abb.png" src="../_images/f8cf73ebc9413252da3cea91b59581e0dab74e331213137d5c8cc06be1e01abb.png" />
+</div>
+</div>
+<p>Nice!  That’s pretty much exactly what we see.  Our data is right (positive) skewed, shown in that sweeping tail out to the right of our histogram.  It’s a little hard to see the nuances of the full distribution though because of the “coarseness”.  This is due to the number of chosen bins in the plotting function.</p>
+<p>Histograms have a parameter called “bins” that you can adjust to increase or decrease the width of the discrete ranges on the x-axis.  Let’s try making it a little more spread out by adjusting the “binwidth” parameter.</p>
+<div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
+<div class="cell_output docutils container">
+<img alt="../_images/079346c043a1c57e661b1abd53d82b47807d20829fd280b1cf0ed997e2b52c41.png" src="../_images/079346c043a1c57e661b1abd53d82b47807d20829fd280b1cf0ed997e2b52c41.png" />
+</div>
+</div>
+<p>Interesting.  See how we lost all of the aggregated groupings?  Historgrams are particular in the number of bins required to really see what’s going on.  When you start wanting to see this kind of granularity, maybe you want the next kind of plot we’ll look at called density plots.</p>
+<h4>Density Plots</h4><p>If the aggregated coarseness of the historgram was too much for you, maybe you’re looking for a smoothed version that will nicely show the overall distribution of data.  Enter the density plot.  Here we lose the frequency counts in favor of the probability density function of a variable.  Sounds complicated, however the same idea applies as with the histogram where the larger more peaked areas occur more frequently.  Simple as that.</p>
+<div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
+<div class="cell_output docutils container">
+<img alt="../_images/25c6c986f070198e692ad7745c535e7ea460b1e5b1b3981e59e163af7a503135.png" src="../_images/25c6c986f070198e692ad7745c535e7ea460b1e5b1b3981e59e163af7a503135.png" />
+</div>
+</div>
+<p>Let’s overlay our density curve on top of our histogram and see how they compliment each other.</p>
+<div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
+<div class="cell_output docutils container">
+<img alt="../_images/f88c085211e3ee6308c308016eda7391bdcbbe3e5049466fed9ec7ea6af8bb98.png" src="../_images/f88c085211e3ee6308c308016eda7391bdcbbe3e5049466fed9ec7ea6af8bb98.png" />
+</div>
+</div>
+<p>Very nice.  We can see the obvious differences between the two representations, but also where they share the same distributional shape.  Sometimes you don’t need or want to see the frequency steps and jagged jumps, and would prefer to see the smooth curve.</p>
+<p>Now, let’s take one last look by visualizing <code class="docutils literal notranslate"><span class="pre">tip</span></code> and <code class="docutils literal notranslate"><span class="pre">total</span> <span class="pre">bill</span></code> amounts on the same graph overlaying their individual density curves.</p>
+<div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
+<div class="cell_output docutils container">
+<img alt="../_images/d591e492d8fa4f1e5f246726b5fd2f106ed17c1e4494c08d09078b1d16c1c865.png" src="../_images/d591e492d8fa4f1e5f246726b5fd2f106ed17c1e4494c08d09078b1d16c1c865.png" />
+</div>
+</div>
+<h4>ECDF (Empirical Cumulative Density Function)</h4><p>Now for the final distributional type of graph we’ll cover:  Empirical Cumulative Density Functions (ECDF)</p>
+<p>This type of plot calculates the fraction of observations that are less than or equal to a specific point in the distribution of the sample.  Probability density curves are extremely beneficial when you need to model or simulate from an observed sample (empirical) because a theoretical distribution will not fit or work.</p>
+<p>Sounds complicated, I know.  It’s really pretty simple though.  Let’s illustrate by simulating a coin flipping game that either <em>wins</em> 1 token or <em>loses</em> 1 token with each flip.</p>
+<p>We’ll simulate playing this game <strong>100</strong> times.  Each game starts out with <strong>10</strong> tokens, and will consist of flipping a coin up to <strong>1,000</strong> times.  Each game will terminate either by running out of tokens when the player hits zero, or by hitting the maximum number of flips set to 1,000.</p>
+<p>Still sound complicated?  Let’s run the simulation and take a look below at the first 10 games and see if it helps make it more clear.</p>
+<div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
+</div>
+<div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
+<div class="cell_output docutils container">
+<img alt="../_images/602935d94b7cb1e00369a4662cbb39e7749c0596bcd06e719b1a0089663a70fc.png" src="../_images/602935d94b7cb1e00369a4662cbb39e7749c0596bcd06e719b1a0089663a70fc.png" />
+</div>
+</div>
+<p>Notice a few things straight away.</p>
+<ul class="simple">
+<li><p>Each “Game” begins with 10 tokens, and will either end when we lose all of our tokens by hiting 0, or by quiting when we hit the maximum number of 1,000 flips (whichever comes first)</p></li>
+<li><p>Some games we went straight down and never got higher than the 10 tokens we started with</p></li>
+<li><p>Some games we made at least a small profit throughout the game, but then eventually gave it all back and went bankrupt</p></li>
+<li><p>Some games we made it all the way to the end of the 1,000 flips while still having at least some tokens left</p></li>
+</ul>
+<div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
+<div class="cell_output docutils container">
+<p>Now remember, we played this game 100 times, so there are actually another 90 other games we can look at to see what happened.  We’re jumping a head a bit, but there’s some really foundational mathematics at play here called the <em>Law of Large Numbers</em> which we’ll cover later which allows us to ask some really cool questions given our history of playing this game.</p>
+</div>
+</div>
+<blockquote>
+<div><p><em>What’s the probability of playing the game and never sitting on a profit?</em> <br>
+<em>What’s the probabiliy of surviving and playing the game all the way to the end of the 1,000 coin flips?</em> <br>
+<em>What’s the probability of running out of tokens before doubling our money and making a profit of 10 tokens?</em> <br>
+<em>What’s the ideal profit amount to walk away from the game at which gives us an 80% chance of winning?</em></p>
+</div></blockquote>
+<p>Next, see all of those little green dots in each game?  Those are highlighting the maximum number of tokens held at any point during each game.  Could we answer some of these questions if we collect all of those maximum value of tokens held during each game and create an <em>empirical cumulative density function</em>?  I think so!</p>
+<p>Let’s give it a try.</p>
+<div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
+<div class="cell_output docutils container">
+<img alt="../_images/4d6006a29cfbb2cb18926a20f2ab5c34467e3d666329b8a418c8423216040c59.png" src="../_images/4d6006a29cfbb2cb18926a20f2ab5c34467e3d666329b8a418c8423216040c59.png" />
+</div>
+</div>
+<p>Beautiful!  Can you already see how it might work?  See the relationship between the cumulative probability percentage on the y-aix and number of tokens on the x-axis?  And notice the operative word <em>cumulative</em>?  That should tip you off that we will always start at 0% and end at 100%.  Because one of the core tenants of probability theory states that probabilities must add up to 100%, this means no matter where you are on the curve you’ll be able to make a statement about the probability of a specific number of tokens less than <em>and</em> greater than those values.  Pretty awesome!</p>
+<p>What’s really cool about this cumulative density function is that it’s actually learning from our data, hence the term <em>empirical</em>.  So as long as we have a sufficient number of samples, we can begin to ask some questions about expected outcomes and feel pretty good about our confidence in those estimates.</p>
+<div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
+<div class="cell_output docutils container">
+<p>Revisiting our first question from above, <em>What’s the probability of playing the game and never sitting on a profit?</em> Turns out there’s a 10% chance of immediately losing money and never getting back to break even.</p>
+</div>
+</div>
+<div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
+<div class="cell_output docutils container">
+<img alt="../_images/c1932c709b3fe07d8c52d40039df20e412b722f0995c9a6f5e5c3f04b8988afc.png" src="../_images/c1932c709b3fe07d8c52d40039df20e412b722f0995c9a6f5e5c3f04b8988afc.png" />
+</div>
+</div>
+<div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
+<div class="cell_output docutils container">
+<p>Remember, that means there’s a 90% chance of sitting on a profit of at least 1 token at some point during the game.</p>
+</div>
+</div>
+<p>Does that sound like a game you want to play?  I’ll let you decide that one for yourself…</p>
+<p>How do we interpret the graph then?  It’s actually pretty simple.  The cumulative probability shows where some percentage of the observations were less than that value on the x-axis, and the inverse percentage is how much of the time the observations were greater than that number.</p>
+<p>Say you’re actually pretty risk tolerant and you would like to know where you might want to start thinking about cashing out given a 50% chance of reaching that amount?</p>
+<div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
+<div class="cell_output docutils container">
+<img alt="../_images/093b94998d418ca7d8a0cd5c614e371feea3ff41f4c6723a95f0894269a9c31e.png" src="../_images/093b94998d418ca7d8a0cd5c614e371feea3ff41f4c6723a95f0894269a9c31e.png" />
+</div>
+</div>
+<div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
+<div class="cell_output docutils container">
+<p>Above we can see above that 50% of the time you would fail to reach 17 tokens, and 50% of the time you could expect to exceed it.  Definitely a game of chance, and not one of skill.</p>
+</div>
+</div>
+<p>Which makes sense if you think about it, because we started with 10 tokens and we’re flipping a fair coin, so we should have approximately the same chance of losing 10 tokens as we do gaining 10!</p>
+<p><strong><h3>Categorical Plots</h3></strong></p>
+<p>Finally, our last grouping of plot types:  Categorical Plots.</p>
+<p>These are exactly as they sound, plots for visualizing categorical data in some way.  Some of these will look very familiar to what we’ve seen already, while others may be a little new.  What they’ll all have in common though is categorical aggregation or faceting in some way that allows us to segment by these non numeric groups.</p>
+<p>I see no reason to break from using the tips data at this point, so we’ll carry on as we have been.</p>
+<div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>total_bill</th>
+      <th>tip</th>
+      <th>sex</th>
+      <th>smoker</th>
+      <th>day</th>
+      <th>time</th>
+      <th>size</th>
+      <th>tip_pct</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>16.99</td>
+      <td>1.01</td>
+      <td>Female</td>
+      <td>No</td>
+      <td>Sun</td>
+      <td>Dinner</td>
+      <td>2</td>
+      <td>0.059447</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>10.34</td>
+      <td>1.66</td>
+      <td>Male</td>
+      <td>No</td>
+      <td>Sun</td>
+      <td>Dinner</td>
+      <td>3</td>
+      <td>0.160542</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>21.01</td>
+      <td>3.50</td>
+      <td>Male</td>
+      <td>No</td>
+      <td>Sun</td>
+      <td>Dinner</td>
+      <td>3</td>
+      <td>0.166587</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>23.68</td>
+      <td>3.31</td>
+      <td>Male</td>
+      <td>No</td>
+      <td>Sun</td>
+      <td>Dinner</td>
+      <td>2</td>
+      <td>0.139780</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>24.59</td>
+      <td>3.61</td>
+      <td>Female</td>
+      <td>No</td>
+      <td>Sun</td>
+      <td>Dinner</td>
+      <td>4</td>
+      <td>0.146808</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p><strong><h5>Bar Plots</h5></strong></p>
+<p>Bar plots look very similar to histograms, the difference being here we’re not spreading the frequencies of a numeric variable out by its range of values across the x-axis, but rather showing the categorical levels of a feature on the x-axis and the counts on the y-axis.</p>
+<div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
+<div class="cell_output docutils container">
+<img alt="../_images/8aaeaa5a2665da239bc1b23104c33a7e52d55f860c2a37ae16f3401417af4e26.png" src="../_images/8aaeaa5a2665da239bc1b23104c33a7e52d55f860c2a37ae16f3401417af4e26.png" />
+</div>
+</div>
+<p>Of course we can also use the aggregation funtionality within the barplot to show numeric values <em>by</em> these same levels contained within a categorical feature.</p>
+<div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
+<div class="cell_output docutils container">
+<img alt="../_images/7b42bd28107f65647ffb1eadfa752b6725e7689bc86337e6b591d7487cadc602.png" src="../_images/7b42bd28107f65647ffb1eadfa752b6725e7689bc86337e6b591d7487cadc602.png" />
+</div>
+</div>
+<h4>Boxplots</h4><p>Boxplots are again similar to some others we’ve seen, namely bar plots and density plots.  We’re essentially using a bar plot layout to view the statistical distribution of the values contained within a feature.  Recall the numeric quantile summaries we’ve been working with?  Well, these are graphical representations of these summaries laid out in a bar with additional quartile information overlaid on top.</p>
+<p>How might this work?</p>
+<p>Curious if there’s a statistical difference in tipping by day of the week?  We can use boxplots to nicely visualize the differences!  However, before we do, let’s print out the numeric summaries for reference.</p>
+<div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>count</th>
+      <th>mean</th>
+      <th>std</th>
+      <th>min</th>
+      <th>25%</th>
+      <th>50%</th>
+      <th>75%</th>
+      <th>max</th>
+    </tr>
+    <tr>
+      <th>day</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Thur</th>
+      <td>62.0</td>
+      <td>2.771452</td>
+      <td>1.240223</td>
+      <td>1.25</td>
+      <td>2.0000</td>
+      <td>2.305</td>
+      <td>3.3625</td>
+      <td>6.70</td>
+    </tr>
+    <tr>
+      <th>Fri</th>
+      <td>19.0</td>
+      <td>2.734737</td>
+      <td>1.019577</td>
+      <td>1.00</td>
+      <td>1.9600</td>
+      <td>3.000</td>
+      <td>3.3650</td>
+      <td>4.73</td>
+    </tr>
+    <tr>
+      <th>Sat</th>
+      <td>87.0</td>
+      <td>2.993103</td>
+      <td>1.631014</td>
+      <td>1.00</td>
+      <td>2.0000</td>
+      <td>2.750</td>
+      <td>3.3700</td>
+      <td>10.00</td>
+    </tr>
+    <tr>
+      <th>Sun</th>
+      <td>76.0</td>
+      <td>3.255132</td>
+      <td>1.234880</td>
+      <td>1.01</td>
+      <td>2.0375</td>
+      <td>3.150</td>
+      <td>4.0000</td>
+      <td>6.50</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
+<div class="cell_output docutils container">
+<img alt="../_images/eec51112a21eacff8e3d0e36e99f7e701aa422ec9ba5071a2decb598ce0a5573.png" src="../_images/eec51112a21eacff8e3d0e36e99f7e701aa422ec9ba5071a2decb598ce0a5573.png" />
+</div>
+</div>
+<p>Nice.  The minimums and maximums are easily identifiable.  Now, remember the discussion about inner quartile range (25th-75th percentiles)?  Well those are observable in the plot as the outer horizontal lines of the boxes.  The thickest line in the middle of the box is the median value.  And see those vertical lines sticking out above and below each box?  Those are the 1.5x the IQR range we’ve also been discussing as an indication of the upper and lower limits for outliers.  Which leaves the dots beyond those outlier limits.  Can you guess what those are?  Outliers!  Good guess.</p>
+<p>We could also do some coloring and additional grouping and faceting if we’d like to get a little more information in one graphic, just don’t forget that <em>simple is always better</em>, as things can get overly complicated super quickly.</p>
+<div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
+<div class="cell_output docutils container">
+<img alt="../_images/843cca28d6c4094f058790f2c6c9267a3df020803f611b9f4a30c8473c10ff98.png" src="../_images/843cca28d6c4094f058790f2c6c9267a3df020803f611b9f4a30c8473c10ff98.png" />
+</div>
+</div>
+<h4>Violin Plots</h4><p>Next up is one of my favorite types of plots, but also unfortunately one of the least used by others.  Sad, because it’s really an informative one.</p>
+<p>Let’s start with throwing boxplots under the bus first.  Did you happen to notice a potential issue with boxplots?  It’s ok if you didn’t catch it.  Yes, these plots show a graphical representation of the numeric distribution of a variable, but they can easily obsfucate the real underlying spread.  Let’s show an example to make this clear.</p>
+<p>First, we’ll simulate a bimodal distribution and see what it looks like in a histogram and density curve.</p>
+<div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
+<div class="cell_output docutils container">
+<img alt="../_images/2d4e478c03e4aebe10072efbc78945c6e3b67d7c59dc7a9a8d030d42980c99d8.png" src="../_images/2d4e478c03e4aebe10072efbc78945c6e3b67d7c59dc7a9a8d030d42980c99d8.png" />
+</div>
+</div>
+<p>Now, using the same data, first we print the numeric summary statistics, and then graphs for a boxplot and violin plot side by side so we can compare and contrast.</p>
+<div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>count</th>
+      <th>mean</th>
+      <th>std</th>
+      <th>min</th>
+      <th>25%</th>
+      <th>50%</th>
+      <th>75%</th>
+      <th>max</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>x</th>
+      <td>200.0</td>
+      <td>0.488792</td>
+      <td>0.304708</td>
+      <td>0.012959</td>
+      <td>0.217672</td>
+      <td>0.490629</td>
+      <td>0.773719</td>
+      <td>0.99541</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
+<div class="cell_output docutils container">
+<img alt="../_images/fb16d12faab89ae26697fe0a3f7aa626a4ccad6c6f129906dae196f9f4bea5d9.png" src="../_images/fb16d12faab89ae26697fe0a3f7aa626a4ccad6c6f129906dae196f9f4bea5d9.png" />
+</div>
+</div>
+<p>Very very interesting.  Hopefully you can see what might be the issue with the boxplot now.  Would you really have been able to understand the distribution of data from the boxplot by itself?  The new violin plot clearly shows the underlying distribution much better than the boxplot does.  It’s essentially a density plot turned on it’s side with the quartiles overlaid.  Super informative.</p>
+<p>This example is just a simple caution.  While boxplots are awesome and super helpful, they can also easily hide distributional information if the data is non-normal.  This isn’t to say violin plots are infallable though.  Simply understand every plot type has its strengths and weaknesses, and try not to fall in love with just one type and you’ll be fine.</p>
+<p>Back to violin plots.  We can do some very cool things with these by splitting, coloring, and faceting.  Here’s just a taste below if you wanted to see the difference in tipping percentage by gender, and whether or not they were in a party with a smoker.  It would be nearly impossible to see this same amount of information in such a succient way in a boxplot.</p>
+<div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
+<div class="cell_output docutils container">
+<img alt="../_images/d8ffa3df69cc920468a4f0c66eef72962c1ee50e7ee0f9704fd51cdc7a7aa9fa.png" src="../_images/d8ffa3df69cc920468a4f0c66eef72962c1ee50e7ee0f9704fd51cdc7a7aa9fa.png" />
+</div>
+</div>
+<h3>Mosaic Plots</h3><p>And now our final plot type we’re going to show: Mosiac Plots.</p>
+<p>Mosaic plots are definitely not the most common plot you’ll see, but it’s good to know there’s a simple way to plot multiple categorical variables against each other.  Under the hood, mosiac plots are leveraging what’s known as <em>crosstabs</em>, which caluclate the overlapping percentages amongst the categorical groups.</p>
+<p>Let’s see how it works using the sex and day variables in the tips data.  First, we show a crosstab table to illustrate the actual numbers behind the graph.</p>
+<div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>day</th>
+      <th>Thur</th>
+      <th>Fri</th>
+      <th>Sat</th>
+      <th>Sun</th>
+    </tr>
+    <tr>
+      <th>sex</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Male</th>
+      <td>30</td>
+      <td>10</td>
+      <td>59</td>
+      <td>58</td>
+    </tr>
+    <tr>
+      <th>Female</th>
+      <td>32</td>
+      <td>9</td>
+      <td>28</td>
+      <td>18</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>And now the mosaic plot, which is just a graphical representation of the crosstable counts above.</p>
+<div class="cell tag_r tag_e tag_m tag_o tag_v tag_- tag_i tag_n tag_p tag_u tag_t docutils container">
+<div class="cell_output docutils container">
+<img alt="../_images/230f4af8be94caa8e21830bd0e069da45fcf7c078077ecaff533b4c1161b9d3e.png" src="../_images/230f4af8be94caa8e21830bd0e069da45fcf7c078077ecaff533b4c1161b9d3e.png" />
+</div>
+</div>
+<p><strong><h3>What Did We Learn?</h3></strong></p>
+<p>Another long one, I know.  But there’s so many different ways to visualize your data and we wanted to try to expose you to as many useful ways as possible.  You’ll start to get comfortable over time, and with practice you’ll be able to quickly associate the different plot types with the specifics of your data at hand.  Google and your application documentations will come to your rescue when needed.</p>
+<p>The last thought to leave you with is that you’ll quickly come to realize there are many dimensions you can force into a graph, but just because we can doesn’t mean we should.  Graphs should not be complicated or confusing.  The point you’re trying to make should jump out of the image at the viewer, and rarely should require any outside explanation.</p>
+<p>Remember, <em>simple is always better</em>.</p>
+<p>Happy plotting.</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Chapter5"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="dqr.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">5.2.2. </span>Data Quality Report</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="data_wrangling.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">5.3. </span>Data Wrangling</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Brian Brady
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>2. What Is Data Science? &#8212; A Beginner&#39;s Guide To Citizen Data Science</title>
+    <title>2. What Is Data Science? &#8212; My Jupyter Book</title>
   
   
   
@@ -154,8 +154,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/npp_logo.png" class="logo__image only-light" alt="A Beginner's Guide To Citizen Data Science - Home"/>
-    <script>document.write(`<img src="../_static/npp_logo.png" class="logo__image only-dark" alt="A Beginner's Guide To Citizen Data Science - Home"/>`);</script>
+    <img src="../_static/BGTDA_logo.png" class="logo__image only-light" alt="My Jupyter Book - Home"/>
+    <script>document.write(`<img src="../_static/BGTDA_logo.png" class="logo__image only-dark" alt="My Jupyter Book - Home"/>`);</script>
   
   
 </a></div>
@@ -165,7 +165,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../intro.html">
-                    Beginner’s Guide To Citizen Data Science:
+                    <span style="color:white">Beginner’s Guide To Citizen Data Science</span>
                 </a>
             </li>
         </ul>
@@ -195,8 +195,27 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../Chapter4/CRISP-DM.html">4.4. CRISP-DM</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter5/project_workflow.html">5. The Project Workflow</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Chapter5/data.html">5.1. Data</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter5/analytics_workflow.html">5. The Analytics Workflow</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Chapter5/data.html">5.1. Data</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/data_structure.html">5.1.1. Data Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/data_types.html">5.1.2. Feature Data Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/dataset_types.html">5.1.3. Dataset Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/data_acquisition.html">5.1.4. Data Acquisition</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Chapter5/EDA.html">5.2. Exploratory Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/data_understanding.html">5.2.1. Data Understanding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/dqr.html">5.2.2. Data Quality Report</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/plots.html">5.2.3. Plots &amp; Graphs</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Chapter5/data_wrangling.html">5.3. Data Wrangling</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/preprocessing.html">5.3.1. Preprocessing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/subsetting.html">5.3.2. Subsetting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/aggregating.html">5.3.3. Aggregating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/groupby.html">5.3.4. Group By</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../zreferences.html">6. References</a></li>
@@ -364,7 +383,14 @@ document.write(`
 <li><p>Convey your message in such a way that others are able to understand what <em>you</em> are talking about</p></li>
 <li><p>Focus on the important things, which is understanding the objectives, value potential, and how to solve a problem</p></li>
 </ul>
-<br><p>To get us started, let’s begin with a simple venn diagram.  In <a class="reference internal" href="#ai-venn-fig"><span class="std std-numref">Fig. 2.1</span></a> you can see a nested view of what’re going to cover in this book.  Probably the most common term being thrown around today in our field is “Artificial Intelligence”, or AI.  It has become so commonplace and ubiquitous in business and everyday circles, we’ve actually “crossed the chasm” and are somewhere between Early and Late Marjority users.  If you’re not already casually throwing around the word “AI” at this point, don’t worry.  You will be soon.</p>
+<br><aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Artificial Intelligence</strong> are technology systems designed to mimic human intelligence.</p>
+</div>
+</aside>
+<p>To get us started, let’s begin with a simple venn diagram.  In <a class="reference internal" href="#ai-venn-fig"><span class="std std-numref">Fig. 2.1</span></a> you can see a nested view of what’re going to cover in this book.  Probably the most common term being thrown around today in our field is <strong>Artificial Intelligence</strong>, or AI.  It has become so commonplace and ubiquitous in business and everyday circles, we’ve actually “crossed the chasm” and are somewhere between Early and Late Marjority users.  If you’re not already casually throwing around the word “AI” at this point, don’t worry.  You will be soon.</p>
 <br>
 <figure class="align-default" id="ai-venn-fig">
 <a class="reference internal image-reference" href="../_images/AI_venn.png"><img alt="../_images/AI_venn.png" src="../_images/AI_venn.png" style="width: 700px;" /></a>
@@ -372,12 +398,15 @@ document.write(`
 <p><span class="caption-number">Fig. 2.1 </span><span class="caption-text">Artificial Intelligence Venn Diagram</span><a class="headerlink" href="#ai-venn-fig" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Data Science is a subset that falls under this AI umbrella term.  This higher level includes a wide assortment of fields of study, from robotics, hardware/software, research, linguistics, vision systems, and applied mathematical theory, to name a few, all to study or design systems intended to <em>mimic human intelligence</em>.  <strong>Data Science</strong> can be generally thought of as an “applied” branch of AI, where we’ll use use the tools, theory, and methodologies contained under AI to study or solve some kind of problem or question.</p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Data Science is a field of study which analyzes data to find patterns and extract meaningful insights.</p>
+<p><strong>Data Science</strong> is a field of study which analyzes data to find patterns and extract meaningful insights.</p>
 </div>
-<br><p>Seems straightforward enough.  Doesn’t it seem a little broad though?</p>
+</aside>
+<p>Data Science is a subset that falls under this AI umbrella term.  This higher level includes a wide assortment of fields of study, from robotics, hardware/software, research, linguistics, vision systems, and applied mathematical theory, to name a few, all to study or design systems intended to <em>mimic human intelligence</em>.  <strong>Data Science</strong> can be generally thought of as an “applied” branch of AI, where we’ll use use the tools, theory, and methodologies contained under AI to study or solve some kind of problem or question.</p>
+<p>Seems straightforward enough.  Doesn’t it seem a little broad though?</p>
 <p>Does this mean that anyone looking at data and finds anything interesting is doing data science work?  Probably not.  With this definition, anyone from a busines analyst to the CEO could be engaged in data science work.  While possible, it’s most likely not the case.  We should be able arrive at a more satisfactory understanding if we tease out and add a few layers of contextualization to help make it more clear.</p>
 <p>What additional information might you want to know to help us understand what we’re talking about?  How about if we knew the following?</p>
 <ol class="arabic simple">

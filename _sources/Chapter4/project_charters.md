@@ -6,6 +6,12 @@ This section is all about setting you up for success by being intentional and ex
 
 **<h3>What Is a Project Charter?</h3>**
 
+````{margin}
+```{note}
+A **Project Charter** is a high-level overview of the who, what, where, when, why, and how's of a project, and commitments from multiple key participants involved in the life of an engagement.
+```
+````
+
 Whether it's an official Charter, Executive Summary, Project Plan, or simply an outline in a Word or PowerPoint doc, the answer is essentially the same.  Primarily what we're talking about is documenting the _Who_, _What_, _When_, _Where_, _Why,_ and _How's_ of a project.  The most formal of the bunch is the Project Charter, which serves as a high-level project overview and commitment from multiple key participants involved in the life of an engagement.
 
 At one level we have the requesting and functional owner of the effort (business sponsor) coming to terms with the working team (analytics team plus business subject matter experts) regarding the details of what they want someone to go off and work on, and their expectations for what that working team needs to deliver at the end of the project to be considered a "success".  At a commonly higher level, there may also be the need for awareness and oversight from a Steering Committee for necessary support or approval (capital, human resources, or change management).  This group of leaders will typically have the power to authorize financial support, communicate expectations, set priorities, and clear any blockers for the working team.
@@ -62,11 +68,13 @@ Sometimes it'll make sense for you to first test out the idea in your most compl
 > _Are there any specific situations or required conditions that need to be included or excluded?_ <br>
 > _What is the plan for future phases and scaling?_
 
-It's pretty much that simple, but know this is the area that has the most potential to cause issues during the course of a project.  It may seem minor at the time.  Add an extra product line to the analysis that we didn't originally talk about...  Allow an additional condition or capability that was not originally agreed to...  Change the method of deployment from a Proof of Value (POV) to now requiring all of the bells and whistles of a customer facing usable Minimum Viable Product (MVP)...  All of these changes are what's known as **scope creep**.
-
+````{margin}
 ```{note}
-_Scope creep_ is any minor or major changes to a plan, compared to what was originally agreed to and approved for working on during the course of a project.
+**Scope creep** is any minor or major change to a plan, compared to what was originally agreed to and approved for working on during the course of a project.
 ```
+````
+
+It's pretty much that simple, but know this is the area that has the most potential to cause issues during the course of a project.  It may seem minor at the time.  Add an extra product line to the analysis that we didn't originally talk about...  Allow an additional condition or capability that was not originally agreed to...  Change the method of deployment from a Proof of Value (POV) to now requiring all of the bells and whistles of a customer facing usable Minimum Viable Product (MVP)...  All of these changes are what's known as **scope creep**.
 
 Often we don't jump straight away into a full scale deployment so we need to be very clear about what kind of effort we're running.  Part of scoping a project is deciding on what the delivery plan looks like.  Will you be doing phased iterations of testing, learning, and deployment?  Are certain requested deliverables off the table for the first version, or does everything need to be delivered all at once?  Depending on what matters for our project sponors, there are options to manage the project goverened by various constraints at different times, such as time, money, resources, priority, etc., and to deliver the project in phases.
 

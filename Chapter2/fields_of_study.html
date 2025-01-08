@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>2.2. Fields of Study &#8212; A Beginner&#39;s Guide To Citizen Data Science</title>
+    <title>2.2. Fields of Study &#8212; My Jupyter Book</title>
   
   
   
@@ -154,8 +154,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/npp_logo.png" class="logo__image only-light" alt="A Beginner's Guide To Citizen Data Science - Home"/>
-    <script>document.write(`<img src="../_static/npp_logo.png" class="logo__image only-dark" alt="A Beginner's Guide To Citizen Data Science - Home"/>`);</script>
+    <img src="../_static/BGTDA_logo.png" class="logo__image only-light" alt="My Jupyter Book - Home"/>
+    <script>document.write(`<img src="../_static/BGTDA_logo.png" class="logo__image only-dark" alt="My Jupyter Book - Home"/>`);</script>
   
   
 </a></div>
@@ -165,7 +165,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../intro.html">
-                    Beginner’s Guide To Citizen Data Science:
+                    <span style="color:white">Beginner’s Guide To Citizen Data Science</span>
                 </a>
             </li>
         </ul>
@@ -195,8 +195,27 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../Chapter4/CRISP-DM.html">4.4. CRISP-DM</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter5/project_workflow.html">5. The Project Workflow</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Chapter5/data.html">5.1. Data</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter5/analytics_workflow.html">5. The Analytics Workflow</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Chapter5/data.html">5.1. Data</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/data_structure.html">5.1.1. Data Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/data_types.html">5.1.2. Feature Data Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/dataset_types.html">5.1.3. Dataset Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/data_acquisition.html">5.1.4. Data Acquisition</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Chapter5/EDA.html">5.2. Exploratory Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/data_understanding.html">5.2.1. Data Understanding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/dqr.html">5.2.2. Data Quality Report</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/plots.html">5.2.3. Plots &amp; Graphs</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Chapter5/data_wrangling.html">5.3. Data Wrangling</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/preprocessing.html">5.3.1. Preprocessing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/subsetting.html">5.3.2. Subsetting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/aggregating.html">5.3.3. Aggregating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Chapter5/groupby.html">5.3.4. Group By</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../zreferences.html">6. References</a></li>
@@ -400,12 +419,14 @@ document.write(`
 <p>So unless you plan on working in every single department or role for a few years before you build any projects for them, it’s extremely unlikely you’ll be able to serve as the functional domain expert all of the time.  We need to work alongside of our project sponsors and functional working teams to make sure we consider all of the exceptions, constraints, and rules necessary to solve any problem adequately.</p>
 <p>At this point we’ve covered the outer ring of <a class="reference internal" href="#ds-venn-fig"><span class="std std-numref">Fig. 2.4</span></a>, which are the general fields and knowledge bases.  As we get closer to the center of the diagram we’re starting to get more specialized and data science specific.  We won’t spend too much time on them here since the remainder of the course is mostly dedicating to covering these topics, but let’s at least hit the highlights now because it should help round out our understanding of what we’ve been building towards.</p>
 <p><strong><h3>Machine Learning</h3></strong></p>
-<p>As you’ll come to understand further, the application of specialty mathematics is a major part of what we do.  Where math &amp; statistics and computer science overlap gives us what’s known as <strong>Machine Learning</strong>.</p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><em>Machine Learning</em> is the application of code, algorithms, and data, giving computers the ability to learn and perform a variety of tasks.</p>
+<p><strong>Machine Learning</strong> is the application of code, algorithms, and data, giving computers the ability to learn and perform a variety of tasks.</p>
 </div>
-<br>
+</aside>
+<p>As you’ll come to understand further, the application of specialty mathematics is a major part of what we do.  Where math &amp; statistics and computer science overlap gives us what’s known as <strong>Machine Learning</strong>.</p>
 <p>Tightly coupled with the types of analytics we’ve already covered, you’ll learn there are groups of methodologies that allow us to teach our models to learn and find patterns, which ultimately gives us the ability to solve our problems.  For example, to solve a Prediction problem previously discussed, we may choose to employ what’s known as a <em>Classification</em> algorithm from the Supervised Learning group of machine learning methods.</p>
 <p>Our machine learning methodologies will generally fall into one of the three buckets below.</p>
 <ol class="arabic simple">
@@ -424,7 +445,7 @@ document.write(`
 <p>More to come on these topics.</p>
 <p><strong><h3>Research</h3></strong></p>
 <p>This one was a little foreign to me coming from a business background.  Where math &amp; statistics overlap with domain expertise, we get <em>Research</em>.  Now this doesn’t mean you’re going to be conducting trials and writing research papers, but it does mean you should understand some of the same tests, methods, and rigor that academic and scientific professionals balance.</p>
-<p>For example, let’s say you’re trying to prove a statistical link between smoking and cancer.  Seems pretty obvious to us today, but did you know that it wasn’t until 1954 that scientists were able to satisfingly prove the causal releationship <span id="id1">[<a class="reference internal" href="../zreferences.html#id4" title="Elizabeth Mendes. The study that helped spur the u.s. stop-smoking movement. American Cancer Society, Jan 2014. URL: https://www.cancer.org/research/acs-research-news/the-study-that-helped-spur-the-us-stop-smoking-movement.html.">Men14</a>]</span>?  It’s a high bar to say something <em>causes</em> something else from a statistical point of view.</p>
+<p>For example, let’s say you’re trying to prove a statistical link between smoking and cancer.  Seems pretty obvious to us today, but did you know that it wasn’t until 1954 that scientists were able to satisfingly prove the causal releationship <span id="id1">[<a class="reference internal" href="../zreferences.html#id7" title="Elizabeth Mendes. The study that helped spur the u.s. stop-smoking movement. American Cancer Society, Jan 2014. URL: https://www.cancer.org/research/acs-research-news/the-study-that-helped-spur-the-us-stop-smoking-movement.html.">Men14</a>]</span>?  It’s a high bar to say something <em>causes</em> something else from a statistical point of view.</p>
 <p>Since you’ll be using a lot of the same statistical methods and making a lot of the same kinds of inferential statements based on your models, there are some well documented steps and protocols you should be aware of and follow as best as you can.  Have you heard of the scientific method?  See <a class="reference internal" href="#scientific-method-fig"><span class="std std-numref">Fig. 2.6</span></a>.</p>
 <figure class="align-default" id="scientific-method-fig">
 <a class="reference internal image-reference" href="../_images/scientific_method.png"><img alt="../_images/scientific_method.png" src="../_images/scientific_method.png" style="width: 400px;" /></a>

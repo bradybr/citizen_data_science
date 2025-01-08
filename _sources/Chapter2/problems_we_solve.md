@@ -222,7 +222,7 @@ ax.yaxis.set_major_formatter(ticker.StrMethodFormatter('${x:,.0f}'))
 ax.xaxis.set_major_formatter(ticker.StrMethodFormatter('${x:,.0f}'));
 ```
 
-Now remember all that talk about estimating mathematical equations?  In this example, if we regress `tip` on the `total_bill` amount (estimate the mathematical equation that best approximates this relationship), we arrive at a value which tells us what happens, on the average.  Running a regression on this dataset gives us a beta coefficient of \$0.11, which can be interpreted as the effect the `total_bill` amount has on the amount the server received as a `tip`, holding all else constant.
+Now remember all that talk about estimating mathematical equations?  In this example, if we regress `total_bill` amount on the `tip` (estimate the mathematical equation that best approximates this relationship), we arrive at a value which tells us what happens, on the average.  Running a regression on this dataset gives us a beta coefficient of \$0.11, which can be interpreted as the effect the `total_bill` amount has on the amount the server received as a `tip`, holding all else constant.
 
 So in simple terms, for every \$1.00 increase in the total bill amount, the server can expect to receive \$0.11 additional in their tip.  We can see the actual visual representation of our mathematical equation in {numref}`regression_scatterplot`, as illustrated by the red line.  Our \$0.11 coefficient is the effect causing the slope of the red line to point upward \$0.11 per \$1.00 increase in the total bill.  Pretty cool.
 
